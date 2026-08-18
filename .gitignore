@@ -1,0 +1,13 @@
+# Sensitive internal business documents — never publish these to GitHub
+Africode Reference Docs/
+
+# Local tooling / assistant session data
+.claude/
+
+# Node / build output
+node_modules/
+dist/
+.DS_Store
+*.local
+.env
+.env.*
