@@ -6,8 +6,13 @@ Africode Reference Docs/
 
 # Node / build output
 node_modules/
+.next/
+out/
 dist/
 .DS_Store
 *.local
 .env
 .env.*
+
+# Vercel
+.vercel
