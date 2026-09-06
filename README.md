@@ -51,6 +51,15 @@ The repository is linked to Vercel. Pushing to `main` deploys to production;
 pushing any other branch creates a preview deployment. No configuration is
 needed — Vercel detects Next.js at the repository root.
 
+The site URL used for canonical tags and link-preview images is resolved from
+the environment: `NEXT_PUBLIC_SITE_URL` if set, otherwise the Vercel-provided
+production URL, otherwise the current deployment URL. So previews and canonicals
+are correct even before a custom domain exists.
+
+NOTE: `africodestudios.com` is not currently registered. Buy it (or whatever
+domain you settle on), add it to the Vercel project, and only then set
+`NEXT_PUBLIC_SITE_URL` to it.
+
 Set `NEXT_PUBLIC_SITE_URL` to the live domain in the Vercel project's
 environment variables so link previews and canonical URLs point at the real
 site. It defaults to `https://africodestudios.com`.

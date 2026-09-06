@@ -2,7 +2,21 @@ import './globals.css'
 import Providers from './providers'
 import SiteShell from './site-shell'
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://africodestudios.com'
+// Where this deployment actually lives. Order matters:
+//   1. NEXT_PUBLIC_SITE_URL  — set this in Vercel once you own a real domain.
+//   2. VERCEL_PROJECT_PRODUCTION_URL — the stable *.vercel.app production URL.
+//   3. VERCEL_URL — this specific deployment (preview builds).
+//   4. localhost — local dev.
+// It used to fall back to a hard-coded https://africodestudios.com. That domain
+// is not registered, so every canonical tag and og:image pointed at a host that
+// does not resolve — WhatsApp and Facebook could not load a preview image, and
+// Google was told the canonical copy of every page lived on a dead domain.
+// Never hard-code a domain here again; let it resolve from the environment.
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`) ||
+  (process.env.VERCEL_URL && `https://${process.env.VERCEL_URL}`) ||
+  'http://localhost:3000'
 
 const TITLE = 'Africode Studios — We build it. You grow.'
 const DESCRIPTION =
