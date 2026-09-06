@@ -1,4 +1,5 @@
-// Central config — edit these values, nothing else needs to change.
+// Central config — contact details and the lead-form hookup.
+// Prices and package copy live in src/data/packages.js.
 
 export const CONTACT = {
   email: 'africodestudios@gmail.com',
@@ -10,15 +11,8 @@ export const CONTACT = {
   whatsappCameroonDisplay: '+237 692 092 192',
 }
 
-// Packages shown on the Pricing page and recommended by the questionnaire.
-// Prices are indicative (USD); the questionnaire recommends a package rather
-// than quoting a hard number while pricing is being reviewed.
-export const PACKAGES = {
-  starter: { key: 'starter', priceUSD: 40 },
-  business: { key: 'business', priceUSD: 90 },
-  store: { key: 'store', priceUSD: 120 },
-  custom: { key: 'custom', priceUSD: null }, // quoted per project
-}
+// NOTE: package prices are NOT set here — they live in src/data/packages.js
+// (that is the single source of truth the Pricing page and questionnaire read).
 
 // Google Form sink — the questionnaire POSTs answers here so they land in a
 // Sheet in your Drive (analytics + Excel). Leave FORM_ACTION empty and the app

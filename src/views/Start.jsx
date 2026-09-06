@@ -297,7 +297,7 @@ function ResultStep({ module, answers, lang, currency }) {
       <p style={{ color: 'var(--muted)', fontSize: 17, margin: '0 0 8px' }}>{copy.tag}</p>
       {!isCustom && p.priceUSD && (
         <p style={{ fontSize: 15, color: 'var(--muted-2)', margin: '0 0 24px' }}>
-          {lang === 'fr' ? 'À partir de' : 'From'} <strong style={{ color: 'var(--ink)' }}>{formatMoney(p.priceUSD, currency)}</strong> · {lang === 'fr' ? 'prix confirmé après un échange rapide' : 'exact price confirmed after a quick chat'}
+          {lang === 'fr' ? 'À partir de' : 'From'} <strong style={{ color: 'var(--ink)' }}>{formatMoney(p.priceUSD, currency, lang)}</strong> · {lang === 'fr' ? 'prix confirmé après un échange rapide' : 'exact price confirmed after a quick chat'}
         </p>
       )}
       {isCustom && (

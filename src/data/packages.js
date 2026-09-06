@@ -41,3 +41,17 @@ export const packages = {
 }
 
 export const packageOrder = ['starter', 'business', 'store', 'custom']
+
+// Recurring plan shown under the package grid on the Pricing page. The first
+// year is included with every new website; this is the price from year two.
+export const carePlan = {
+  priceUSD: 120,
+  en: {
+    name: 'Care & Hosting',
+    includes: ['Domain and reliable hosting', 'Security, SSL and backups', 'Small updates and changes', 'Priority support on WhatsApp'],
+  },
+  fr: {
+    name: 'Maintenance et hébergement',
+    includes: ['Domaine et hébergement fiable', 'Sécurité, SSL et sauvegardes', 'Petites mises à jour et modifications', 'Support prioritaire sur WhatsApp'],
+  },
+}

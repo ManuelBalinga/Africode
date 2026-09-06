@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import PageHero from '../components/PageHero'
 import { useI18n } from '../i18n/I18nContext'
-import { packages, packageOrder } from '../data/packages'
+import { packages, packageOrder, carePlan } from '../data/packages'
 import { formatMoney, detectCurrency, CURRENCY_ORDER, CURRENCIES } from '../lib/currency'
 import { waLink } from '../lib/whatsapp'
 import { usePageMeta } from '../lib/usePageMeta'
@@ -68,12 +68,12 @@ export default function Pricing() {
                     {isCustom ? (
                       <>
                         <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>{t('pricing.customFrom')} </span>
-                        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 30 }}>{formatMoney(p.priceFromUSD, currency)}</span>
+                        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 30 }}>{formatMoney(p.priceFromUSD, currency, lang)}</span>
                       </>
                     ) : (
                       <>
                         <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>{t('pricing.from')} </span>
-                        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 34 }}>{formatMoney(p.priceUSD, currency)}</span>
+                        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 34 }}>{formatMoney(p.priceUSD, currency, lang)}</span>
                       </>
                     )}
                   </div>
@@ -100,12 +100,46 @@ export default function Pricing() {
             })}
           </div>
 
+          <CareStrip currency={currency} />
+
           <p style={{ color: 'var(--text-muted)', fontSize: 13.5, marginTop: 22, maxWidth: '70ch' }}>{t('pricing.note')}</p>
         </div>
       </section>
 
       <FAQ />
     </>
+  )
+}
+
+function CareStrip({ currency }) {
+  const { t, lang } = useI18n()
+  const copy = carePlan[lang] || carePlan.en
+  return (
+    <div style={{
+      marginTop: 26, background: 'var(--surface)', border: '0.5px solid var(--line)',
+      borderLeft: '4px solid var(--amber, #E8890B)', borderRadius: 16, padding: '24px 26px',
+      display: 'flex', gap: 24, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between',
+    }}>
+      <div style={{ flex: '1 1 320px' }}>
+        <span style={{
+          fontSize: 12, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
+          color: 'var(--amber, #E8890B)',
+        }}>{t('pricing.careKicker')}</span>
+        <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 21, margin: '6px 0 6px' }}>{copy.name}</h3>
+        <p style={{ color: 'var(--text-muted)', fontSize: 14.5, margin: '0 0 14px', maxWidth: '52ch' }}>{t('pricing.careTag')}</p>
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexWrap: 'wrap', gap: '8px 20px' }}>
+          {copy.includes.map((f) => (
+            <li key={f} style={{ display: 'flex', gap: 8, alignItems: 'center', fontSize: 14.5 }}>
+              <i className="ti ti-check" style={{ color: 'var(--blue)', fontSize: 16, flexShrink: 0 }} aria-hidden="true" />{f}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div style={{ textAlign: 'right', flex: '0 0 auto' }}>
+        <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 30 }}>{formatMoney(carePlan.priceUSD, currency, lang)}</div>
+        <div style={{ color: 'var(--text-muted)', fontSize: 13.5 }}>{t('pricing.perYear')}</div>
+      </div>
+    </div>
   )
 }
 

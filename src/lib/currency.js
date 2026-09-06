@@ -1,17 +1,23 @@
 // Currency + country handling. Rates are approximate (per 1 USD) and easy to
 // edit here. Used to show budgets and prices in the visitor's local currency.
+//
+// RATES LAST CHECKED: 6 September 2026 (mid-market).
+// Re-check every few months — a stale rate quietly changes your prices. GHS in
+// particular drifted from 15 to ~11.75, which had been overstating Ghana prices
+// by roughly 30%. XAF and XOF are pegged to the euro (655.957 per 1 EUR), so
+// derive them from the EUR rate rather than quoting them separately.
 
 export const CURRENCIES = {
   USD: { symbol: '$', rate: 1, pos: 'before' },
-  GHS: { symbol: 'GH₵', rate: 15, pos: 'before' },
-  XAF: { symbol: 'FCFA', rate: 600, pos: 'after' },
-  XOF: { symbol: 'CFA', rate: 600, pos: 'after' },
-  NGN: { symbol: '₦', rate: 1550, pos: 'before' },
-  KES: { symbol: 'KSh', rate: 130, pos: 'before' },
-  ZAR: { symbol: 'R', rate: 18, pos: 'before' },
-  EUR: { symbol: '€', rate: 0.92, pos: 'before' },
-  GBP: { symbol: '£', rate: 0.79, pos: 'before' },
-  CAD: { symbol: 'C$', rate: 1.37, pos: 'before' },
+  GHS: { symbol: 'GH₵', rate: 11.75, pos: 'before' },
+  XAF: { symbol: 'FCFA', rate: 564.6, pos: 'after' },
+  XOF: { symbol: 'CFA', rate: 564.6, pos: 'after' },
+  NGN: { symbol: '₦', rate: 1365, pos: 'before' },
+  KES: { symbol: 'KSh', rate: 129.4, pos: 'before' },
+  ZAR: { symbol: 'R', rate: 15.97, pos: 'before' },
+  EUR: { symbol: '€', rate: 0.861, pos: 'before' },
+  GBP: { symbol: '£', rate: 0.744, pos: 'before' },
+  CAD: { symbol: 'C$', rate: 1.40, pos: 'before' },
 }
 
 // Countries offered at the start of the questionnaire, each mapped to a currency.
@@ -51,9 +57,11 @@ function roundNice(n) {
   return Math.round(n / 1000) * 1000
 }
 
-export function formatMoney(usd, curCode = 'USD') {
+// `lang` matters: French uses a space as the thousands separator, so an
+// en-US "22,500 FCFA" reads as twenty-two point five to a French speaker.
+export function formatMoney(usd, curCode = 'USD', lang = 'en') {
   const c = CURRENCIES[curCode] || CURRENCIES.USD
-  const amt = roundNice(usd * c.rate).toLocaleString('en-US')
+  const amt = roundNice(usd * c.rate).toLocaleString(lang === 'fr' ? 'fr-FR' : 'en-US')
   return c.pos === 'after' ? `${amt} ${c.symbol}` : `${c.symbol}${amt}`
 }
 
@@ -92,8 +100,8 @@ export function budgetLabel(value, curCode = 'USD', lang = 'en') {
   if (value === 'unsure') return lang === 'fr' ? 'Pas encore sûr(e) — à discuter' : 'Not sure yet — let’s discuss'
   const b = BUDGET_THRESHOLDS[value]
   if (!b) return value
-  const lo = b.min != null ? formatMoney(b.min, curCode) : null
-  const hi = b.max != null ? formatMoney(b.max, curCode) : null
+  const lo = b.min != null ? formatMoney(b.min, curCode, lang) : null
+  const hi = b.max != null ? formatMoney(b.max, curCode, lang) : null
   if (lo && hi) return `${lo} – ${hi}`
   if (hi) return (lang === 'fr' ? 'Moins de ' : 'Under ') + hi
   return (lang === 'fr' ? 'Plus de ' : 'More than ') + lo
