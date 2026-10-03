@@ -20,6 +20,15 @@ export const PACKAGES = {
   custom: { key: 'custom', priceUSD: null }, // quoted per project
 }
 
+// Free-website promo intake (/promo/intake). The page talks to a Google Apps
+// Script web app that writes each response to a Sheet and saves photos to Drive.
+// Paste the web app's /exec URL below after deploying promo-setup/Code.gs
+// (steps in promo-setup/SETUP.md). The slot limit is enforced by the script too.
+export const PROMO = {
+  SCRIPT_URL: '', // e.g. https://script.google.com/macros/s/XXXX/exec
+  TOTAL_SLOTS: 10,
+}
+
 // Google Form sink — the questionnaire POSTs answers here so they land in a
 // Sheet in your Drive (analytics + Excel). Leave FORM_ACTION empty and the app
 // still works: it just skips the save and only does the WhatsApp handoff.
