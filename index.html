@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">Africode Studios — We build it. You grow.</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta.desc" content="A web studio in Accra building websites, online stores and web apps for clients worldwide. Built and supported in English &amp; French. Websites from $40.">
+<meta name="theme-color" content="#08080A">
+<link rel="canonical" href="https://africodestudios.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Africode Studios">
+<meta property="og:url" content="https://africodestudios.com/">
+<meta property="og:title" data-i18n-attr="content" data-i18n="meta.title" content="Africode Studios — We build it. You grow.">
+<meta property="og:description" data-i18n-attr="content" data-i18n="meta.desc" content="A web studio in Accra building websites, online stores and web apps for clients worldwide.">
+<meta property="og:image" content="https://africodestudios.com/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" data-i18n-attr="content" data-i18n="meta.title" content="Africode Studios — We build it. You grow.">
+<meta name="twitter:description" data-i18n-attr="content" data-i18n="meta.desc" content="A web studio in Accra building websites, online stores and web apps for clients worldwide.">
+<meta name="twitter:image" content="https://africodestudios.com/og.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%23FFB224'/%3E%3Ctext x='50' y='73' font-family='Verdana,sans-serif' font-size='62' font-weight='700' text-anchor='middle' fill='%2308080A'%3EA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Africode Studios",
+  "description": "Web design and development studio based in Accra, Ghana, building websites, online stores and web apps for clients worldwide. Bilingual English and French.",
+  "url": "https://africodestudios.com/",
+  "image": "https://africodestudios.com/og.jpg",
+  "email": "africodestudios@gmail.com",
+  "telephone": "+233550456626",
+  "areaServed": "Worldwide",
+  "availableLanguage": ["en", "fr"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Accra", "addressCountry": "GH" },
+  "priceRange": "$$",
+  "makesOffer": [
+    { "@type": "Offer", "name": "One-Page Website", "price": "40", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Multipage Website", "price": "90", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Online Store", "price": "120", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Web App & Software", "price": "250", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Care & Hosting Plan", "price": "120", "priceCurrency": "USD" }
+  ]
+}
+</script>
+
+<style>
+:root{
+  /* ink */
+  --ink:#08080A;
+  --ink-1:#0E0E13;
+  --ink-2:#14141B;
+  --surf:#1A1A23;
+  --surf-2:#20202B;
+  --line:rgba(255,255,255,.075);
+  --line-2:rgba(255,255,255,.14);
+  /* type */
+  --ivory:#F7F4EF;
+  --mute:#A5A1AE;
+  --mute-2:#726E7C;
+  /* accents */
+  --amber:#FFB224;
+  --amber-2:#F08C00;
+  --indigo:#5B6CFF;
+  --indigo-2:#3A48D6;
+  --jade:#1FD3A3;
+  --rose:#FF6B6B;
+
+  --display:'Bricolage Grotesque','Poppins',Verdana,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --maxw:1240px;
+  --ease:cubic-bezier(.22,.9,.28,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;background:var(--ink);color:var(--ivory);
+  font-family:var(--body);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.02;margin:0;letter-spacing:-.035em;font-weight:800;}
+p{margin:0;}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--amber);color:var(--ink);}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+
+/* film grain over everything — kills banding, adds texture */
+body::after{
+  content:"";position:fixed;inset:0;z-index:999;pointer-events:none;opacity:.028;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- type primitives ---------- */
+.eyebrow{
+  font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--amber);display:inline-flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.6;}
+.sec{padding:130px 0;position:relative;}
+.sec-h{font-size:clamp(34px,5.6vw,68px);margin-bottom:20px;}
+.sec-p{color:var(--mute);max-width:560px;font-size:17px;}
+.sec-head{margin-bottom:64px;}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:-.01em;
+  padding:15px 28px;border-radius:100px;border:1px solid transparent;cursor:pointer;
+  position:relative;overflow:hidden;white-space:nowrap;
+  transition:transform .4s var(--ease-out),box-shadow .4s var(--ease-out),background .3s,color .3s,border-color .3s;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn:focus-visible{outline:2px solid var(--amber);outline-offset:3px;}
+.btn-amber{background:var(--amber);color:var(--ink);box-shadow:0 10px 34px -8px rgba(255,178,36,.55);}
+.btn-amber:hover{box-shadow:0 18px 46px -10px rgba(255,178,36,.7);}
+.btn-ghost{border-color:var(--line-2);color:var(--ivory);}
+.btn-ghost:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.3);}
+.btn-wa{background:var(--jade);color:#04231A;box-shadow:0 10px 34px -8px rgba(31,211,163,.5);}
+.btn-sm{padding:11px 20px;font-size:13.5px;}
+
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:80;transition:all .4s var(--ease);}
+header.scrolled{background:rgba(8,8,10,.72);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid var(--line);}
+.bar{display:flex;align-items:center;gap:22px;height:78px;}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.03em;}
+.mark{
+  width:34px;height:34px;border-radius:10px;flex:none;display:grid;place-items:center;
+  background:var(--amber);color:var(--ink);font-family:var(--display);font-weight:800;font-size:19px;
+  box-shadow:0 5px 18px -4px rgba(255,178,36,.6);
+}
+nav{margin-left:auto;display:flex;align-items:center;gap:30px;}
+nav a.nl{font-size:14px;color:var(--mute);transition:color .25s;position:relative;padding:5px 0;}
+nav a.nl:hover{color:var(--ivory);}
+nav a.nl::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--amber);transition:right .4s var(--ease);}
+nav a.nl:hover::after{right:0;}
+.hact{display:flex;align-items:center;gap:12px;flex:none;}
+.hact>*{flex:none;}
+.lang{display:flex;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:100px;padding:3px;}
+.lang button{
+  border:0;background:transparent;color:var(--mute-2);cursor:pointer;
+  font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.1em;
+  padding:6px 12px;border-radius:100px;transition:all .28s var(--ease);
+}
+.lang button.on{background:var(--ivory);color:var(--ink);}
+.burger{display:none;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--ivory);width:42px;height:42px;border-radius:12px;cursor:pointer;font-size:16px;margin-left:auto;}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:150px 0 90px;min-height:100svh;display:flex;align-items:center;overflow:hidden;}
+#aurora{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:0;transition:opacity 1.6s var(--ease);}
+#aurora.on{opacity:1;}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,8,10,.35) 0%,transparent 26%,transparent 62%,var(--ink) 100%);
+}
+.hero .wrap{position:relative;z-index:2;width:100%;}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.hero h1{font-size:clamp(46px,7vw,94px);margin:26px 0 24px;letter-spacing:-.045em;}
+.hero h1 .g{
+  background:linear-gradient(100deg,var(--amber) 0%,#FFD98A 40%,var(--indigo) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hlede{color:var(--mute);font-size:clamp(16px,1.5vw,18.5px);max-width:460px;margin-bottom:34px;}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px;}
+
+/* ---------- the build demo ---------- */
+.demo-side{position:relative;}
+.picker-lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute-2);margin-bottom:13px;}
+.picker{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+.pick{
+  border:1px solid var(--line-2);background:rgba(255,255,255,.035);color:var(--mute);
+  font-family:var(--body);font-size:13px;font-weight:500;padding:9px 15px;border-radius:100px;
+  cursor:pointer;display:inline-flex;align-items:center;gap:7px;
+  transition:all .3s var(--ease);
+}
+.pick:hover{border-color:var(--line-2);background:rgba(255,255,255,.08);color:var(--ivory);transform:translateY(-1px);}
+.pick.on{background:var(--ivory);color:var(--ink);border-color:var(--ivory);font-weight:600;}
+.pick:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+
+.device{
+  border-radius:16px;overflow:hidden;background:var(--ink-2);
+  border:1px solid var(--line-2);
+  box-shadow:0 50px 100px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.04);
+  transform:perspective(2000px) rotateY(-7deg) rotateX(3deg) translateZ(0);
+  transition:transform .8s var(--ease-out);
+  will-change:transform;
+}
+.device:hover{transform:perspective(2000px) rotateY(-3deg) rotateX(1deg);}
+.chrome{
+  display:flex;align-items:center;gap:11px;padding:11px 13px;
+  background:var(--surf);border-bottom:1px solid var(--line);
+}
+.dots{display:flex;gap:6px;flex:none;}
+.dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.16);}
+.url{
+  flex:1;background:var(--ink-1);border-radius:7px;padding:5px 11px;
+  font-family:var(--mono);font-size:10.5px;color:var(--mute-2);
+  display:flex;align-items:center;gap:6px;overflow:hidden;white-space:nowrap;
+  transition:color .5s;
+}
+.device[data-stage="4"] .url{color:var(--jade);}
+.url .lock{opacity:0;transition:opacity .5s;}
+.device[data-stage="4"] .url .lock{opacity:1;}
+.d-live{
+  font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.14em;
+  padding:4px 9px;border-radius:5px;flex:none;
+  background:rgba(31,211,163,.14);color:var(--jade);
+  opacity:0;transform:scale(.8);transition:all .5s var(--ease-out);
+}
+.device[data-stage="4"] .d-live{opacity:1;transform:none;}
+
+.screen{
+  --da:var(--amber);
+  height:396px;overflow:hidden;position:relative;
+  background:#fff;
+  transition:background .7s var(--ease);
+}
+/* stages 0-1 keep the canvas grey — it is a wireframe, not a site yet */
+.device[data-stage="0"] .screen,.device[data-stage="1"] .screen{background:#EDEDF0;}
+
+.screen .blk{opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .6s var(--ease-out),background .6s var(--ease),border-radius .6s var(--ease);}
+.device[data-stage="0"] .screen .blk,.device:not([data-stage="0"]) .screen .blk{opacity:1;transform:none;}
+
+/* skeleton look: every text slot is a grey bar until content lands */
+.sk{background:#D6D6DC;border-radius:4px;transition:background .55s var(--ease);}
+.device[data-stage="3"] .sk,.device[data-stage="4"] .sk{background:transparent;}
+.sk .t{opacity:0;transition:opacity .5s var(--ease) .12s;}
+.device[data-stage="3"] .sk .t,.device[data-stage="4"] .sk .t{opacity:1;}
+
+.d-nav{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid #E6E6EB;background:#fff;transition:background .6s,border-color .6s;}
+.device[data-stage="0"] .d-nav,.device[data-stage="1"] .d-nav{background:#E4E4E9;border-color:#DADAE0;}
+.d-logo{display:flex;align-items:center;gap:7px;}
+.d-logo .sq{width:19px;height:19px;border-radius:5px;background:#D6D6DC;transition:background .6s var(--ease);}
+.device[data-stage="2"] .d-logo .sq,.device[data-stage="3"] .d-logo .sq,.device[data-stage="4"] .d-logo .sq{background:var(--da);}
+.d-logo .nm{height:9px;min-width:40px;display:flex;align-items:center;}
+.d-logo .nm .t{font-family:var(--body);font-weight:700;font-size:10px;color:#15151C;white-space:nowrap;}
+.d-links{display:flex;gap:10px;flex:none;}
+.d-links span{height:7px;min-width:22px;display:flex;align-items:center;}
+.d-links span .t{font-size:7.5px;color:#6B6B76;white-space:nowrap;font-weight:500;}
+
+.d-hero{padding:22px 16px 18px;position:relative;overflow:hidden;background:#fff;transition:background .6s var(--ease);}
+.device[data-stage="0"] .d-hero,.device[data-stage="1"] .d-hero{background:#EDEDF0;}
+.device[data-stage="2"] .d-hero,.device[data-stage="3"] .d-hero,.device[data-stage="4"] .d-hero{
+  background:linear-gradient(135deg,color-mix(in srgb,var(--da) 13%,#fff),#fff 70%);
+}
+.d-h1{height:19px;width:74%;margin-bottom:9px;display:flex;align-items:center;}
+.d-h1 .t{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.03em;color:#101016;white-space:nowrap;}
+.d-sub{height:9px;width:58%;margin-bottom:15px;display:flex;align-items:center;}
+.d-sub .t{font-size:9px;color:#5E5E6B;white-space:nowrap;}
+.d-cta{display:flex;gap:7px;}
+.d-btn{height:26px;width:88px;border-radius:100px;background:#D6D6DC;display:grid;place-items:center;transition:background .6s var(--ease);}
+.device[data-stage="2"] .d-btn,.device[data-stage="3"] .d-btn,.device[data-stage="4"] .d-btn{background:var(--da);}
+.d-btn .t{font-size:8.5px;font-weight:700;color:#fff;white-space:nowrap;}
+.d-btn2{height:26px;width:72px;border-radius:100px;border:1px solid #D6D6DC;display:grid;place-items:center;transition:border-color .6s;}
+.device[data-stage="2"] .d-btn2,.device[data-stage="3"] .d-btn2,.device[data-stage="4"] .d-btn2{border-color:color-mix(in srgb,var(--da) 45%,#fff);}
+.d-btn2 .t{font-size:8.5px;font-weight:600;color:#3A3A45;white-space:nowrap;}
+
+.d-strip{padding:0 16px 16px;background:#fff;transition:background .6s;}
+.device[data-stage="0"] .d-strip,.device[data-stage="1"] .d-strip{background:#EDEDF0;}
+.d-lab{height:7px;width:70px;margin-bottom:9px;display:flex;align-items:center;}
+.d-lab .t{font-family:var(--mono);font-size:7px;letter-spacing:.14em;text-transform:uppercase;color:var(--da);font-weight:600;white-space:nowrap;}
+.d-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.d-card{border-radius:8px;overflow:hidden;background:#F1F1F5;border:1px solid #E6E6EB;transition:all .6s var(--ease);}
+.device[data-stage="0"] .d-card,.device[data-stage="1"] .d-card{background:#DFDFE5;border-color:#D4D4DB;}
+.d-card .img{height:40px;background:#D6D6DC;display:grid;place-items:center;font-size:17px;transition:background .6s var(--ease);}
+.device[data-stage="2"] .d-card .img,.device[data-stage="3"] .d-card .img,.device[data-stage="4"] .d-card .img{
+  background:linear-gradient(140deg,color-mix(in srgb,var(--da) 26%,#fff),color-mix(in srgb,var(--da) 9%,#fff));
+}
+.d-card .img .em{opacity:0;transition:opacity .5s var(--ease) .1s;}
+.device[data-stage="3"] .d-card .img .em,.device[data-stage="4"] .d-card .img .em{opacity:1;}
+.d-card .cb{padding:7px;}
+.d-card .cn{height:7px;width:84%;margin-bottom:5px;display:flex;align-items:center;}
+.d-card .cn .t{font-size:7.5px;font-weight:600;color:#1A1A22;white-space:nowrap;overflow:hidden;}
+.d-card .cp{height:6px;width:48%;display:flex;align-items:center;}
+.d-card .cp .t{font-size:7px;font-weight:700;color:var(--da);white-space:nowrap;}
+
+.d-foot{height:28px;background:#F1F1F5;border-top:1px solid #E6E6EB;transition:background .6s;}
+.device[data-stage="2"] .d-foot,.device[data-stage="3"] .d-foot,.device[data-stage="4"] .d-foot{background:color-mix(in srgb,var(--da) 9%,#fff);}
+
+/* floating WhatsApp bubble appears only when the site goes live */
+.d-fab{
+  position:absolute;right:11px;bottom:11px;width:30px;height:30px;border-radius:50%;
+  background:var(--jade);display:grid;place-items:center;font-size:14px;
+  opacity:0;transform:scale(.4) translateY(8px);
+  transition:all .6s var(--ease-out);
+  box-shadow:0 8px 20px -4px rgba(31,211,163,.6);
+}
+.device[data-stage="4"] .d-fab{opacity:1;transform:none;}
+
+/* ---- demo layout blocks: each business type builds a different site ---- */
+.d-cart{margin-left:10px;font-size:8px;display:flex;align-items:center;color:#1A1A22;font-weight:700;}
+.d-sec{padding:0 16px 14px;background:#fff;transition:background .6s var(--ease);}
+.d-sec.pad{padding-top:14px;}
+.d-sec.tightsec{padding-top:2px;}
+.device[data-stage="0"] .d-sec,.device[data-stage="1"] .d-sec{background:#EDEDF0;}
+.d-hero.tight{padding-bottom:12px;}
+.d-note{padding:9px 16px;border-top:1px solid #E6E6EB;background:#F6F6F9;transition:background .6s;}
+.d-note .sk{display:inline-flex;align-items:center;height:8px;min-width:120px;}
+.d-note .t{font-size:7.5px;color:#6B6B76;white-space:nowrap;}
+.device[data-stage="2"] .d-note,.device[data-stage="3"] .d-note,.device[data-stage="4"] .d-note{
+  background:color-mix(in srgb,var(--da) 8%,#fff);}
+
+/* restaurant: menu rows with a dotted leader */
+/* A menu reads in two columns, with the dish name taking its own width and
+   the leader filling only the gap that is left — a single column on a wide
+   frame left a 400px run of dots and clipped the longer names. */
+.d-menu{display:grid;grid-template-columns:1fr 1fr;gap:11px 22px;}
+.d-mi{min-width:0;}
+.d-mtop{display:flex;align-items:center;gap:7px;}
+.d-me{font-size:13px;flex:none;opacity:0;transition:opacity .5s var(--ease) .1s;}
+.device[data-stage="3"] .d-me,.device[data-stage="4"] .d-me{opacity:1;}
+.d-mn{height:9px;flex:0 0 auto;display:flex;align-items:center;}
+.d-mn .t{font-size:9px;font-weight:600;color:#1A1A22;white-space:nowrap;}
+.d-lead{flex:1 1 auto;height:1px;border-bottom:1px dotted #C9C9D2;min-width:8px;}
+.d-mp{height:9px;flex:none;display:flex;align-items:center;}
+.d-mp .t{font-size:9px;font-weight:700;color:var(--da);white-space:nowrap;}
+.d-md{height:7px;margin:5px 0 0 20px;display:flex;align-items:center;}
+.d-md .t{font-size:7px;color:#7A7A86;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/* salon: a bookable grid, one slot taken */
+.d-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.d-slot{height:24px;border-radius:6px;border:1px solid #DCDCE4;display:grid;place-items:center;
+  background:#fff;transition:all .6s var(--ease);}
+.d-slot .sk{height:7px;display:flex;align-items:center;}
+.d-slot .t{font-size:7.5px;font-weight:600;color:#3A3A45;white-space:nowrap;}
+.device[data-stage="2"] .d-slot.on,.device[data-stage="3"] .d-slot.on,.device[data-stage="4"] .d-slot.on{
+  background:var(--da);border-color:var(--da);}
+.device[data-stage="3"] .d-slot.on .t,.device[data-stage="4"] .d-slot.on .t{color:#fff;}
+.d-slot.off{opacity:.42;}
+.device[data-stage="3"] .d-slot.off .t,.device[data-stage="4"] .d-slot.off .t{text-decoration:line-through;}
+
+/* shop: product grid with add-to-cart */
+.d-prods{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;}
+.d-prod{border:1px solid #E6E6EB;border-radius:7px;overflow:hidden;background:#F8F8FB;transition:all .6s var(--ease);}
+.device[data-stage="0"] .d-prod,.device[data-stage="1"] .d-prod{background:#DFDFE5;border-color:#D4D4DB;}
+.d-pim{height:34px;background:#D6D6DC;display:grid;place-items:center;font-size:15px;transition:background .6s var(--ease);}
+.device[data-stage="2"] .d-pim,.device[data-stage="3"] .d-pim,.device[data-stage="4"] .d-pim{
+  background:linear-gradient(140deg,color-mix(in srgb,var(--da) 24%,#fff),color-mix(in srgb,var(--da) 8%,#fff));}
+.d-pim .em{opacity:0;transition:opacity .5s var(--ease) .1s;}
+.device[data-stage="3"] .d-pim .em,.device[data-stage="4"] .d-pim .em{opacity:1;}
+.d-pb{padding:5px 6px 6px;}
+.d-pn{height:7px;margin-bottom:5px;display:flex;align-items:center;}
+.d-pn .t{font-size:7px;font-weight:600;color:#1A1A22;white-space:nowrap;overflow:hidden;}
+.d-pr{display:flex;align-items:center;justify-content:space-between;gap:4px;}
+.d-pp{height:7px;display:flex;align-items:center;}
+.d-pp .t{font-size:7.5px;font-weight:700;color:var(--da);}
+.d-add{font-size:6.5px;font-weight:700;color:#fff;background:#D6D6DC;border-radius:4px;padding:3px 6px;
+  transition:background .6s var(--ease);white-space:nowrap;}
+.device[data-stage="2"] .d-add,.device[data-stage="3"] .d-add,.device[data-stage="4"] .d-add{background:var(--da);}
+.d-add .t{opacity:0;transition:opacity .5s var(--ease) .1s;}
+.device[data-stage="3"] .d-add .t,.device[data-stage="4"] .d-add .t{opacity:1;}
+
+/* clinic: appointment form + the doctors you will see */
+.d-form{display:grid;grid-template-columns:1fr 1fr;gap:7px 8px;}
+.d-field{display:flex;flex-direction:column;gap:3px;}
+.d-field.wide{grid-column:1/-1;}
+.d-fl{height:6px;display:flex;align-items:center;}
+.d-fl .t{font-size:6.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#7A7A86;white-space:nowrap;}
+.d-fi{height:21px;border:1px solid #DCDCE4;border-radius:5px;background:#fff;display:flex;align-items:center;padding:0 7px;
+  transition:border-color .6s var(--ease);}
+.device[data-stage="2"] .d-fi,.device[data-stage="3"] .d-fi,.device[data-stage="4"] .d-fi{
+  border-color:color-mix(in srgb,var(--da) 38%,#fff);}
+.d-fi .t{font-size:7.5px;color:#2A2A33;white-space:nowrap;}
+.d-fi.sel{position:relative;}
+.d-fi.sel::after{content:"▾";position:absolute;right:7px;font-size:7px;color:#9A9AA6;}
+.d-btn.wide{grid-column:1/-1;width:100%;height:24px;}
+.d-docs{display:flex;gap:12px;}
+.d-doc{display:flex;align-items:center;gap:5px;}
+.d-doc .av{font-size:14px;opacity:0;transition:opacity .5s var(--ease) .1s;}
+.device[data-stage="3"] .d-doc .av,.device[data-stage="4"] .d-doc .av{opacity:1;}
+.d-doc .sk{height:7px;display:flex;align-items:center;min-width:34px;}
+.d-doc .t{font-size:7px;font-weight:600;color:#3A3A45;white-space:nowrap;}
+
+/* school: announcement bar + fee table */
+.d-notice{padding:7px 16px;background:#D6D6DC;transition:background .6s var(--ease);}
+.device[data-stage="2"] .d-notice,.device[data-stage="3"] .d-notice,.device[data-stage="4"] .d-notice{
+  background:color-mix(in srgb,var(--da) 20%,#fff);}
+.d-notice .sk{height:8px;display:inline-flex;align-items:center;min-width:150px;}
+.d-notice .t{font-size:7.5px;font-weight:600;color:#3A2E12;white-space:nowrap;}
+.d-table{border:1px solid #E6E6EB;border-radius:7px;overflow:hidden;}
+.d-tr{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 9px;border-bottom:1px solid #EDEDF1;}
+.d-tr:last-child{border-bottom:0;}
+.d-tr.head{background:#F4F4F8;transition:background .6s var(--ease);}
+.device[data-stage="2"] .d-tr.head,.device[data-stage="3"] .d-tr.head,.device[data-stage="4"] .d-tr.head{
+  background:color-mix(in srgb,var(--da) 12%,#fff);}
+.d-tr .sk{height:7px;display:flex;align-items:center;min-width:56px;}
+.d-tr .t{font-size:7.5px;color:#2A2A33;white-space:nowrap;}
+.d-tr.head .t{font-size:6.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6B6B76;}
+.d-tp .t{font-weight:700;color:var(--da);}
+
+/* church: sermon player + the week */
+.d-play{display:flex;align-items:center;gap:8px;padding:9px 10px;border-radius:7px;margin-bottom:12px;
+  background:#E4E4EA;transition:background .6s var(--ease);}
+.device[data-stage="2"] .d-play,.device[data-stage="3"] .d-play,.device[data-stage="4"] .d-play{
+  background:linear-gradient(120deg,color-mix(in srgb,var(--da) 22%,#fff),color-mix(in srgb,var(--da) 7%,#fff));}
+.d-play .pb{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:7px;color:#fff;
+  background:#B9B9C4;flex:none;transition:background .6s var(--ease);}
+.device[data-stage="2"] .d-play .pb,.device[data-stage="3"] .d-play .pb,.device[data-stage="4"] .d-play .pb{background:var(--da);}
+.d-play .pl{flex:1;height:8px;display:flex;align-items:center;}
+.d-play .pl .t{font-size:8px;font-weight:600;color:#1A1A22;white-space:nowrap;}
+.d-play .pd{height:7px;display:flex;align-items:center;}
+.d-play .pd .t{font-size:7px;color:#6B6B76;font-variant-numeric:tabular-nums;}
+.d-times{display:grid;gap:7px;}
+.d-time{display:flex;align-items:center;gap:8px;}
+.d-time .dd{height:7px;display:flex;align-items:center;min-width:46px;}
+.d-time .dd .t{font-size:7px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--da);white-space:nowrap;}
+.d-time .ds{height:7px;flex:1;display:flex;align-items:center;}
+.d-time .ds .t{font-size:8px;color:#2A2A33;white-space:nowrap;}
+.d-time .dt{height:7px;display:flex;align-items:center;}
+.d-time .dt .t{font-size:8px;font-weight:700;color:#1A1A22;font-variant-numeric:tabular-nums;}
+
+/* build progress rail */
+.rail{display:flex;align-items:center;gap:0;margin-top:20px;}
+.rstep{flex:1;display:flex;flex-direction:column;gap:7px;position:relative;}
+.rstep .ln{height:2px;background:rgba(255,255,255,.09);border-radius:2px;overflow:hidden;}
+.rstep .ln i{display:block;height:100%;width:0;background:var(--amber);border-radius:2px;transition:width .5s linear;}
+.rstep.done .ln i{width:100%;}
+.rstep.now .ln i{width:100%;transition:width .8s linear;}
+.rstep span{font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute-2);transition:color .4s;}
+.rstep.now span,.rstep.done span{color:var(--ivory);}
+.rail-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:14px;}
+.demo-note{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute-2);}
+.replay{
+  background:transparent;border:1px solid var(--line-2);color:var(--mute);border-radius:100px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  padding:7px 14px;cursor:pointer;transition:all .3s var(--ease);
+}
+.replay:hover{color:var(--ivory);border-color:var(--ivory);}
+
+/* ---------- proof strip ---------- */
+/* proof strip — four facts, stated once, where the ticker used to churn */
+.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-1);}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);}
+.pf{padding:46px 28px;border-right:1px solid var(--line);transition:background .5s var(--ease);}
+.pf:last-child{border-right:0;}
+.pf:hover{background:rgba(255,255,255,.022);}
+.pf-n{
+  display:block;font-family:var(--display);font-weight:800;line-height:1;
+  font-size:clamp(40px,5.2vw,68px);letter-spacing:-.055em;color:var(--ivory);
+  font-variant-numeric:tabular-nums;
+}
+.pf:nth-child(2) .pf-n{color:var(--amber);}
+.pf-u{
+  display:block;font-family:var(--mono);font-size:10.5px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-top:14px;
+}
+.pf:nth-child(2) .pf-u{color:var(--mute-2);}
+.pf p{color:var(--mute-2);font-size:13.5px;line-height:1.55;margin-top:12px;max-width:210px;}
+.pgrid.rv > *{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out);}
+.pgrid.rv.in > *{opacity:1;transform:none;}
+.pgrid.rv.in > *:nth-child(1){transition-delay:0s;}
+.pgrid.rv.in > *:nth-child(2){transition-delay:.08s;}
+.pgrid.rv.in > *:nth-child(3){transition-delay:.16s;}
+.pgrid.rv.in > *:nth-child(4){transition-delay:.24s;}
+.pgrid.rv{opacity:1;transform:none;}
+
+/* scroll progress */
+.prog{
+  position:fixed;top:0;left:0;height:2px;width:100%;z-index:95;pointer-events:none;
+  transform:scaleX(0);transform-origin:0 50%;
+  background:linear-gradient(90deg,var(--amber),var(--indigo));
+}
+
+/* headline: per-character weight + lift that follows the cursor.
+   Characters are inline-block so they can be transformed, which would let a
+   line break fall inside a word — so each word is wrapped in a nowrap box
+   and breaks are only possible at the real spaces between them. */
+.hero h1 .wd{display:inline-block;white-space:nowrap;}
+.hero h1 .ch{display:inline-block;will-change:transform,font-variation-settings;}
+.hero h1.split .g{
+  background:none;-webkit-background-clip:border-box;background-clip:border-box;
+  color:inherit;-webkit-text-fill-color:currentColor;
+}
+
+/* ---------- services: editorial rows ---------- */
+.rows{border-top:1px solid var(--line);}
+.row{
+  border-bottom:1px solid var(--line);padding:30px 0;
+  display:grid;grid-template-columns:80px 1.1fr 1.4fr auto;gap:30px;align-items:center;
+  transition:background .45s var(--ease),padding .45s var(--ease);position:relative;
+}
+.row::before{content:"";position:absolute;left:-26px;right:-26px;top:0;bottom:0;background:linear-gradient(90deg,rgba(255,178,36,.07),transparent 60%);opacity:0;transition:opacity .45s;border-radius:4px;}
+.row:hover::before{opacity:1;}
+.row>*{position:relative;}
+.rnum{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.1em;}
+.row h3{font-size:clamp(23px,3vw,36px);letter-spacing:-.04em;transition:transform .45s var(--ease);}
+.row:hover h3{transform:translateX(7px);}
+.row p{color:var(--mute);font-size:14.5px;}
+.rtag{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute-2);border:1px solid var(--line-2);padding:6px 12px;border-radius:100px;white-space:nowrap;}
+.row.lead .rnum{color:var(--ink);background:var(--amber);border-radius:6px;padding:4px 8px;display:inline-block;}
+
+/* ---------- capability chips ---------- */
+.caps{display:flex;flex-wrap:wrap;gap:10px;margin-top:52px;}
+.cap{
+  display:inline-flex;align-items:center;gap:9px;padding:12px 19px;border-radius:100px;
+  border:1px solid var(--line);background:rgba(255,255,255,.03);font-size:14px;color:var(--mute);
+  transition:all .35s var(--ease);
+}
+.cap:hover{color:var(--ivory);border-color:var(--amber);background:rgba(255,178,36,.08);transform:translateY(-2px);}
+
+/* ---------- pricing ---------- */
+#pricing{background:linear-gradient(180deg,var(--ink),var(--ink-1) 40%,var(--ink));}
+.phead{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:52px;}
+.cur{display:flex;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:100px;padding:4px;flex:none;}
+.cur button{
+  border:0;background:transparent;color:var(--mute-2);cursor:pointer;
+  font-family:var(--mono);font-weight:600;font-size:11.5px;letter-spacing:.08em;
+  padding:9px 17px;border-radius:100px;transition:all .28s var(--ease);
+}
+.cur button.on{background:var(--amber);color:var(--ink);}
+.pkgs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px;}
+.pkg{
+  background:var(--ink-2);border:1px solid var(--line);border-radius:18px;padding:28px 24px;
+  display:flex;flex-direction:column;position:relative;overflow:hidden;
+  transition:transform .45s var(--ease-out),border-color .4s,box-shadow .45s var(--ease-out);
+}
+.pkg::after{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;opacity:0;transition:opacity .45s;
+  background:radial-gradient(360px 200px at var(--mx,50%) 0%,rgba(255,178,36,.11),transparent 70%);}
+.pkg:hover{transform:translateY(-6px);border-color:var(--line-2);box-shadow:0 34px 66px -26px rgba(0,0,0,.9);}
+.pkg:hover::after{opacity:1;}
+.pkg>*{position:relative;}
+.pkg.best{border-color:rgba(91,108,255,.5);background:linear-gradient(175deg,rgba(91,108,255,.11),var(--ink-2) 55%);}
+.best-tag{
+  position:absolute;top:0;right:24px;background:var(--indigo);color:#fff;
+  font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.14em;
+  padding:5px 11px;border-radius:0 0 7px 7px;
+}
+.ptag{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--amber);margin-bottom:17px;}
+.amt{font-family:var(--display);font-size:32px;font-weight:800;letter-spacing:-.045em;line-height:1.1;white-space:nowrap;}
+.amt small{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--mute-2);letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:3px;}
+.pkg h3{font-size:19px;font-weight:700;margin:14px 0 8px;letter-spacing:-.025em;}
+.pdesc{color:var(--mute-2);font-size:13.5px;margin-bottom:19px;}
+.pkg ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px;}
+.pkg li{font-size:13.5px;color:var(--mute);padding-left:21px;position:relative;line-height:1.45;}
+.pkg li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--amber);opacity:.85;}
+.pkg .btn{margin-top:auto;width:100%;}
+.care{
+  background:linear-gradient(115deg,rgba(255,178,36,.1),var(--ink-2) 55%);
+  border:1px solid rgba(255,178,36,.28);border-radius:18px;padding:32px;
+  display:flex;gap:34px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+}
+.care>div:not(.cprice){flex:1 1 380px;min-width:0;}
+.care h3{font-size:23px;margin-bottom:16px;letter-spacing:-.03em;}
+.care ul{list-style:none;margin:0;padding:0;display:flex;gap:11px 28px;flex-wrap:wrap;}
+.care li{font-size:13.5px;color:var(--mute);padding-left:22px;position:relative;}
+.care li::before{content:"✓";position:absolute;left:0;color:var(--amber);font-weight:700;}
+.cprice{text-align:right;flex:0 0 auto;min-width:190px;}
+.cprice .amt{font-size:36px;}
+.cprice>span{display:block;font-family:var(--mono);font-size:11px;color:var(--mute-2);line-height:1.6;margin-top:7px;white-space:nowrap;letter-spacing:.04em;}
+.fx{margin-top:24px;font-family:var(--mono);font-size:11px;color:var(--mute-2);text-align:center;letter-spacing:.03em;line-height:1.7;}
+
+/* ---------- work ---------- */
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;perspective:1600px;}
+.work{
+  background:linear-gradient(165deg,var(--surf),var(--ink-2));
+  border:1px solid var(--line);border-radius:20px;padding:32px;
+  position:relative;overflow:hidden;transform-style:preserve-3d;will-change:transform;
+  transition:border-color .4s,box-shadow .5s var(--ease-out),transform .6s var(--ease-out);
+}
+.work .glare{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s;
+  background:radial-gradient(400px 260px at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.09),transparent 66%);}
+.work:hover{border-color:var(--line-2);box-shadow:0 40px 80px -30px rgba(0,0,0,.95);}
+.work:hover .glare{opacity:1;}
+.lift{transform:translateZ(38px);}
+.wtop{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:14px;}
+.work h3{font-size:24px;letter-spacing:-.035em;}
+.st{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;padding:5px 11px;border-radius:100px;white-space:nowrap;}
+.st i{width:5px;height:5px;border-radius:50%;}
+.st.live{background:rgba(31,211,163,.13);color:var(--jade);}
+.st.live i{background:var(--jade);animation:blip 2.4s infinite;}
+.st.soon{background:rgba(91,108,255,.13);color:#9AA5FF;}
+.st.soon i{background:#9AA5FF;}
+.st.dev{background:rgba(255,178,36,.13);color:var(--amber);}
+.st.dev i{background:var(--amber);}
+@keyframes blip{0%{box-shadow:0 0 0 0 rgba(31,211,163,.6);}70%{box-shadow:0 0 0 7px rgba(31,211,163,0);}100%{box-shadow:0 0 0 0 rgba(31,211,163,0);}}
+.work p{color:var(--mute);font-size:14.5px;margin-bottom:20px;}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px;}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:5px 10px;border-radius:6px;background:rgba(255,255,255,.05);color:var(--mute-2);border:1px solid var(--line);}
+.wlink{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:14px;color:var(--amber);transition:gap .3s var(--ease);}
+.wlink:hover{gap:14px;}
+.wlink.off{color:var(--mute-2);}
+
+/* ---------- globe band ---------- */
+.band{position:relative;overflow:hidden;padding:120px 0;background:var(--ink-1);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+#globe{position:absolute;top:50%;right:-4%;transform:translateY(-50%);width:min(620px,48vw);aspect-ratio:1;z-index:0;opacity:0;transition:opacity 1.6s var(--ease);pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 50%,
+      rgba(91,108,255,.17) 0%,
+      rgba(91,108,255,.13) 24%,
+      rgba(91,108,255,.09) 36%,
+      rgba(120,140,255,.22) 40.5%,
+      rgba(91,108,255,.06) 44%,
+      transparent 58%);}
+#globe.on{opacity:1;}
+#globe{will-change:opacity;}
+.band .wrap{position:relative;z-index:1;}
+.band-in{max-width:520px;}
+.band h2{font-size:clamp(30px,4.6vw,52px);margin:22px 0 18px;letter-spacing:-.04em;}
+.band p{color:var(--mute);font-size:16.5px;margin-bottom:28px;}
+.cities{display:flex;flex-wrap:wrap;gap:9px;}
+.city{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute-2);border:1px solid var(--line);padding:7px 13px;border-radius:100px;}
+.city.home{color:var(--amber);border-color:rgba(255,178,36,.35);background:rgba(255,178,36,.06);}
+
+/* ---------- process ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.step{padding:34px 28px;border:1px solid var(--line);border-radius:18px;background:var(--ink-2);transition:all .45s var(--ease-out);}
+.step:hover{transform:translateY(-5px);border-color:var(--line-2);}
+.step .n{font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.14em;margin-bottom:22px;display:block;}
+.step h3{font-size:21px;margin-bottom:11px;letter-spacing:-.03em;}
+.step p{color:var(--mute);font-size:14.5px;}
+
+/* ---------- CTA ---------- */
+.cta{border-radius:26px;padding:70px 56px;position:relative;overflow:hidden;background:var(--ink-2);border:1px solid var(--line-2);}
+.cta::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 400px at 12% 15%,rgba(255,178,36,.16),transparent 62%),
+  radial-gradient(600px 400px at 88% 85%,rgba(91,108,255,.2),transparent 62%);}
+.cta-in{position:relative;display:flex;gap:46px;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.cta h2{font-size:clamp(32px,4.6vw,56px);margin-bottom:14px;letter-spacing:-.04em;}
+.cta p{color:var(--mute);max-width:420px;font-size:16px;}
+.cact{display:flex;flex-direction:column;gap:12px;min-width:310px;}
+.cmail{text-align:center;font-family:var(--mono);font-size:11.5px;color:var(--mute-2);letter-spacing:.04em;transition:color .3s;}
+.cmail:hover{color:var(--amber);}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink);}
+.fg{display:grid;grid-template-columns:2fr 1fr 1.3fr;gap:50px;margin-bottom:50px;}
+.fg p{color:var(--mute-2);font-size:14px;margin-top:17px;max-width:320px;}
+.fc h4{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--mute-2);margin-bottom:18px;}
+.fc a{display:block;color:var(--mute);font-size:14px;margin-bottom:12px;transition:color .25s;}
+.fc a:hover{color:var(--amber);}
+.fb{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--mute-2);letter-spacing:.04em;}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease-out),transform .85s var(--ease-out);}
+.rv.in{opacity:1;transform:none;}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .pgrid{grid-template-columns:repeat(2,1fr);}
+  .pf:nth-child(2){border-right:0;}
+  .pf:nth-child(-n+2){border-bottom:1px solid var(--line);}
+  .pf{padding:34px 22px;}
+  .hgrid{grid-template-columns:1fr;gap:52px;}
+  .hero{min-height:0;padding:132px 0 80px;}
+  .device{transform:none;}
+  .device:hover{transform:none;}
+  .pkgs{grid-template-columns:repeat(2,1fr);}
+  #globe{right:-20%;width:min(520px,70vw);}
+  #globe.on{opacity:.4;}
+  .row{grid-template-columns:54px 1fr;gap:16px 20px;}
+  .row .rp{grid-column:2;}
+  .rtag{display:none;}
+}
+@media (max-width:820px){
+  nav{
+    position:fixed;top:78px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;
+    background:rgba(8,8,10,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+    padding:0 26px;max-height:0;overflow:hidden;transition:max-height .45s var(--ease),padding .45s var(--ease);
+  }
+  nav.open{max-height:400px;padding:12px 26px 24px;}
+  nav a.nl{width:100%;padding:16px 0;border-bottom:1px solid var(--line);font-size:16px;}
+  nav .hact{margin-top:18px;width:100%;justify-content:space-between;}
+  .nav-cta{display:none;}
+  .burger{display:block;}
+  .sec{padding:86px 0;}
+  .wgrid,.steps{grid-template-columns:1fr;}
+  .fg{grid-template-columns:1fr;gap:38px;}
+  .cta{padding:44px 26px;}
+  .cact{min-width:100%;}
+  .care{flex-direction:column;align-items:flex-start;gap:24px;}
+  .cprice{text-align:left;}
+  .screen{height:340px;}
+}
+@media (max-width:560px){
+  .d-menu{grid-template-columns:1fr;gap:9px;}
+  .d-menu .d-mi:nth-child(4){display:none;}   /* three dishes fit the phone frame */
+  .pgrid{grid-template-columns:1fr;}
+  .pf{border-right:0;border-bottom:1px solid var(--line);padding:28px 0;}
+  .pf:last-child{border-bottom:0;}
+  .pf p{max-width:none;}
+  .pkgs{grid-template-columns:1fr;}
+  .phead{flex-direction:column;align-items:flex-start;}
+  .rail span{font-size:7px;letter-spacing:.06em;}
+  .rail{gap:3px;}
+  .screen{height:344px;}
+  .wrap{padding:0 20px;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;}
+  .rv{opacity:1;transform:none;}
+}
+</style>
+</head>
+<body id="top">
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<header id="head">
+  <div class="wrap bar">
+    <a href="#top" class="brand" aria-label="Africode Studios home"><span class="mark">A</span><span>Africode&nbsp;Studios</span></a>
+    <nav id="nav">
+      <a href="#services" class="nl" data-i18n="nav.services">What we build</a>
+      <a href="#pricing" class="nl" data-i18n="nav.pricing">Pricing</a>
+      <a href="#work" class="nl" data-i18n="nav.work">Our work</a>
+      <a href="#process" class="nl" data-i18n="nav.process">Process</a>
+      <div class="hact">
+        <div class="lang" role="group" aria-label="Language">
+          <button id="lang-en" class="on" onclick="setLang('en',true)">EN</button>
+          <button id="lang-fr" onclick="setLang('fr',true)">FR</button>
+        </div>
+        <a href="#contact" class="btn btn-amber btn-sm nav-cta" data-i18n="nav.quote">Free quote</a>
+      </div>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav" onclick="toggleNav()">☰</button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <canvas id="aurora" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hgrid">
+
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Web studio · Accra, Ghana</p>
+        <h1><span data-split data-i18n="hero.h1a">We build it.</span><br><span class="g" data-split data-i18n="hero.h1b">You grow.</span></h1>
+        <p class="hlede" data-i18n="hero.lede">Websites, online stores and web apps that make your business look credible, get found, and win more customers. Live in as little as a week.</p>
+        <div class="hero-cta">
+          <a class="btn btn-amber" data-wa href="#" data-i18n="hero.cta1">Get a free quote</a>
+          <a class="btn btn-ghost" href="#work" data-i18n="hero.cta2">See our work</a>
+        </div>
+      </div>
+
+      <div class="demo-side">
+        <p class="picker-lab" data-i18n="demo.pick">What do you run? Watch us build it →</p>
+        <div class="picker" id="picker" role="group" aria-label="Business type"></div>
+
+        <div class="device" id="device" data-stage="0" data-tilt>
+          <div class="chrome">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="url"><span class="lock">🔒</span><span id="demoUrl">…</span></span>
+            <span class="d-live">LIVE</span>
+          </div>
+          <div class="screen" id="screen" aria-hidden="true"></div>
+        </div>
+
+        <div class="rail" id="rail"></div>
+        <div class="rail-foot">
+          <span class="demo-note" data-i18n="demo.note">Example build · not a real client</span>
+          <button class="replay" id="replay" data-i18n="demo.replay">↻ Build again</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap pgrid rv" id="pgrid">
+    <div class="pf">
+      <span class="pf-n" data-count="7">7</span>
+      <span class="pf-u" data-i18n="pf1.u">days</span>
+      <p data-i18n="pf1.d">From your first message to a site that is live.</p>
+    </div>
+    <div class="pf">
+      <span class="pf-n" data-price="starter">$40</span>
+      <span class="pf-u" data-i18n="pf2.u">starting price</span>
+      <p data-i18n="pf2.d">Fixed and agreed in writing before we start.</p>
+    </div>
+    <div class="pf">
+      <span class="pf-n" data-count="2">2</span>
+      <span class="pf-u" data-i18n="pf3.u">languages</span>
+      <p data-i18n="pf3.d">Built and supported in English and French.</p>
+    </div>
+    <div class="pf">
+      <span class="pf-n" data-count="100" data-suffix="%">100%</span>
+      <span class="pf-u" data-i18n="pf4.u">mobile-first</span>
+      <p data-i18n="pf4.d">Fast on any phone, on any network.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow" data-i18n="svc.kicker">What we do</p>
+      <h2 class="sec-h" data-i18n="svc.h2">One partner.<br>Not three freelancers.</h2>
+      <p class="sec-p" data-i18n="svc.intro">Most studios build you a site and disappear. We build it, then run it — the whole online side of your business, month after month.</p>
+    </div>
+
+    <div class="rows rv">
+      <div class="row lead">
+        <span class="rnum">01</span>
+        <h3 data-i18n="pil.build">Build</h3>
+        <p class="rp" data-i18n="pil.build.d">Websites, online stores and custom software — the assets your business runs on.</p>
+        <span class="rtag" data-i18n="pil.build.t">One-off project</span>
+      </div>
+      <div class="row">
+        <span class="rnum">02</span>
+        <h3 data-i18n="pil.manage">Manage</h3>
+        <p class="rp" data-i18n="pil.manage.d">Social media, content and your Google profile — posted, scheduled and answered.</p>
+        <span class="rtag" data-i18n="pil.manage.t">Monthly</span>
+      </div>
+      <div class="row">
+        <span class="rnum">03</span>
+        <h3 data-i18n="pil.grow">Grow</h3>
+        <p class="rp" data-i18n="pil.grow.d">SEO, ads and plain-English reporting on exactly what your money did.</p>
+        <span class="rtag" data-i18n="pil.grow.t">Monthly</span>
+      </div>
+      <div class="row">
+        <span class="rnum">04</span>
+        <h3 data-i18n="pil.support">Support</h3>
+        <p class="rp" data-i18n="pil.support.d">Hosting, security, backups, domains, business email — and someone to call.</p>
+        <span class="rtag" data-i18n="pil.support.t">Always on</span>
+      </div>
+    </div>
+
+    <div class="caps rv">
+      <span class="cap">🌐 <span data-i18n="c1">Business websites</span></span>
+      <span class="cap">🛒 <span data-i18n="c2">Online stores</span></span>
+      <span class="cap">⚙️ <span data-i18n="c3">Web apps &amp; software</span></span>
+      <span class="cap">📱 <span data-i18n="c4">Mobile apps</span></span>
+      <span class="cap">💳 <span data-i18n="c5">Mobile-money payments</span></span>
+      <span class="cap">📣 <span data-i18n="c6">Social media management</span></span>
+      <span class="cap">✍️ <span data-i18n="c7">Content creation</span></span>
+      <span class="cap">📈 <span data-i18n="c8">SEO &amp; online ads</span></span>
+      <span class="cap">🎨 <span data-i18n="c9">Logo &amp; brand design</span></span>
+      <span class="cap">🛡️ <span data-i18n="c10">Hosting &amp; maintenance</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="sec" id="pricing">
+  <div class="wrap">
+    <div class="phead rv">
+      <div>
+        <p class="eyebrow" data-i18n="pr.kicker">Pricing</p>
+        <h2 class="sec-h" data-i18n="pr.h2">Fixed prices.<br>Told upfront.</h2>
+        <p class="sec-p" data-i18n="pr.intro">A clear plan, a timeline and a price before we start — always.</p>
+      </div>
+      <div class="cur" role="group" aria-label="Currency">
+        <button data-cur="USD" class="on" onclick="setCur('USD',true)">USD</button>
+        <button data-cur="GHS" onclick="setCur('GHS',true)">GH₵</button>
+        <button data-cur="XAF" onclick="setCur('XAF',true)">FCFA</button>
+      </div>
+    </div>
+
+    <div class="pkgs rv">
+      <div class="pkg">
+        <p class="ptag" data-i18n="pk1.tag">Starter</p>
+        <p class="amt"><small data-i18n="pr.from">from</small><span data-price="starter">$40</span></p>
+        <h3 data-i18n="pk1.h">One-Page Website</h3>
+        <p class="pdesc" data-i18n="pk1.d">A clean, professional presence to get you online fast.</p>
+        <ul>
+          <li data-i18n="pk1.f1">One sleek, mobile-friendly page</li>
+          <li data-i18n="pk1.f2">Your services, info &amp; photos</li>
+          <li data-i18n="pk1.f3">Click-to-WhatsApp &amp; contact buttons</li>
+          <li data-i18n="pk1.f4">Basic Google / SEO setup</li>
+        </ul>
+        <a class="btn btn-ghost btn-sm" data-wa data-wa-pkg="One-Page Website" href="#" data-i18n="pr.cta">Get a quote</a>
+      </div>
+      <div class="pkg best">
+        <span class="best-tag" data-i18n="pr.popular">POPULAR</span>
+        <p class="ptag" data-i18n="pk2.tag">Business</p>
+        <p class="amt"><small data-i18n="pr.from">from</small><span data-price="business">$90</span></p>
+        <h3 data-i18n="pk2.h">Multipage Website</h3>
+        <p class="pdesc" data-i18n="pk2.d">A complete website to fully establish your business.</p>
+        <ul>
+          <li data-i18n="pk2.f1">Up to 5 pages (Home, About, Services…)</li>
+          <li data-i18n="pk2.f2">Contact form, WhatsApp &amp; social links</li>
+          <li data-i18n="pk2.f3">Google Maps + SEO basics</li>
+          <li data-i18n="pk2.f4">Gallery, menu or portfolio section</li>
+        </ul>
+        <a class="btn btn-amber btn-sm" data-wa data-wa-pkg="Multipage Website" href="#" data-i18n="pr.cta">Get a quote</a>
+      </div>
+      <div class="pkg">
+        <p class="ptag" data-i18n="pk3.tag">Store</p>
+        <p class="amt"><small data-i18n="pr.from">from</small><span data-price="store">$120</span></p>
+        <h3 data-i18n="pk3.h">Online Store</h3>
+        <p class="pdesc" data-i18n="pk3.d">Start selling online, mobile money included.</p>
+        <ul>
+          <li data-i18n="pk3.f1">Product catalogue &amp; shopping cart</li>
+          <li data-i18n="pk3.f2">Secure checkout + mobile-money payments</li>
+          <li data-i18n="pk3.f3">Simple order management</li>
+          <li data-i18n="pk3.f4">Everything in the Business package</li>
+        </ul>
+        <a class="btn btn-ghost btn-sm" data-wa data-wa-pkg="Online Store" href="#" data-i18n="pr.cta">Get a quote</a>
+      </div>
+      <div class="pkg">
+        <p class="ptag" data-i18n="pk4.tag">Custom</p>
+        <p class="amt"><small data-i18n="pr.from">from</small><span data-price="custom">$250</span></p>
+        <h3 data-i18n="pk4.h">Web App &amp; Software</h3>
+        <p class="pdesc" data-i18n="pk4.d">Custom tools built around how you work.</p>
+        <ul>
+          <li data-i18n="pk4.f1">Booking systems, dashboards, marketplaces</li>
+          <li data-i18n="pk4.f2">User accounts &amp; secure logins</li>
+          <li data-i18n="pk4.f3">Built to your exact requirements</li>
+          <li data-i18n="pk4.f4">Quoted per project after a free consult</li>
+        </ul>
+        <a class="btn btn-ghost btn-sm" data-wa data-wa-pkg="Web App & Software" href="#" data-i18n="pr.cta">Get a quote</a>
+      </div>
+    </div>
+
+    <div class="care rv">
+      <div>
+        <p class="ptag" data-i18n="care.tag">Keep it running · first year included</p>
+        <h3 data-i18n="care.h">Care &amp; Hosting Plan</h3>
+        <ul>
+          <li data-i18n="care.f1">Domain &amp; reliable hosting</li>
+          <li data-i18n="care.f2">Security, SSL &amp; backups</li>
+          <li data-i18n="care.f3">Small updates &amp; changes</li>
+          <li data-i18n="care.f4">Priority support</li>
+        </ul>
+      </div>
+      <div class="cprice">
+        <p class="amt"><span data-price="care">$120</span></p>
+        <span><span data-i18n="care.per">per year</span> · <span data-price="careMo">≈ $10/month</span><br><span data-i18n="care.after">after your first year</span></span>
+      </div>
+    </div>
+
+    <p class="fx" data-i18n="pr.fx">Prices in USD. Local amounts are indicative, based on exchange rates as of 6 September 2026, and payable in GHS or XAF at the rate on the day.</p>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow" data-i18n="work.kicker">Our work</p>
+      <h2 class="sec-h" data-i18n="work.h2">We ship real products.</h2>
+      <p class="sec-p" data-i18n="work.intro">Not mockups. Products with real users, real payments and real uptime.</p>
+    </div>
+    <div class="wgrid rv">
+      <article class="work" data-tilt>
+        <div class="glare"></div>
+        <div class="lift">
+          <div class="wtop"><h3>CampusMart</h3><span class="st live"><i></i><span data-i18n="st.live">Live</span></span></div>
+          <p data-i18n="w.campusmart">A campus marketplace for Lancaster University Ghana — students buy, sell and message each other in one place. Live and running today.</p>
+          <div class="tags"><span class="tag" data-i18n="w.cm.t">Marketplace</span><span class="tag">React</span><span class="tag">Supabase</span><span class="tag">Vercel</span></div>
+          <a class="wlink" href="https://campusmart-seven.vercel.app" target="_blank" rel="noopener"><span data-i18n="w.visit">Visit site</span> ↗</a>
+        </div>
+      </article>
+      <article class="work" data-tilt>
+        <div class="glare"></div>
+        <div class="lift">
+          <div class="wtop"><h3>Passify</h3><span class="st soon"><i></i><span data-i18n="st.soon">Launching 2026</span></span></div>
+          <p data-i18n="w.passify">A subscription exam-prep platform for GCE, BAC, Probatoire, IB &amp; IGCSE students — a 102-document library with mobile-money payments via Campay &amp; PayUnit.</p>
+          <div class="tags"><span class="tag" data-i18n="w.pa.t">Subscription SaaS</span><span class="tag" data-i18n="w.pa.t2">Payments</span><span class="tag">EdTech</span></div>
+          <a class="wlink" href="https://passify.cm" target="_blank" rel="noopener"><span data-i18n="w.visit">Visit site</span> ↗</a>
+        </div>
+      </article>
+      <article class="work" data-tilt>
+        <div class="glare"></div>
+        <div class="lift">
+          <div class="wtop"><h3>ChopNow</h3><span class="st dev"><i></i><span data-i18n="st.dev">In development</span></span></div>
+          <p data-i18n="w.chopnow">A food-delivery mobile app connecting restaurants, riders and hungry customers — with live order tracking and mobile payments.</p>
+          <div class="tags"><span class="tag" data-i18n="w.ch.t">Mobile app</span><span class="tag">React Native</span><span class="tag">Expo</span></div>
+          <span class="wlink off"><span data-i18n="w.soon">Coming soon</span></span>
+        </div>
+      </article>
+      <article class="work" data-tilt>
+        <div class="glare"></div>
+        <div class="lift">
+          <div class="wtop"><h3>DreamPath</h3><span class="st dev"><i></i><span data-i18n="st.dev">In development</span></span></div>
+          <p data-i18n="w.dreampath">A career-roadmap engine that builds a realistic, budget-aware learning plan for any goal — no dead links, no impossible steps.</p>
+          <div class="tags"><span class="tag" data-i18n="w.dr.t">Web app</span><span class="tag">AI</span><span class="tag">Node</span></div>
+          <span class="wlink off"><span data-i18n="w.soon">Coming soon</span></span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GLOBE BAND ================= -->
+<section class="band">
+  <canvas id="globe" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="band-in rv">
+      <p class="eyebrow" data-i18n="band.kicker">Where we work</p>
+      <h2 data-i18n="band.h2">Built in Accra.<br>Shipped worldwide.</h2>
+      <p data-i18n="band.p">One studio, one time zone, no agency layers. We understand mobile money and WhatsApp-first customers — and we deliver to clients abroad in the same week, in English or French.</p>
+      <div class="cities">
+        <span class="city home">🇬🇭 Accra · home</span>
+        <span class="city">London</span><span class="city">Paris</span><span class="city">New York</span>
+        <span class="city">Toronto</span><span class="city">Dubai</span><span class="city">Lagos</span>
+        <span class="city">Douala</span><span class="city">Johannesburg</span><span class="city">Sydney</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow" data-i18n="proc.kicker">How it works</p>
+      <h2 class="sec-h" data-i18n="proc.h2">Three steps. One week.</h2>
+      <p class="sec-p" data-i18n="proc.intro">No jargon, no long delays, no disappearing.</p>
+    </div>
+    <div class="steps rv">
+      <div class="step">
+        <span class="n">STEP 01</span>
+        <h3 data-i18n="p1.h">Free quote &amp; plan</h3>
+        <p data-i18n="p1.p">Tell us what you need. We reply with a clear plan, timeline and fixed price — no surprises.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 02</span>
+        <h3 data-i18n="p2.h">We design &amp; build</h3>
+        <p data-i18n="p2.p">You approve the look, we build it. You see progress and give feedback along the way.</p>
+      </div>
+      <div class="step">
+        <span class="n">STEP 03</span>
+        <h3 data-i18n="p3.h">Launch &amp; support</h3>
+        <p data-i18n="p3.p">We put you live — often within a week — and stay on to host, update and support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="cta rv">
+      <div class="cta-in">
+        <div>
+          <h2 data-i18n="cta.h2">Let's build yours.</h2>
+          <p data-i18n="cta.p">Free quote, honest advice and a clear plan. Message us on WhatsApp — we usually reply the same day.</p>
+        </div>
+        <div class="cact">
+          <a class="btn btn-wa" data-wa href="#">💬 <span data-i18n="cta.wa">WhatsApp us — free quote</span></a>
+          <a class="cmail" href="mailto:africodestudios@gmail.com?subject=Website%20enquiry%20%E2%80%94%20Africode%20Studios">africodestudios@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <a href="#top" class="brand"><span class="mark">A</span><span>Africode&nbsp;Studios</span></a>
+        <p data-i18n="foot.tag">A web studio in Accra building fast, modern websites and web apps for clients worldwide. We build it — you grow.</p>
+      </div>
+      <div class="fc">
+        <h4 data-i18n="foot.explore">Explore</h4>
+        <a href="#services" data-i18n="nav.services">What we build</a>
+        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="#work" data-i18n="nav.work">Our work</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+      </div>
+      <div class="fc">
+        <h4 data-i18n="foot.contact">Contact</h4>
+        <a href="mailto:africodestudios@gmail.com">africodestudios@gmail.com</a>
+        <a href="https://wa.me/233550456626" target="_blank" rel="noopener">WhatsApp · +233 55 045 6626</a>
+      </div>
+    </div>
+    <div class="fb">
+      <span>© <span id="yr"></span> Africode Studios</span>
+      <span data-i18n="foot.based">Based in Accra, Ghana · Clients worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ===================== preferences ===================== */
+var K={lang:'africode.lang',cur:'africode.cur'};
+function put(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function get(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+
+/* ===================== copy ===================== */
+var I18N={
+"meta.title":{en:"Africode Studios — We build it. You grow.",fr:"Africode Studios — On le construit. Vous grandissez."},
+"meta.desc":{en:"A web studio in Accra building websites, online stores and web apps for clients worldwide. Built and supported in English & French. Websites from $40.",fr:"Un studio web à Accra qui conçoit sites web, boutiques en ligne et applications pour des clients partout dans le monde. En français et en anglais. Sites web dès 40 $."},
+
+"nav.services":{en:"What we build",fr:"Nos services"},
+"nav.pricing":{en:"Pricing",fr:"Tarifs"},
+"nav.work":{en:"Our work",fr:"Réalisations"},
+"nav.process":{en:"Process",fr:"Méthode"},
+"nav.quote":{en:"Free quote",fr:"Devis gratuit"},
+
+"hero.eyebrow":{en:"Web studio · Accra, Ghana",fr:"Studio web · Accra, Ghana"},
+"hero.h1a":{en:"We build it.",fr:"On le construit."},
+"hero.h1b":{en:"You grow.",fr:"Vous grandissez."},
+"hero.lede":{en:"Websites, online stores and web apps that make your business look credible, get found, and win more customers. Live in as little as a week.",fr:"Sites web, boutiques en ligne et applications qui rendent votre entreprise crédible, vous font trouver et vous apportent plus de clients. En ligne en une semaine."},
+"hero.cta1":{en:"Get a free quote",fr:"Devis gratuit"},
+"hero.cta2":{en:"See our work",fr:"Nos réalisations"},
+"pf1.u":{en:"days",fr:"jours"},
+"pf1.d":{en:"From your first message to a site that is live.",fr:"De votre premier message à un site en ligne."},
+"pf2.u":{en:"starting price",fr:"prix de départ"},
+"pf2.d":{en:"Fixed and agreed in writing before we start.",fr:"Fixé et convenu par écrit avant de commencer."},
+"pf3.u":{en:"languages",fr:"langues"},
+"pf3.d":{en:"Built and supported in English and French.",fr:"Conçu et suivi en français et en anglais."},
+"pf4.u":{en:"mobile-first",fr:"pensé mobile"},
+"pf4.d":{en:"Fast on any phone, on any network.",fr:"Rapide sur tout téléphone, sur tout réseau."},
+
+"demo.pick":{en:"What do you run? Watch us build it →",fr:"Votre activité ? Regardez-nous la construire →"},
+"demo.note":{en:"Example build · not a real client",fr:"Exemple · pas un vrai client"},
+"demo.replay":{en:"↻ Build again",fr:"↻ Reconstruire"},
+"st1":{en:"Wireframe",fr:"Structure"},
+"st2":{en:"Layout",fr:"Mise en page"},
+"st3":{en:"Design",fr:"Design"},
+"st4":{en:"Content",fr:"Contenu"},
+"st5":{en:"Live",fr:"En ligne"},
+
+"svc.kicker":{en:"What we do",fr:"Ce que nous faisons"},
+"svc.h2":{en:"One partner.<br>Not three freelancers.",fr:"Un seul partenaire.<br>Pas trois prestataires."},
+"svc.intro":{en:"Most studios build you a site and disappear. We build it, then run it — the whole online side of your business, month after month.",fr:"La plupart des studios livrent un site puis disparaissent. Nous le construisons, puis nous le gérons — toute votre présence en ligne, mois après mois."},
+
+"pil.build":{en:"Build",fr:"Créer"},
+"pil.build.d":{en:"Websites, online stores and custom software — the assets your business runs on.",fr:"Sites, boutiques en ligne et logiciels sur mesure — les outils sur lesquels tourne votre activité."},
+"pil.build.t":{en:"One-off project",fr:"Projet ponctuel"},
+"pil.manage":{en:"Manage",fr:"Gérer"},
+"pil.manage.d":{en:"Social media, content and your Google profile — posted, scheduled and answered.",fr:"Réseaux sociaux, contenu et fiche Google — publiés, planifiés et gérés."},
+"pil.manage.t":{en:"Monthly",fr:"Mensuel"},
+"pil.grow":{en:"Grow",fr:"Développer"},
+"pil.grow.d":{en:"SEO, ads and plain-English reporting on exactly what your money did.",fr:"SEO, publicité et rapports clairs sur ce qu'a rapporté votre budget."},
+"pil.grow.t":{en:"Monthly",fr:"Mensuel"},
+"pil.support":{en:"Support",fr:"Assister"},
+"pil.support.d":{en:"Hosting, security, backups, domains, business email — and someone to call.",fr:"Hébergement, sécurité, sauvegardes, domaines, e-mail pro — et quelqu'un à appeler."},
+"pil.support.t":{en:"Always on",fr:"En continu"},
+
+"c1":{en:"Business websites",fr:"Sites web professionnels"},
+"c2":{en:"Online stores",fr:"Boutiques en ligne"},
+"c3":{en:"Web apps & software",fr:"Applications & logiciels"},
+"c4":{en:"Mobile apps",fr:"Applications mobiles"},
+"c5":{en:"Mobile-money payments",fr:"Paiements mobile money"},
+"c6":{en:"Social media management",fr:"Gestion des réseaux sociaux"},
+"c7":{en:"Content creation",fr:"Création de contenu"},
+"c8":{en:"SEO & online ads",fr:"SEO & publicité en ligne"},
+"c9":{en:"Logo & brand design",fr:"Logo & identité visuelle"},
+"c10":{en:"Hosting & maintenance",fr:"Hébergement & maintenance"},
+
+"pr.kicker":{en:"Pricing",fr:"Tarifs"},
+"pr.h2":{en:"Fixed prices.<br>Told upfront.",fr:"Prix fixes.<br>Annoncés d'avance."},
+"pr.intro":{en:"A clear plan, a timeline and a price before we start — always.",fr:"Un plan clair, un délai et un prix avant de commencer — toujours."},
+"pr.from":{en:"from",fr:"dès"},
+"pr.cta":{en:"Get a quote",fr:"Demander un devis"},
+"pr.popular":{en:"POPULAR",fr:"POPULAIRE"},
+"pr.fx":{en:"Prices in USD. Local amounts are indicative, based on exchange rates as of 6 September 2026, and payable in GHS or XAF at the rate on the day.",fr:"Prix en USD. Les montants locaux sont indicatifs, basés sur le taux de change du 6 septembre 2026, et payables en GHS ou XAF au taux du jour."},
+
+"pk1.tag":{en:"Starter",fr:"Essentiel"},
+"pk1.h":{en:"One-Page Website",fr:"Site une page"},
+"pk1.d":{en:"A clean, professional presence to get you online fast.",fr:"Une présence soignée et professionnelle, en ligne rapidement."},
+"pk1.f1":{en:"One sleek, mobile-friendly page",fr:"Une page élégante, adaptée au mobile"},
+"pk1.f2":{en:"Your services, info & photos",fr:"Vos services, infos & photos"},
+"pk1.f3":{en:"Click-to-WhatsApp & contact buttons",fr:"Boutons WhatsApp & contact"},
+"pk1.f4":{en:"Basic Google / SEO setup",fr:"Configuration Google / SEO de base"},
+"pk2.tag":{en:"Business",fr:"Entreprise"},
+"pk2.h":{en:"Multipage Website",fr:"Site multipage"},
+"pk2.d":{en:"A complete website to fully establish your business.",fr:"Un site complet pour bien établir votre entreprise."},
+"pk2.f1":{en:"Up to 5 pages (Home, About, Services…)",fr:"Jusqu'à 5 pages (Accueil, À propos, Services…)"},
+"pk2.f2":{en:"Contact form, WhatsApp & social links",fr:"Formulaire de contact, WhatsApp & réseaux sociaux"},
+"pk2.f3":{en:"Google Maps + SEO basics",fr:"Google Maps + bases SEO"},
+"pk2.f4":{en:"Gallery, menu or portfolio section",fr:"Galerie, menu ou portfolio"},
+"pk3.tag":{en:"Store",fr:"Boutique"},
+"pk3.h":{en:"Online Store",fr:"Boutique en ligne"},
+"pk3.d":{en:"Start selling online, mobile money included.",fr:"Vendez en ligne, mobile money inclus."},
+"pk3.f1":{en:"Product catalogue & shopping cart",fr:"Catalogue produits & panier"},
+"pk3.f2":{en:"Secure checkout + mobile-money payments",fr:"Paiement sécurisé + mobile money"},
+"pk3.f3":{en:"Simple order management",fr:"Gestion simple des commandes"},
+"pk3.f4":{en:"Everything in the Business package",fr:"Tout le pack Entreprise"},
+"pk4.tag":{en:"Custom",fr:"Sur mesure"},
+"pk4.h":{en:"Web App & Software",fr:"Application & logiciel"},
+"pk4.d":{en:"Custom tools built around how you work.",fr:"Des outils sur mesure adaptés à votre activité."},
+"pk4.f1":{en:"Booking systems, dashboards, marketplaces",fr:"Réservations, tableaux de bord, places de marché"},
+"pk4.f2":{en:"User accounts & secure logins",fr:"Comptes utilisateurs & connexions sécurisées"},
+"pk4.f3":{en:"Built to your exact requirements",fr:"Développé selon vos besoins exacts"},
+"pk4.f4":{en:"Quoted per project after a free consult",fr:"Devis par projet après consultation gratuite"},
+
+"care.tag":{en:"Keep it running · first year included",fr:"Pour tout gérer · 1ʳᵉ année incluse"},
+"care.h":{en:"Care & Hosting Plan",fr:"Forfait Maintenance & Hébergement"},
+"care.f1":{en:"Domain & reliable hosting",fr:"Domaine & hébergement fiable"},
+"care.f2":{en:"Security, SSL & backups",fr:"Sécurité, SSL & sauvegardes"},
+"care.f3":{en:"Small updates & changes",fr:"Petites mises à jour & modifications"},
+"care.f4":{en:"Priority support",fr:"Support prioritaire"},
+"care.per":{en:"per year",fr:"par an"},
+"care.after":{en:"after your first year",fr:"à partir de la 2ᵉ année"},
+
+"work.kicker":{en:"Our work",fr:"Réalisations"},
+"work.h2":{en:"We ship real products.",fr:"Nous livrons de vrais produits."},
+"work.intro":{en:"Not mockups. Products with real users, real payments and real uptime.",fr:"Pas des maquettes. Des produits avec de vrais utilisateurs, de vrais paiements, en production."},
+"st.live":{en:"Live",fr:"En ligne"},
+"st.soon":{en:"Launching 2026",fr:"Lancement 2026"},
+"st.dev":{en:"In development",fr:"En développement"},
+"w.visit":{en:"Visit site",fr:"Voir le site"},
+"w.soon":{en:"Coming soon",fr:"Bientôt disponible"},
+"w.campusmart":{en:"A campus marketplace for Lancaster University Ghana — students buy, sell and message each other in one place. Live and running today.",fr:"Une place de marché étudiante pour Lancaster University Ghana — les étudiants achètent, vendent et échangent au même endroit. En ligne dès aujourd'hui."},
+"w.cm.t":{en:"Marketplace",fr:"Place de marché"},
+"w.passify":{en:"A subscription exam-prep platform for GCE, BAC, Probatoire, IB & IGCSE students — a 102-document library with mobile-money payments via Campay & PayUnit.",fr:"Une plateforme de révision par abonnement pour les élèves du GCE, BAC, Probatoire, IB & IGCSE — une bibliothèque de 102 documents avec paiements mobile money via Campay & PayUnit."},
+"w.pa.t":{en:"Subscription SaaS",fr:"SaaS par abonnement"},
+"w.pa.t2":{en:"Payments",fr:"Paiements"},
+"w.chopnow":{en:"A food-delivery mobile app connecting restaurants, riders and hungry customers — with live order tracking and mobile payments.",fr:"Une application mobile de livraison de repas reliant restaurants, livreurs et clients — avec suivi en temps réel et paiements mobiles."},
+"w.ch.t":{en:"Mobile app",fr:"Application mobile"},
+"w.dreampath":{en:"A career-roadmap engine that builds a realistic, budget-aware learning plan for any goal — no dead links, no impossible steps.",fr:"Un moteur de feuille de route professionnelle qui construit un plan réaliste et adapté au budget — sans liens morts ni étapes impossibles."},
+"w.dr.t":{en:"Web app",fr:"Application web"},
+
+"band.kicker":{en:"Where we work",fr:"Où nous travaillons"},
+"band.h2":{en:"Built in Accra.<br>Shipped worldwide.",fr:"Conçu à Accra.<br>Livré dans le monde entier."},
+"band.p":{en:"One studio, one time zone, no agency layers. We understand mobile money and WhatsApp-first customers — and we deliver to clients abroad in the same week, in English or French.",fr:"Un seul studio, un seul fuseau, sans couches d'agence. Nous maîtrisons le mobile money et les clients qui vivent sur WhatsApp — et nous livrons à l'étranger dans la même semaine, en français ou en anglais."},
+
+"proc.kicker":{en:"How it works",fr:"Comment ça marche"},
+"proc.h2":{en:"Three steps. One week.",fr:"Trois étapes. Une semaine."},
+"proc.intro":{en:"No jargon, no long delays, no disappearing.",fr:"Sans jargon, sans délais interminables, sans disparaître."},
+"p1.h":{en:"Free quote & plan",fr:"Devis & plan gratuits"},
+"p1.p":{en:"Tell us what you need. We reply with a clear plan, timeline and fixed price — no surprises.",fr:"Dites-nous ce qu'il vous faut. Nous répondons avec un plan clair, un délai et un prix fixe — sans surprise."},
+"p2.h":{en:"We design & build",fr:"On conçoit & développe"},
+"p2.p":{en:"You approve the look, we build it. You see progress and give feedback along the way.",fr:"Vous validez le design, on le construit. Vous suivez l'avancement et donnez votre avis."},
+"p3.h":{en:"Launch & support",fr:"Lancement & suivi"},
+"p3.p":{en:"We put you live — often within a week — and stay on to host, update and support.",fr:"On vous met en ligne — souvent en une semaine — puis on assure hébergement, mises à jour et support."},
+
+"cta.h2":{en:"Let's build yours.",fr:"Construisons le vôtre."},
+"cta.p":{en:"Free quote, honest advice and a clear plan. Message us on WhatsApp — we usually reply the same day.",fr:"Devis gratuit, conseils honnêtes et plan clair. Écrivez-nous sur WhatsApp — nous répondons souvent le jour même."},
+"cta.wa":{en:"WhatsApp us — free quote",fr:"WhatsApp — devis gratuit"},
+
+"foot.tag":{en:"A web studio in Accra building fast, modern websites and web apps for clients worldwide. We build it — you grow.",fr:"Un studio web à Accra qui conçoit des sites et applications rapides et modernes pour des clients du monde entier. On le construit — vous grandissez."},
+"foot.explore":{en:"Explore",fr:"Explorer"},
+"foot.contact":{en:"Contact",fr:"Contact"},
+"foot.based":{en:"Based in Accra, Ghana · Clients worldwide",fr:"Basé à Accra, Ghana · Clients dans le monde entier"}
+};
+
+/* ===================== prices =====================
+   Published rates from the Africode pricing sheets (USD base, GHS/XAF
+   converted 6 Sep 2026). Written out per currency, never computed, so
+   they cannot silently drift from the printed sheets.               */
+var PRICES={
+USD:{starter:"$40",business:"$90",store:"$120",custom:"$250",care:"$120",careMo:{en:"≈ $10/month",fr:"≈ 10 $/mois"}},
+GHS:{starter:"GH₵470",business:"GH₵1,050",store:"GH₵1,400",custom:"GH₵2,950",care:"GH₵1,400",careMo:{en:"≈ GH₵120/month",fr:"≈ 120 GH₵/mois"}},
+XAF:{starter:"22 500 FCFA",business:"51 000 FCFA",store:"68 000 FCFA",custom:"141 000 FCFA",care:"68 000 FCFA",careMo:{en:"≈ 5 500 FCFA/month",fr:"≈ 5 500 FCFA/mois"}}
+};
+
+/* ===================== WhatsApp ===================== */
+/* Every enquiry goes to the Ghana line. */
+var WA_NUMBER="233550456626";
+var WA_TXT={en:"Hi Africode Studios! I'd like a free quote for my project.",fr:"Bonjour Africode Studios ! J'aimerais un devis gratuit pour mon projet."};
+var WA_PKG={en:function(p){return "Hi Africode Studios! I'd like a free quote for the "+p+" package.";},
+            fr:function(p){return "Bonjour Africode Studios ! J'aimerais un devis gratuit pour la formule "+p+".";}};
+var WA_BIZ={en:function(b){return "Hi Africode Studios! I run a "+b+" and I'd like a free quote for a website.";},
+            fr:function(b){return "Bonjour Africode Studios ! Je gère "+b+" et j'aimerais un devis gratuit pour un site web.";}};
+var PKG_FR={"One-Page Website":"Site une page","Multipage Website":"Site multipage","Online Store":"Boutique en ligne","Web App & Software":"Application & logiciel"};
+
+var lang='en',cur='USD',bizPick=null;
+
+function refreshWA(){
+  var base="https://wa.me/"+WA_NUMBER+"?text=";
+  var a=document.querySelectorAll('[data-wa]');
+  for(var i=0;i<a.length;i++){
+    var pkg=a[i].getAttribute('data-wa-pkg'),msg;
+    if(pkg){
+      msg=WA_PKG[lang]((lang==='fr'&&PKG_FR[pkg])?PKG_FR[pkg]:pkg);
+    }else if(bizPick&&DEMOS[bizPick]){
+      msg=WA_BIZ[lang](DEMOS[bizPick].biz[lang]);
+    }else{
+      msg=WA_TXT[lang];
+    }
+    a[i].setAttribute('href',base+encodeURIComponent(msg));
+  }
+}
+
+function setCur(n,save){
+  if(!PRICES[n])return;
+  cur=n; if(save)put(K.cur,n);
+  var t=PRICES[cur],el=document.querySelectorAll('[data-price]');
+  for(var i=0;i<el.length;i++){
+    var v=t[el[i].getAttribute('data-price')];
+    if(v==null)continue;
+    el[i].textContent=(typeof v==='string')?v:(v[lang]||v.en);
+  }
+  var b=document.querySelectorAll('.cur button');
+  for(var j=0;j<b.length;j++)b[j].classList.toggle('on',b[j].getAttribute('data-cur')===cur);
+}
+
+function setLang(n,save){
+  lang=(n==='fr')?'fr':'en';
+  if(save)put(K.lang,lang);
+  document.documentElement.lang=lang;
+  var el=document.querySelectorAll('[data-i18n]');
+  for(var i=0;i<el.length;i++){
+    var e=el[i],entry=I18N[e.getAttribute('data-i18n')];
+    if(!entry)continue;
+    var v=entry[lang];
+    if(v==null)continue;
+    if(e.hasAttribute('data-i18n-attr'))e.setAttribute(e.getAttribute('data-i18n-attr'),v);
+    else if(e.tagName==='TITLE')document.title=v;
+    else e.innerHTML=v;
+  }
+  document.getElementById('lang-en').classList.toggle('on',lang==='en');
+  document.getElementById('lang-fr').classList.toggle('on',lang==='fr');
+  setCur(cur,false);
+  buildPicker();
+  buildRail();
+  splitHero();
+  if(bizPick)runBuild(bizPick,false);
+  refreshWA();
+}
+window.setLang=setLang;window.setCur=setCur;
+
+/* ===================== the build demo =====================
+   Six business types, each with its own accent colour and its own
+   copy in both languages. The device runs a five-stage timeline:
+   wireframe → layout → design → content → live.                   */
+var DEMOS={
+restaurant:{
+  ico:"🍲",accent:"#FF6B35",url:"mamas-kitchen.com",layout:"menu",
+  label:{en:"Restaurant",fr:"Restaurant"}, biz:{en:"restaurant",fr:"un restaurant"},
+  name:{en:"Mama's Kitchen",fr:"Chez Mama"},
+  nav:{en:["Menu","Order","Find us"],fr:["Menu","Commander","Nous trouver"]},
+  h1:{en:"Hot jollof, delivered.",fr:"Du jollof chaud, livré."},
+  sub:{en:"Order on WhatsApp — ready in 20 minutes.",fr:"Commandez sur WhatsApp — prêt en 20 minutes."},
+  cta:{en:"Order now",fr:"Commander"},
+  lab:{en:"Today's menu",fr:"Menu du jour"},
+  foot:{en:"Open today until 10pm",fr:"Ouvert aujourd'hui jusqu'à 22h"},
+  items:[{e:"🍛",n:{en:"Jollof & chicken",fr:"Jollof & poulet"},p:"$5",
+          d:{en:"Smoky rice, grilled thigh, shito",fr:"Riz fumé, cuisse grillée, shito"}},
+         {e:"🍲",n:{en:"Waakye special",fr:"Waakye spécial"},p:"$4",
+          d:{en:"Rice & beans, egg, gari, stew",fr:"Riz-haricots, œuf, gari, sauce"}},
+         {e:"🐟",n:{en:"Grilled tilapia",fr:"Tilapia grillé"},p:"$7",
+          d:{en:"Whole fish, banku, pepper sauce",fr:"Poisson entier, banku, sauce pimentée"}},
+         {e:"🍗",n:{en:"Chicken suya",fr:"Suya de poulet"},p:"$6",
+          d:{en:"Spiced skewers, onion, lime",fr:"Brochettes épicées, oignon, citron"}}]
+},
+salon:{
+  ico:"💇🏾",accent:"#E85D9C",url:"glow-beauty.com",layout:"book",
+  label:{en:"Salon",fr:"Salon"}, biz:{en:"beauty salon",fr:"un salon de beauté"},
+  name:{en:"Glow Beauty Bar",fr:"Glow Beauté"},
+  nav:{en:["Services","Book","Gallery"],fr:["Services","Réserver","Galerie"]},
+  h1:{en:"Book your chair.",fr:"Réservez votre place."},
+  sub:{en:"Knotless braids · 3 hrs · $25",fr:"Tresses sans nœuds · 3 h · 25 $"},
+  cta:{en:"Confirm booking",fr:"Confirmer"},
+  lab:{en:"Pick a time — Saturday",fr:"Choisissez l'heure — samedi"},
+  foot:{en:"Free cancellation up to 24h before",fr:"Annulation gratuite jusqu'à 24h avant"},
+  slots:["09:00","10:30","12:00","13:30","15:00","16:30","18:00","19:30"],
+  slotOn:3, slotOff:[1,6]
+},
+shop:{
+  ico:"🛍️",accent:"#4C6FFF",url:"kente-corner.com",layout:"shop",
+  label:{en:"Shop",fr:"Boutique"}, biz:{en:"shop",fr:"une boutique"},
+  name:{en:"Kente Corner",fr:"Kente Corner"},
+  nav:{en:["Shop","New in","Delivery"],fr:["Boutique","Nouveautés","Livraison"]},
+  cart:2,
+  lab:{en:"Best sellers",fr:"Meilleures ventes"},
+  foot:{en:"Mobile money · card · delivery worldwide",fr:"Mobile money · carte · livraison mondiale"},
+  add:{en:"Add",fr:"Ajouter"},
+  items:[{e:"👗",n:{en:"Kente dress",fr:"Robe kente"},p:"$28"},
+         {e:"👜",n:{en:"Woven tote",fr:"Sac tissé"},p:"$14"},
+         {e:"🧣",n:{en:"Print scarf",fr:"Foulard imprimé"},p:"$7"},
+         {e:"👖",n:{en:"Wax trousers",fr:"Pantalon wax"},p:"$22"},
+         {e:"👑",n:{en:"Head wrap",fr:"Foulard tête"},p:"$9"},
+         {e:"📿",n:{en:"Bead set",fr:"Parure perles"},p:"$11"}]
+},
+clinic:{
+  ico:"🩺",accent:"#12B886",url:"unity-clinic.com",layout:"form",
+  label:{en:"Clinic",fr:"Clinique"}, biz:{en:"clinic",fr:"une clinique"},
+  name:{en:"Unity Health Clinic",fr:"Clinique Unity"},
+  nav:{en:["Services","Doctors","Book"],fr:["Services","Médecins","Rendez-vous"]},
+  h1:{en:"Care without the queue.",fr:"Des soins sans la file."},
+  sub:{en:"Book online, any hour.",fr:"Réservez en ligne, à toute heure."},
+  cta:{en:"Request appointment",fr:"Demander un rendez-vous"},
+  lab:{en:"Book an appointment",fr:"Prendre rendez-vous"},
+  foot:{en:"Our doctors",fr:"Nos médecins"},
+  fields:[{l:{en:"Full name",fr:"Nom complet"},v:{en:"Ama Mensah",fr:"Ama Mensah"}},
+          {l:{en:"Preferred date",fr:"Date souhaitée"},v:{en:"Tue 16 Sep",fr:"mar. 16 sept."}}],
+  dept:{l:{en:"Department",fr:"Service"},v:{en:"General medicine",fr:"Médecine générale"}},
+  docs:[{e:"👨🏾‍⚕️",n:{en:"Dr Owusu",fr:"Dr Owusu"}},
+        {e:"👩🏾‍⚕️",n:{en:"Dr Adjei",fr:"Dr Adjei"}},
+        {e:"👨🏿‍⚕️",n:{en:"Dr Boateng",fr:"Dr Boateng"}}]
+},
+school:{
+  ico:"🎓",accent:"#FFB224",url:"brightstar-academy.com",layout:"table",
+  label:{en:"School",fr:"École"}, biz:{en:"school",fr:"une école"},
+  name:{en:"Bright Star Academy",fr:"Académie Bright Star"},
+  nav:{en:["About","Admissions","Fees"],fr:["À propos","Admissions","Frais"]},
+  notice:{en:"📣 Admissions open for 2026/27 — apply by 30 September",fr:"📣 Inscriptions 2026/27 ouvertes — avant le 30 septembre"},
+  h1:{en:"Enrol your child online.",fr:"Inscrivez votre enfant en ligne."},
+  sub:{en:"Five minutes, no paperwork.",fr:"Cinq minutes, sans paperasse."},
+  cta:{en:"Start application",fr:"Commencer"},
+  lab:{en:"Programmes & termly fees",fr:"Programmes & frais par trimestre"},
+  cols:{en:["Programme","Per term"],fr:["Programme","Par trimestre"]},
+  rows:[{n:{en:"Primary (Class 1–6)",fr:"Primaire (CP–CM2)"},p:"$110"},
+        {n:{en:"Junior high (JHS 1–3)",fr:"Collège (6e–4e)"},p:"$160"},
+        {n:{en:"Creative arts club",fr:"Club arts créatifs"},p:"$55"}]
+},
+church:{
+  ico:"⛪",accent:"#7C5CFF",url:"gracechapel.org",layout:"times",
+  label:{en:"Church",fr:"Église"}, biz:{en:"church",fr:"une église"},
+  name:{en:"Grace Chapel",fr:"Chapelle Grace"},
+  nav:{en:["Services","Sermons","Give"],fr:["Cultes","Prédications","Donner"]},
+  h1:{en:"Everyone is welcome.",fr:"Chacun est le bienvenu."},
+  cta:{en:"Give",fr:"Donner"},
+  watch:{en:"Watch last Sunday",fr:"Revoir dimanche"},
+  dur:"41:20",
+  lab:{en:"This week",fr:"Cette semaine"},
+  foot:{en:"Streaming live on Sundays",fr:"En direct le dimanche"},
+  times:[{d:{en:"Sunday",fr:"Dimanche"},s:{en:"First service",fr:"Premier culte"},t:"09:00"},
+         {d:{en:"Sunday",fr:"Dimanche"},s:{en:"Second service",fr:"Deuxième culte"},t:"11:00"},
+         {d:{en:"Wednesday",fr:"Mercredi"},s:{en:"Bible study",fr:"Étude biblique"},t:"19:00"}]
+}
+};
+var ORDER=['restaurant','salon','shop','clinic','school','church'];
+
+var device=document.getElementById('device');
+var screenEl=document.getElementById('screen');
+var urlEl=document.getElementById('demoUrl');
+var pickerEl=document.getElementById('picker');
+var railEl=document.getElementById('rail');
+var timers=[],cycleTimer=null,autoCycle=true;
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function buildPicker(){
+  var h='';
+  for(var i=0;i<ORDER.length;i++){
+    var k=ORDER[i],d=DEMOS[k];
+    h+='<button class="pick'+(k===bizPick?' on':'')+'" data-biz="'+k+'">'+d.ico+' <span>'+esc(d.label[lang])+'</span></button>';
+  }
+  pickerEl.innerHTML=h;
+}
+pickerEl.addEventListener('click',function(e){
+  var b=e.target.closest('[data-biz]');
+  if(!b)return;
+  autoCycle=false;                    // a deliberate choice stops the carousel
+  if(cycleTimer){clearTimeout(cycleTimer);cycleTimer=null;}
+  runBuild(b.getAttribute('data-biz'),true);
+});
+
+var STAGE_KEYS=['st1','st2','st3','st4','st5'];
+function buildRail(){
+  var h='';
+  for(var i=0;i<5;i++){
+    var t=I18N[STAGE_KEYS[i]][lang];
+    h+='<div class="rstep" data-s="'+i+'"><div class="ln"><i></i></div><span>'+esc(t)+'</span></div>';
+  }
+  railEl.innerHTML=h;
+}
+function markRail(stage){
+  var st=railEl.querySelectorAll('.rstep');
+  for(var i=0;i<st.length;i++){
+    st[i].classList.toggle('done',i<stage);
+    st[i].classList.toggle('now',i===stage);
+  }
+}
+
+/* ---------------------------------------------------------------
+   Six businesses, six genuinely different sites. A restaurant needs a
+   menu with prices; a salon needs bookable slots; a shop needs a cart
+   and an Add button; a clinic needs an appointment form; a school needs
+   a fee table and an admissions notice; a church needs service times
+   and a player. Same five-stage build, completely different structure —
+   otherwise the demo just proves we own one template.
+   --------------------------------------------------------------- */
+function dNav(d){
+  var nav=d.nav[lang];
+  var h='<div class="d-nav blk"><span class="d-logo"><span class="sq"></span>'
+       +'<span class="nm sk"><span class="t">'+esc(d.name[lang])+'</span></span></span>'
+       +'<span class="d-links">';
+  for(var i=0;i<nav.length;i++)h+='<span class="sk"><span class="t">'+esc(nav[i])+'</span></span>';
+  h+='</span>';
+  if(d.cart)h+='<span class="d-cart sk"><span class="t">🛒 '+d.cart+'</span></span>';
+  return h+'</div>';
+}
+function dHero(d,compact,noBtn){
+  var h='<div class="d-hero blk'+(compact?' tight':'')+'">'
+       +'<div class="d-h1 sk"><span class="t">'+esc(d.h1[lang])+'</span></div>';
+  if(d.sub)h+='<div class="d-sub sk"><span class="t">'+esc(d.sub[lang])+'</span></div>';
+  /* where the page body already carries the call to action — a booking form,
+     a fee table — the hero must not repeat it. */
+  if(!noBtn)h+='<div class="d-cta"><span class="d-btn"><span class="t">'+esc(d.cta[lang])+'</span></span></div>';
+  return h+'</div>';
+}
+function dLab(d){return '<div class="d-lab sk"><span class="t">'+esc(d.lab[lang])+'</span></div>';}
+function dFoot(d){return d.foot?'<div class="d-note blk"><span class="sk"><span class="t">'+esc(d.foot[lang])+'</span></span></div>':'';}
+
+var LAYOUT={
+  /* restaurant — a menu that reads like a menu */
+  menu:function(d){
+    var h=dNav(d)+dHero(d)+'<div class="d-sec blk">'+dLab(d)+'<div class="d-menu">';
+    for(var i=0;i<d.items.length;i++){
+      var it=d.items[i];
+      h+='<div class="d-mi"><div class="d-mtop"><span class="d-me">'+it.e+'</span>'
+       + '<span class="d-mn sk"><span class="t">'+esc(it.n[lang])+'</span></span>'
+       + '<span class="d-lead"></span>'
+       + '<span class="d-mp sk"><span class="t">'+it.p+'</span></span></div>'
+       + '<div class="d-md sk"><span class="t">'+esc(it.d[lang])+'</span></div></div>';
+    }
+    return h+'</div></div>'+dFoot(d);
+  },
+  /* salon — a real booking grid, one slot already taken */
+  book:function(d){
+    var h=dNav(d)+dHero(d,true)+'<div class="d-sec blk">'+dLab(d)+'<div class="d-slots">';
+    for(var i=0;i<d.slots.length;i++){
+      var cls='d-slot'+(i===d.slotOn?' on':'')+(d.slotOff.indexOf(i)>=0?' off':'');
+      h+='<span class="'+cls+'"><span class="sk"><span class="t">'+d.slots[i]+'</span></span></span>';
+    }
+    return h+'</div></div>'+dFoot(d);
+  },
+  /* shop — catalogue, prices, add to cart */
+  shop:function(d){
+    var h=dNav(d)+'<div class="d-sec blk pad">'+dLab(d)+'<div class="d-prods">';
+    for(var i=0;i<d.items.length;i++){
+      var it=d.items[i];
+      h+='<div class="d-prod"><div class="d-pim"><span class="em">'+it.e+'</span></div>'
+       + '<div class="d-pb"><div class="d-pn sk"><span class="t">'+esc(it.n[lang])+'</span></div>'
+       + '<div class="d-pr"><span class="d-pp sk"><span class="t">'+it.p+'</span></span>'
+       + '<span class="d-add"><span class="t">'+esc(d.add[lang])+'</span></span></div></div></div>';
+    }
+    return h+'</div></div>'+dFoot(d);
+  },
+  /* clinic — an appointment form and the people you will see */
+  form:function(d){
+    var h=dNav(d)+dHero(d,true,true)+'<div class="d-sec blk">'+dLab(d)+'<div class="d-form">';
+    for(var i=0;i<d.fields.length;i++){
+      h+='<label class="d-field"><span class="d-fl sk"><span class="t">'+esc(d.fields[i].l[lang])+'</span></span>'
+       + '<span class="d-fi sk"><span class="t">'+esc(d.fields[i].v[lang])+'</span></span></label>';
+    }
+    h+='<label class="d-field wide"><span class="d-fl sk"><span class="t">'+esc(d.dept.l[lang])+'</span></span>'
+     + '<span class="d-fi sel sk"><span class="t">'+esc(d.dept.v[lang])+'</span></span></label>';
+    h+='<span class="d-btn wide"><span class="t">'+esc(d.cta[lang])+'</span></span>';
+    h+='</div></div><div class="d-sec blk tightsec"><div class="d-lab sk"><span class="t">'+esc(d.foot[lang])+'</span></div><div class="d-docs">';
+    for(var j=0;j<d.docs.length;j++){
+      h+='<span class="d-doc"><span class="av">'+d.docs[j].e+'</span><span class="sk"><span class="t">'+esc(d.docs[j].n[lang])+'</span></span></span>';
+    }
+    return h+'</div></div>';
+  },
+  /* school — announcement bar plus an actual fee table */
+  table:function(d){
+    var c=d.cols[lang];
+    var h='<div class="d-notice blk"><span class="sk"><span class="t">'+esc(d.notice[lang])+'</span></span></div>'
+        + dNav(d)+dHero(d,true)+'<div class="d-sec blk">'+dLab(d)+'<div class="d-table">'
+        + '<div class="d-tr head"><span class="sk"><span class="t">'+esc(c[0])+'</span></span><span class="sk"><span class="t">'+esc(c[1])+'</span></span></div>';
+    for(var i=0;i<d.rows.length;i++){
+      h+='<div class="d-tr"><span class="sk"><span class="t">'+esc(d.rows[i].n[lang])+'</span></span>'
+       + '<span class="d-tp sk"><span class="t">'+d.rows[i].p+'</span></span></div>';
+    }
+    return h+'</div></div>';
+  },
+  /* church — a player and the week's schedule */
+  times:function(d){
+    var h=dNav(d)+'<div class="d-hero blk tight"><div class="d-h1 sk"><span class="t">'+esc(d.h1[lang])+'</span></div></div>'
+        + '<div class="d-sec blk"><div class="d-play"><span class="pb">▶</span>'
+        + '<span class="pl sk"><span class="t">'+esc(d.watch[lang])+'</span></span>'
+        + '<span class="pd sk"><span class="t">'+d.dur+'</span></span></div>';
+    h+=dLab(d)+'<div class="d-times">';
+    for(var i=0;i<d.times.length;i++){
+      var t=d.times[i];
+      h+='<div class="d-time"><span class="dd sk"><span class="t">'+esc(t.d[lang])+'</span></span>'
+       + '<span class="ds sk"><span class="t">'+esc(t.s[lang])+'</span></span>'
+       + '<span class="dt sk"><span class="t">'+t.t+'</span></span></div>';
+    }
+    return h+'</div></div>'+dFoot(d);
+  }
+};
+
+function renderScreen(d){
+  screenEl.innerHTML=(LAYOUT[d.layout]||LAYOUT.menu)(d)+'<div class="d-fab">💬</div>';
+  screenEl.style.setProperty('--da',d.accent);
+  screenEl.setAttribute('data-layout',d.layout);
+}
+
+function clearTimers(){for(var i=0;i<timers.length;i++)clearTimeout(timers[i]);timers=[];}
+
+function runBuild(key,fromClick){
+  var d=DEMOS[key];
+  if(!d)return;
+  bizPick=key;
+  clearTimers();
+  renderScreen(d);
+  urlEl.textContent=d.url;
+  refreshWA();                        // the enquiry now knows their trade
+  var picks=pickerEl.querySelectorAll('.pick');
+  for(var i=0;i<picks.length;i++)picks[i].classList.toggle('on',picks[i].getAttribute('data-biz')===key);
+
+  if(reduce){device.setAttribute('data-stage','4');markRail(4);return;}
+
+  device.setAttribute('data-stage','0');markRail(0);
+  var at=[820,1640,2460,3320];
+  for(var s=1;s<=4;s++){
+    (function(stage,delay){
+      timers.push(setTimeout(function(){
+        device.setAttribute('data-stage',String(stage));
+        markRail(stage);
+      },delay));
+    })(s,at[s-1]);
+  }
+  if(autoCycle&&!fromClick){
+    cycleTimer=setTimeout(function(){
+      var n=(ORDER.indexOf(key)+1)%ORDER.length;
+      runBuild(ORDER[n],false);
+    },7400);
+  }
+}
+document.getElementById('replay').addEventListener('click',function(){
+  autoCycle=false;
+  if(cycleTimer){clearTimeout(cycleTimer);cycleTimer=null;}
+  runBuild(bizPick||ORDER[0],true);
+});
+
+/* ===================== proof numbers ===================== */
+/* Count the proof numbers up once, when the strip first comes into view.
+   The final value is written immediately and re-asserted by a timer, so the
+   figure is still correct if rAF never runs (background tab, prerender). */
+function countUp(el){
+  var target=parseFloat(el.getAttribute('data-count'));
+  if(isNaN(target))return;
+  var suffix=el.getAttribute('data-suffix')||'';
+  var done=function(){el.textContent=target+suffix;};
+  done();
+  if(reduce)return;
+  setTimeout(done,1500);
+  var t0=null;
+  function step(ts){
+    if(!t0)t0=ts;
+    var p=Math.min((ts-t0)/1100,1);
+    el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+suffix;
+    if(p<1)requestAnimationFrame(step); else done();
+  }
+  requestAnimationFrame(step);
+}
+
+/* ===================== headline interaction =====================
+   Bricolage Grotesque is a variable font, so each character's weight can
+   follow the cursor. Letters swell to 800 under the pointer and thin to
+   ~540 away from it; the accent line runs a slow amber→indigo sweep.   */
+var heroEl=document.querySelector('.hero'),h1El=document.querySelector('.hero h1');
+var chars=[],gchars=[],charPos=[],charW=[],posDirty=true;
+
+function splitHero(){
+  if(!h1El)return;
+  var nodes=h1El.querySelectorAll('[data-split]');
+  for(var i=0;i<nodes.length;i++){
+    var words=nodes[i].textContent.split(/\s+/),h='';
+    for(var w=0;w<words.length;w++){
+      if(!words[w])continue;
+      h+='<span class="wd">';
+      for(var j=0;j<words[w].length;j++)h+='<span class="ch">'+esc(words[w][j])+'</span>';
+      h+='</span>';
+      if(w<words.length-1)h+=' ';       // a real space: the only break point
+    }
+    nodes[i].innerHTML=h;
+  }
+  h1El.classList.add('split');
+  chars=[].slice.call(h1El.querySelectorAll('.ch'));
+  gchars=[].slice.call(h1El.querySelectorAll('.g .ch'));
+  charW=chars.map(function(){return 800;});
+  posDirty=true;
+}
+
+function sweepColor(t){                       // amber → indigo, ping-ponged
+  var a=[255,178,36],b=[120,140,255];
+  return 'rgb('+Math.round(a[0]+(b[0]-a[0])*t)+','
+              +Math.round(a[1]+(b[1]-a[1])*t)+','
+              +Math.round(a[2]+(b[2]-a[2])*t)+')';
+}
+
+function heroEngine(){
+  if(!h1El)return;
+  var mx=-1,my=-1,t0=performance.now(),run=true;
+  if(fine&&!reduce){
+    heroEl.addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;},{passive:true});
+    heroEl.addEventListener('pointerleave',function(){mx=-1;my=-1;});
+  }
+  addEventListener('scroll',function(){posDirty=true;},{passive:true});
+  addEventListener('resize',function(){posDirty=true;},{passive:true});
+
+  if(reduce){
+    for(var g0=0;g0<gchars.length;g0++)gchars[g0].style.color=sweepColor(g0/Math.max(gchars.length-1,1));
+    return;
+  }
+  function frame(now){
+    if(!run)return;
+    if(posDirty||charPos.length!==chars.length){
+      charPos=chars.map(function(c){var b=c.getBoundingClientRect();return [b.left+b.width/2,b.top+b.height/2];});
+      posDirty=false;
+    }
+    for(var i=0;i<chars.length;i++){
+      var target=800;
+      if(mx>=0&&charPos[i]){
+        var dx=charPos[i][0]-mx,dy=charPos[i][1]-my;
+        var k=Math.max(0,1-Math.sqrt(dx*dx+dy*dy)/300); k*=k;
+        target=540+260*k;
+        chars[i].style.transform='translateY('+(-8*k).toFixed(2)+'px)';
+      }else if(chars[i].style.transform){
+        chars[i].style.transform='';
+      }
+      charW[i]+=(target-charW[i])*0.16;        // eased in JS, not CSS, so it never fights the loop
+      chars[i].style.fontVariationSettings="'wght' "+charW[i].toFixed(0);
+    }
+    var ph=((now-t0)/9000)%1;
+    for(var g=0;g<gchars.length;g++){
+      var u=(g/Math.max(gchars.length-1,1))*0.8+ph;
+      gchars[g].style.color=sweepColor(Math.abs((((u%1)+1)%1)*2-1));
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden)run=false; else if(!run){run=true;requestAnimationFrame(frame);}
+  });
+
+  if(fine&&!reduce){                            // magnetic hero buttons
+    document.querySelectorAll('.hero-cta .btn').forEach(function(b){
+      b.addEventListener('pointermove',function(e){
+        var r=b.getBoundingClientRect();
+        var ddx=(e.clientX-(r.left+r.width/2))/(r.width/2);
+        var ddy=(e.clientY-(r.top+r.height/2))/(r.height/2);
+        b.style.transform='translate('+(ddx*7).toFixed(1)+'px,'+(ddy*5-2).toFixed(1)+'px)';
+      });
+      b.addEventListener('pointerleave',function(){b.style.transform='';});
+    });
+  }
+}
+
+/* ===================== scroll progress ===================== */
+(function progress(){
+  var bar=document.getElementById('prog');
+  if(!bar)return;
+  function upd(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    bar.style.transform='scaleX('+(h>0?Math.min(window.scrollY/h,1):0)+')';
+  }
+  addEventListener('scroll',upd,{passive:true});
+  addEventListener('resize',upd);
+  upd();
+})();
+
+/* ===================== nav ===================== */
+var nav=document.getElementById('nav'),burger=document.getElementById('burger');
+window.toggleNav=function(){
+  var o=nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded',o?'true':'false');
+};
+nav.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){nav.classList.remove('open');burger.setAttribute('aria-expanded','false');}
+});
+var head=document.getElementById('head');
+function onScroll(){head.classList.toggle('scrolled',window.scrollY>14);}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ===================== boot preferences ===================== */
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var fine=matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+var sl=get(K.lang);
+if(sl!=='en'&&sl!=='fr'){
+  var nl=(navigator.languages&&navigator.languages[0])||navigator.language||'en';
+  sl=/^fr\b/i.test(nl)?'fr':'en';
+}
+var sc=get(K.cur); if(!PRICES[sc])sc=null;
+setCur(sc||'USD',false);
+setLang(sl,false);
+runBuild(ORDER[0],false);
+
+/* ===================== reveal ===================== */
+var rv=document.querySelectorAll('.rv');
+if(reduce||!('IntersectionObserver' in window)){
+  for(var i=0;i<rv.length;i++)rv[i].classList.add('in');
+}else{
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+      var nums=e.target.querySelectorAll('[data-count]');
+      for(var n=0;n<nums.length;n++)countUp(nums[n]);
+    });
+  },{rootMargin:'0px 0px -10% 0px',threshold:.08});
+  for(var i2=0;i2<rv.length;i2++)io.observe(rv[i2]);
+  /* copy must never stay invisible if an observer never fires */
+  setTimeout(function(){for(var i3=0;i3<rv.length;i3++)rv[i3].classList.add('in');},2600);
+}
+
+heroEngine();
+
+/* ===================== 3D tilt + glow ===================== */
+if(fine&&!reduce){
+  document.querySelectorAll('.pkg').forEach(function(c){
+    c.addEventListener('pointermove',function(e){
+      var b=c.getBoundingClientRect();
+      c.style.setProperty('--mx',((e.clientX-b.left)/b.width*100)+'%');
+    });
+  });
+  document.querySelectorAll('.work[data-tilt]').forEach(function(el){
+    var raf=0;
+    el.addEventListener('pointermove',function(e){
+      if(raf)return;
+      raf=requestAnimationFrame(function(){
+        raf=0;
+        var b=el.getBoundingClientRect(),px=(e.clientX-b.left)/b.width,py=(e.clientY-b.top)/b.height;
+        el.style.transition='transform .1s linear,border-color .4s,box-shadow .5s';
+        el.style.transform='perspective(1600px) rotateX('+((0.5-py)*8).toFixed(2)+'deg) rotateY('+((px-0.5)*10).toFixed(2)+'deg) translateZ(6px)';
+        el.style.setProperty('--gx',(px*100)+'%');
+        el.style.setProperty('--gy',(py*100)+'%');
+      });
+    });
+    el.addEventListener('pointerleave',function(){
+      el.style.transition='transform .7s cubic-bezier(.16,1,.3,1),border-color .4s,box-shadow .5s';
+      el.style.transform='';
+    });
+  });
+}
+
+/* ===================== WebGL helpers ===================== */
+function ctx(c){
+  try{
+    /* preserveDrawingBuffer keeps the last frame if rAF is throttled, so a
+       backgrounded tab never composites an empty canvas. */
+    return c.getContext('webgl',{alpha:true,antialias:true,premultipliedAlpha:false,preserveDrawingBuffer:true})
+        || c.getContext('experimental-webgl');
+  }catch(e){return null;}
+}
+function prog(gl,vs,fs){
+  function sh(t,s){var o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);
+    return gl.getShaderParameter(o,gl.COMPILE_STATUS)?o:null;}
+  var a=sh(gl.VERTEX_SHADER,vs),b=sh(gl.FRAGMENT_SHADER,fs);
+  if(!a||!b)return null;
+  var p=gl.createProgram();gl.attachShader(p,a);gl.attachShader(p,b);gl.linkProgram(p);
+  return gl.getProgramParameter(p,gl.LINK_STATUS)?p:null;
+}
+function whenVisible(el,on,off){
+  if(!('IntersectionObserver' in window)){on();return;}
+  new IntersectionObserver(function(es){es[0].isIntersecting?on():off();},{threshold:0}).observe(el);
+}
+
+/* ===================== hero aurora ===================== */
+(function aurora(){
+  var c=document.getElementById('aurora');
+  if(!c)return;
+  var gl=ctx(c); if(!gl)return;
+  var p=prog(gl,
+    'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}',
+    'precision mediump float;uniform vec2 uR;uniform float uT;'+
+    'void main(){'+
+    ' vec2 uv=gl_FragCoord.xy/uR.xy;'+
+    ' vec2 q=uv*vec2(uR.x/uR.y,1.0)*2.6;'+
+    ' float t=uT*0.055;'+
+    ' float a=sin(q.x*1.2+t*1.6)+sin(q.y*1.6-t*1.1)+sin((q.x+q.y)*0.85+t*1.3);'+
+    ' float b=sin(q.x*0.65-t*0.9)+sin(q.y*1.05+t*0.75)+sin((q.x-q.y)*1.4-t);'+
+    ' float m=(a+b)*0.15+0.5;'+
+    ' vec3 col=vec3(0.031,0.031,0.039);'+
+    ' col=mix(col,vec3(0.28,0.34,0.95)*0.85,smoothstep(0.16,0.96,m)*0.88);'+
+    ' col=mix(col,vec3(1.0,0.70,0.14)*0.55,smoothstep(0.60,1.16,m)*0.58);'+
+    ' float v=smoothstep(1.40,0.22,length(uv-vec2(0.5,0.42)));'+
+    ' col*=0.46+0.54*v;'+
+    ' gl_FragColor=vec4(col,1.0);'+
+    '}');
+  if(!p)return;
+  gl.useProgram(p);
+  var buf=gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER,buf);
+  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  var la=gl.getAttribLocation(p,'a');
+  gl.enableVertexAttribArray(la);gl.vertexAttribPointer(la,2,gl.FLOAT,false,0,0);
+  var uR=gl.getUniformLocation(p,'uR'),uT=gl.getUniformLocation(p,'uT');
+  var dpr=Math.min(devicePixelRatio||1,1.6),run=true,t0=performance.now();
+  function frame(now){
+    if(!run)return;
+    var w=c.clientWidth,h=c.clientHeight;
+    if(w&&h){
+      var W=Math.round(w*dpr),H=Math.round(h*dpr);
+      if(c.width!==W||c.height!==H){c.width=W;c.height=H;}
+      gl.viewport(0,0,c.width,c.height);
+      gl.uniform2f(uR,c.width,c.height);
+      gl.uniform1f(uT,reduce?12.0:(now-t0)/1000);
+      gl.drawArrays(gl.TRIANGLES,0,3);
+      c.classList.add('on');
+    }
+    if(reduce)return;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden)run=false;
+    else if(!run){run=true;requestAnimationFrame(frame);}
+  });
+  whenVisible(c,function(){if(!run&&!document.hidden){run=true;requestAnimationFrame(frame);}},function(){run=false;});
+})();
+
+/* ===================== globe band =====================
+   A dot-matrix Earth with connection arcs leaving Accra — the one studio —
+   for the cities Africode delivers to. Hand-written WebGL, no library.
+   Dots rather than a line wireframe: 1px lines are sub-pixel at dpr 2 and
+   disappeared against the atmosphere glow.          */
+(function globe(){
+  var c=document.getElementById('globe');
+  if(!c)return;
+  var gl=ctx(c); if(!gl)return;
+  var p=prog(gl,
+    'attribute vec3 aP;attribute float aA;uniform mat4 uMVP;uniform mat4 uMV;uniform float uS;'+
+    'varying float vA;varying float vZ;varying float vF;'+
+    'void main(){'+
+    ' vec4 mv=uMV*vec4(aP,1.0);'+
+    ' gl_Position=uMVP*vec4(aP,1.0);'+
+    /* the globe sits at z=-3.05, so this is the surface normal in view space;
+       dotting it with the view direction gives 1 head-on, 0 at the silhouette */
+    ' vF=dot(normalize(mv.xyz-vec3(0.0,0.0,-3.05)),normalize(-mv.xyz));'+
+    ' vZ=mv.z;vA=aA;gl_PointSize=uS;}',
+    'precision mediump float;uniform vec3 uC;uniform float uRound;uniform float uFacing;uniform float uMul;uniform float uSolid;'+
+    'varying float vA;varying float vZ;varying float vF;'+
+    'void main(){'+
+    ' if(uSolid>0.5){gl_FragColor=vec4(uC,1.0);return;}'+
+    /* globe sits at z=-3.05, radius 1 → view z runs -4.1 (far) to -2.0 (near) */
+    ' float d=clamp((vZ+4.1)/2.1,0.0,1.0);'+
+    ' float a=vA*mix(0.28,1.0,d);'+
+    /* without this the dots bunch into a hard rim at the silhouette and the
+       sphere reads as a ring; arcs and markers opt out via uFacing=0 */
+    ' a*=mix(1.0,smoothstep(-0.10,0.45,vF),uFacing);'+
+    ' a*=uMul;'+
+    ' if(uRound>0.5){vec2 q=gl_PointCoord-vec2(0.5);float r=length(q);if(r>0.5)discard;a*=smoothstep(0.5,0.12,r);}'+
+    ' gl_FragColor=vec4(uC*a,a);'+
+    '}');
+  if(!p)return;
+  gl.useProgram(p);
+  var aP=gl.getAttribLocation(p,'aP'),aA=gl.getAttribLocation(p,'aA');
+  var uMVP=gl.getUniformLocation(p,'uMVP'),uMV=gl.getUniformLocation(p,'uMV'),
+      uC=gl.getUniformLocation(p,'uC'),uS=gl.getUniformLocation(p,'uS'),uRound=gl.getUniformLocation(p,'uRound'),
+      uFacing=gl.getUniformLocation(p,'uFacing'),uMul=gl.getUniformLocation(p,'uMul'),
+      uSolid=gl.getUniformLocation(p,'uSolid');
+
+  function mul(a,b){var o=new Float32Array(16);
+    for(var i=0;i<4;i++)for(var j=0;j<4;j++)
+      o[i*4+j]=a[j]*b[i*4]+a[4+j]*b[i*4+1]+a[8+j]*b[i*4+2]+a[12+j]*b[i*4+3];
+    return o;}
+  function persp(f,asp,n,fa){var t=1/Math.tan(f/2),nf=1/(n-fa);
+    return new Float32Array([t/asp,0,0,0,0,t,0,0,0,0,(fa+n)*nf,-1,0,0,2*fa*n*nf,0]);}
+  function tr(z){return new Float32Array([1,0,0,0,0,1,0,0,0,0,1,0,0,0,z,1]);}
+  function rx(a){var c1=Math.cos(a),s=Math.sin(a);return new Float32Array([1,0,0,0,0,c1,s,0,0,-s,c1,0,0,0,0,1]);}
+  function ry(a){var c1=Math.cos(a),s=Math.sin(a);return new Float32Array([c1,0,-s,0,0,1,0,0,s,0,c1,0,0,0,0,1]);}
+  function ll(la,lo,r){la=la*Math.PI/180;lo=lo*Math.PI/180;var cl=Math.cos(la);
+    return [r*cl*Math.cos(lo),r*Math.sin(la),-r*cl*Math.sin(lo)];}
+
+  /* Land mask baked offline from Natural Earth 110m coastlines, tested
+     point-in-polygon against the exact points this loop generates, in the
+     exact order it generates them: 14,000 bits in 2,336 characters. No map
+     image to download, no runtime cost past one atob().
+     A Fibonacci sphere rather than a lat/lon grid — an even grid bunches
+     its dots toward the limb and leaves the middle of the disc empty. */
+  var LANDMASK="AAAAAAAAIAAhAAkISMhCQgKyEICQhIQM4CdDADmIAMAChgByMQGYHcxA4EczMRsFjMyWZi8xJ3uSASChGSUoKAVIShJDEBAAkJQkBqAAASkoQHe3/d2s7//nbyv72Vvbzt5X9/K3v92sre/lZ2+7WVvfzk7Wd/KRn5zMrO7lLyM5mUnMznZSd3KTkZzMpO5nLyE5uenNznZCc3OTkJzM9OZnPzE5mc3MTn56c3PbkJzc9ubnNz05uc3JTm56c3Obnpzc9OanNzk5ucnPTm5yc1Obnpzc5uanNz05qcnNTk57c1OTnpzU5OenNzk5qcnNTm5yc1ObjozU5uajNxk5qc3NTmZyc1OTmIzU5OajIxk5icnNRmp6c5GRiozE5OajJzU5iMjFRmJ6cxOTmozU5OYnIzUZicnFTmJiM5MRmpzExGInITUZiYjFTmJycxMSmozExGKnITkZicjNTmpiM5OQmIzUxGYjJTkZ6IhNRmpiM9GQmIzUxCejJTEZqMhPRmpiE9GSmIzU5CejJTEZqMlPRkpiE1GSmJzUZKajJTEJqMlNSkpyU1OSmJTU5KanJTEpKclMTmpyU1OSmJSU5KSlJTEoKclJSkpyUlOSmJQU5KSnNTEpKclJSgpyUlOSmJSU5KSlBRkpKUlNSgpyUlKKiJSU5KSlBTgpKcFNSkpwUlKSmJSUoKSlJTApKUlFSkpQUlKamBSUpKKlJSApKU1NCkpAUlKSmBSUpIKlNSApKQkMCmpAQ0KSmBSUhIaFNSApKQkMKkpAQUKSkBSUhIYVNSAgoUkIKmpAQ0KSkBTUhIQFNSAgoUkICmpAQsKakBBUoIQFNSAhIUkICkpQQoKakBCQooQEJSAhIU0ICAhRQgKakBCQooQEJSghIUUICEhRQgICkBCQooQEJCghAUFICEhRQgICkBCQgIQEJCghAUFICFhSQgoSEBCChIQEJKihBQlICEFCQgoSUFCCpIQUIKAhBQkoKEFCUgoWUBCChJQEKKAhBQkoCEFSUgoUUBCihJQEIKghBQkoCEFCSgIQUBKihJQAIKklBQgoAFFSSgAQVAKihBQAIKEFAAgoAVFSCgAQVAKiBBQAoKkFAAgqAVFCCgAQVAKiBBQAqKEFQAgqAVFCCgBQVAKiBRQAqKAFAAoqAVECCgBQUAKiBBUAqKAFACooEVECCgBQUAKCFRUIqIAFACgoAVEKCoBUUAKBFRQIqIQFQigpEUGKCoRUQgKBFBQAoMUFQigpAUGKCgBQQgKBFBSAoMVFACghAUCKCkBQYgKAFBiAoMUFIigxAVCKCkBUYoKAFBCAqEUFICoxAUCKiEBQIqKAFBiAoAUFICghUUAKCEBQAoKQFBCAoAUFICgBQUAKCEBQAoKQFBCgoAUEICgRQUAKCEBQAoKQFACgoEUEICgBQUCKCEBQAoKRFAigoEUEICgBQUCKAFBQAoIRFAigoUcAIigBQUCKBFBQIoIRFACgoUWUh4f+vrV10uRwIoARFACgoUUCIigRQAqKBFBQooARFAigIUUCIigRQAiKBFBQooERFAigBUUCIigRQIiKBFQQooERFAioREUCIigRwIiKBFQAooERFAioREUCKihRQIiKBFQgooERFAioQEUCKhBRQIiKBFQgIoERFAigQEUCKhBRQICKBFQgIoERGAigQEUCKhARQIiKBFAgIoERCAigQEUCKhARQIiMBFAgIoEVCAigQEUCKBARQIiMBFAgIoERCAigQEQCKBARQIiEBFAgIgEQCAigQEYCKBARQIiEAFAgIgAQCACgQEYAKBARQIiEAFAgIgAQCACgQEIAIBABAAAEAEAgAgAQCACAAAIAIBABAAAEAEAAAgAQCECAAAIAIAABAAgEIEAAAgAQAACAAAIAIAABAAAAIEAAAAAAAACAAAAAIAABAAAAIEAAAQAAAECAAAAAIAAAAAAAAEAAAQAAAECAAAAAIAAAAAAAAEAAAAAAAECAAAAAIACAAAAAAEAAAAAAAECAAAAAIAAAAAAAAEAAAAAQAACAAAAAIAAAAAAAAEAAAAAQAAAAAAAAIAAAAAAAAEAAAAAQAAAAAAAAIAAAAAAAAAAAAAAQAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAIAAAAAAABESgIAEBKQgJSEpCIlISkoCUlHSkpaU9KSnpa0tOelrS0t6WnPz1p+e/Pzn5+8/PXn568/ffn7z89/evP739++/v/3/kAAAAA==";
+  var MB=atob(LANDMASK);
+  function land(i){return (MB.charCodeAt(i>>3)>>(7-(i&7)))&1;}
+
+  var R=1,lnd=[],lndA=[],ocn=[],ocnA=[];
+  var NPT=14000,GA=Math.PI*(3-Math.sqrt(5));
+  for(var i=0;i<NPT;i++){
+    var y=1-(i/(NPT-1))*2;
+    var rr=Math.sqrt(Math.max(0,1-y*y));
+    var th=GA*i, x=Math.cos(th)*rr, z=Math.sin(th)*rr;
+    if(land(i)){lnd.push(x,y,z);lndA.push(1.0);}
+    else{ocn.push(x,y,z);ocnA.push(0.34);}
+  }
+
+  /* An opaque sphere just inside the dot shell. It writes depth, so dots,
+     routes and comets on the far side are correctly hidden instead of
+     drawing straight through the planet. This is the one thing three.js
+     would have given for free that additive blending cannot fake. */
+  function sph(r,phi,th){var cp=Math.cos(phi);return [r*cp*Math.cos(th),r*Math.sin(phi),-r*cp*Math.sin(th)];}
+  var body=[],SEG=48,RING=24,BR=0.978;
+  for(var ry2=0;ry2<RING;ry2++){
+    var p0=Math.PI*(ry2/RING)-Math.PI/2, p1=Math.PI*((ry2+1)/RING)-Math.PI/2;
+    for(var sx2=0;sx2<SEG;sx2++){
+      var t0=(sx2/SEG)*Math.PI*2, t1=((sx2+1)/SEG)*Math.PI*2;
+      var A=sph(BR,p0,t0),B=sph(BR,p0,t1),C=sph(BR,p1,t1),D=sph(BR,p1,t0);
+      body.push(A[0],A[1],A[2],B[0],B[1],B[2],C[0],C[1],C[2],
+                A[0],A[1],A[2],C[0],C[1],C[2],D[0],D[1],D[2]);
+    }
+  }
+  var bodyA=new Array(body.length/3).fill(1);
+
+  var ACCRA=[5.6,-0.2];   /* the single origin — the studio is in Accra */
+  var DEST=[[51.50,-0.13],[48.86,2.35],[40.71,-74.01],[43.65,-79.38],
+            [25.20,55.27],[6.52,3.38],[4.05,9.70],[-26.20,28.04],[-33.87,151.21]];
+  var arcP=[],arcPA=[],arcPaths=[];
+  function pushArc(a,b){
+    var A=ll(a[0],a[1],R),B=ll(b[0],b[1],R);
+    var dot=(A[0]*B[0]+A[1]*B[1]+A[2]*B[2])/(R*R);
+    var ang=Math.acos(Math.max(-1,Math.min(1,dot)));
+    var lift=0.10+0.17*(ang/Math.PI),N=90,path=[];
+    for(var i=0;i<=N;i++){
+      var t=i/N,s=Math.sin(ang);
+      var w1=s<1e-4?1-t:Math.sin((1-t)*ang)/s, w2=s<1e-4?t:Math.sin(t*ang)/s;
+      var h=R+Math.sin(t*Math.PI)*lift;
+      var x=A[0]*w1+B[0]*w2,y=A[1]*w1+B[1]*w2,z=A[2]*w1+B[2]*w2;
+      var len=Math.sqrt(x*x+y*y+z*z)||1;
+      var q=[x/len*h,y/len*h,z/len*h];
+      path.push(q[0],q[1],q[2]);
+      var f=Math.sin(t*Math.PI);
+      arcP.push(q[0],q[1],q[2]);
+      arcPA.push(0.16+0.26*f);                 /* dim, so the comet leads */
+    }
+    arcPaths.push(path);
+  }
+  for(var d2=0;d2<DEST.length;d2++)pushArc(ACCRA,DEST[d2]);
+
+  var pts=[],ptsA=[];
+  function pt(c1,a){var q=ll(c1[0],c1[1],R*1.012);pts.push(q[0],q[1],q[2]);ptsA.push(a);}
+  pt(ACCRA,1);
+  for(var m=0;m<DEST.length;m++)pt(DEST[m],0.72);
+
+  function vbo(arr){var b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);
+    gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(arr),gl.STATIC_DRAW);return b;}
+  var bB=vbo(body),bBA=vbo(bodyA),nB=body.length/3;
+  var bL=vbo(lnd),bLA=vbo(lndA),bO=vbo(ocn),bOA=vbo(ocnA),bA=vbo(arcP),bAA=vbo(arcPA),bP=vbo(pts),bPA=vbo(ptsA);
+  var nL=lnd.length/3,nO=ocn.length/3,nA=arcP.length/3,nP=pts.length/3;
+
+  /* A comet runs each route, Accra outward. Nine heads with a five-point
+     tail is 45 points a frame — the whole thing is one bufferSubData. */
+  var TAIL=5,NPUL=arcPaths.length*TAIL;
+  var pulP=new Float32Array(NPUL*3),pulA=new Float32Array(NPUL);
+  var bPul=gl.createBuffer(),bPulA=gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER,bPul);gl.bufferData(gl.ARRAY_BUFFER,pulP,gl.DYNAMIC_DRAW);
+  gl.bindBuffer(gl.ARRAY_BUFFER,bPulA);gl.bufferData(gl.ARRAY_BUFFER,pulA,gl.DYNAMIC_DRAW);
+  function pulses(tSec){
+    for(var a=0;a<arcPaths.length;a++){
+      var path=arcPaths[a],N=path.length/3;
+      var head=(tSec*0.30+a*0.117)%1;
+      for(var k=0;k<TAIL;k++){
+        var t=head-k*0.018; if(t<0)t+=1;
+        var idx=Math.max(0,Math.min(N-1,Math.round(t*(N-1))));
+        var o=(a*TAIL+k)*3;
+        pulP[o]=path[idx*3];pulP[o+1]=path[idx*3+1];pulP[o+2]=path[idx*3+2];
+        /* fade the comet in and out at both ends of the route */
+        pulA[a*TAIL+k]=(1-k/TAIL)*Math.sin(t*Math.PI);
+      }
+    }
+    gl.bindBuffer(gl.ARRAY_BUFFER,bPul);gl.bufferSubData(gl.ARRAY_BUFFER,0,pulP);
+    gl.bindBuffer(gl.ARRAY_BUFFER,bPulA);gl.bufferSubData(gl.ARRAY_BUFFER,0,pulA);
+  }
+
+  function bind(pb,ab){
+    gl.bindBuffer(gl.ARRAY_BUFFER,pb);gl.enableVertexAttribArray(aP);gl.vertexAttribPointer(aP,3,gl.FLOAT,false,0,0);
+    gl.bindBuffer(gl.ARRAY_BUFFER,ab);gl.enableVertexAttribArray(aA);gl.vertexAttribPointer(aA,1,gl.FLOAT,false,0,0);
+  }
+
+  gl.blendFunc(gl.ONE,gl.ONE_MINUS_SRC_ALPHA);
+  gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);
+  /* spin starts near -PI/2 so Accra — where every route begins — faces the
+     reader on load, instead of bunching the arcs against the limb. */
+  var dpr=Math.min(devicePixelRatio||1,2),spin=-1.55,tilt=-0.30,run=true,last=performance.now(),t0=last;
+
+  function frame(now){
+    if(!run)return;
+    var dt=Math.min((now-last)/1000,0.05);last=now;
+    if(!reduce)spin+=dt*0.075;
+    var w=c.clientWidth,h=c.clientHeight;
+    if(w&&h){
+      var W=Math.round(w*dpr),H=Math.round(h*dpr);
+      if(c.width!==W||c.height!==H){c.width=W;c.height=H;}
+      gl.viewport(0,0,c.width,c.height);
+      gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+      var view=mul(tr(-3.05),mul(rx(tilt),ry(spin)));
+      gl.uniformMatrix4fv(uMVP,false,mul(persp(0.85,c.width/c.height,0.1,20),view));
+      gl.uniformMatrix4fv(uMV,false,view);
+      /* Opaque body first: blending off, depth writing on. */
+      gl.disable(gl.BLEND);gl.depthMask(true);
+      gl.uniform1f(uSolid,1);gl.uniform1f(uRound,0);
+      gl.uniform3f(uC,0.043,0.047,0.078);
+      bind(bB,bBA);gl.drawArrays(gl.TRIANGLES,0,nB);
+
+      /* Everything after tests against that depth but never writes to it, so
+         the glow layers still blend with each other. Bright elements are
+         drawn twice — wide and dim, then tight and bright — and additive
+         blending turns the pair into a bloom with no framebuffer, no
+         bright-pass and no blur chain. */
+      gl.uniform1f(uSolid,0);
+      gl.enable(gl.BLEND);gl.depthMask(false);
+      gl.uniform1f(uRound,1);
+
+      gl.uniform1f(uFacing,1);gl.uniform1f(uMul,1);
+      gl.uniform3f(uC,0.34,0.42,0.90);gl.uniform1f(uS,2.0*dpr);
+      bind(bO,bOA);gl.drawArrays(gl.POINTS,0,nO);            /* ocean: faint body */
+      gl.uniform3f(uC,0.80,0.87,1.0);gl.uniform1f(uS,3.0*dpr);
+      bind(bL,bLA);gl.drawArrays(gl.POINTS,0,nL);            /* land: continents */
+
+      gl.uniform1f(uFacing,0);
+      bind(bA,bAA);                                          /* routes */
+      gl.uniform3f(uC,1.0,0.66,0.18);gl.uniform1f(uS,11*dpr);gl.uniform1f(uMul,0.20);
+      gl.drawArrays(gl.POINTS,0,nA);
+      gl.uniform3f(uC,1.0,0.82,0.40);gl.uniform1f(uS,3.4*dpr);gl.uniform1f(uMul,1);
+      gl.drawArrays(gl.POINTS,0,nA);
+
+      if(!reduce)pulses((now-t0)/1000);
+      bind(bPul,bPulA);                                      /* comets */
+      gl.uniform3f(uC,1.0,0.86,0.45);gl.uniform1f(uS,16*dpr);gl.uniform1f(uMul,0.26);
+      gl.drawArrays(gl.POINTS,0,NPUL);
+      gl.uniform3f(uC,1.0,0.97,0.86);gl.uniform1f(uS,4.4*dpr);gl.uniform1f(uMul,1);
+      gl.drawArrays(gl.POINTS,0,NPUL);
+
+      bind(bP,bPA);                                          /* cities */
+      gl.uniform3f(uC,1.0,0.70,0.22);gl.uniform1f(uS,26*dpr);gl.uniform1f(uMul,0.16);
+      gl.drawArrays(gl.POINTS,0,nP);
+      gl.uniform3f(uC,1.0,0.88,0.55);gl.uniform1f(uS,8*dpr);gl.uniform1f(uMul,1);
+      gl.drawArrays(gl.POINTS,0,nP);
+      c.classList.add('on');
+    }
+    if(reduce)return;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden)run=false;
+    else if(!run){run=true;last=performance.now();requestAnimationFrame(frame);}
+  });
+  whenVisible(c,function(){if(!run&&!document.hidden){run=true;last=performance.now();requestAnimationFrame(frame);}},function(){run=false;});
+})();
+
+})();
+</script>
+</body>
+</html>
