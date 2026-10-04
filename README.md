@@ -9,6 +9,24 @@ outside it is ever deployed.
 | `og.jpg` | The link-preview card shown when the site is shared on WhatsApp |
 | `vercel.json` | Security headers and caching |
 
+## The free-website promo form
+
+`index.html` contains a hidden intake form (`<section id="claim">`). It only
+appears at `/#claim` (or `/?claim`), so the flyer and QR code can link straight
+to it while the public homepage stays unchanged.
+
+Submissions go to a Google Apps Script web app (`API` in the last `<script>` of
+`index.html`). The script writes one row per business to the **Submissions**
+tab of the "Africode Promo Responses" Google Sheet, saves the photos to a Drive
+folder called "Africode Promo Photos", enforces the 10-spot limit and allows one
+business per category. Each row has an **AI BRIEF** column that can be pasted
+into Claude or ChatGPT to build that client's site.
+
+- To free a spot, set the row's **Status** to `Cancelled`.
+- The script's source lives in the Google Sheet (Extensions > Apps Script). If
+  you redeploy it, use **Manage deployments > Edit > New version** so the URL
+  in `index.html` stays the same.
+
 Run it locally with any static server:
 
 ```

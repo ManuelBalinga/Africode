@@ -702,6 +702,45 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;}
   .rv{opacity:1;transform:none;}
 }
+
+/* ---------- free-website promo form (#claim) ---------- */
+[hidden]{display:none!important;}
+#claim .cl-box{max-width:720px;margin:0 auto;}
+#claim .sec-h{font-size:clamp(32px,5vw,56px);}
+#claim .cl-left{color:var(--amber);font-weight:600;}
+#claim fieldset{border:0;padding:0;margin:44px 0 0;min-width:0;}
+#claim legend{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.03em;padding:0;margin-bottom:22px;}
+#claim legend i{font-style:normal;color:var(--amber);margin-right:10px;font-family:var(--mono);font-size:15px;}
+#claim .cl-f{margin-bottom:22px;}
+#claim .cl-f>label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;}
+#claim .cl-f>label b{color:var(--amber);font-weight:700;}
+#claim .cl-help{color:var(--mute);font-size:13.5px;margin:0 0 9px;}
+#claim input[type=text],#claim input[type=tel],#claim input[type=email],#claim select,#claim textarea{
+  width:100%;background:var(--ink-2);color:var(--ivory);border:1px solid var(--line-2);border-radius:14px;
+  padding:14px 16px;font:inherit;font-size:16px;transition:border-color .25s,background .25s;
+}
+#claim textarea{resize:vertical;min-height:90px;}
+#claim select option:disabled{color:var(--mute-2);}
+#claim input:focus,#claim select:focus,#claim textarea:focus{outline:0;border-color:var(--amber);background:var(--surf);}
+#claim .cl-chips{display:flex;flex-wrap:wrap;gap:8px;}
+#claim .cl-photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:10px;}
+#claim .cl-ph{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;border:1px solid var(--line-2);}
+#claim .cl-ph img{width:100%;height:100%;object-fit:cover;display:block;}
+#claim .cl-ph button{position:absolute;top:5px;right:5px;width:26px;height:26px;border-radius:50%;border:0;background:rgba(0,0,0,.7);color:#fff;cursor:pointer;font-size:15px;line-height:1;}
+#claim .cl-add{aspect-ratio:1;border-radius:12px;border:1.5px dashed var(--line-2);background:var(--ink-2);color:var(--mute);cursor:pointer;font:600 14px var(--body);transition:border-color .25s,color .25s;}
+#claim .cl-add:hover{border-color:var(--amber);color:var(--ivory);}
+#claim .cl-logo{display:flex;align-items:center;gap:14px;}
+#claim .cl-logo img{width:64px;height:64px;object-fit:contain;border-radius:10px;background:#fff;}
+#claim .cl-consent{display:flex;gap:12px;align-items:flex-start;margin:34px 0 22px;font-size:14.5px;color:var(--mute);cursor:pointer;}
+#claim .cl-consent input{margin-top:4px;width:18px;height:18px;accent-color:var(--amber);flex:none;}
+#claim .cl-msg{margin:0 0 18px;padding:13px 16px;border-radius:12px;border:1px solid var(--amber);background:var(--ink-2);font-size:14.5px;}
+#claim .cl-msg.err{border-color:var(--rose);}
+#claim .cl-submit{width:100%;font-size:16px;padding:18px 28px;}
+#claim .cl-submit[disabled]{opacity:.7;cursor:progress;}
+#claim .cl-note{text-align:center;color:var(--mute-2);font-size:13px;margin-top:14px;}
+#claim .cl-done{text-align:center;padding:30px 0;}
+#claim .cl-done .tick{width:64px;height:64px;border-radius:50%;margin:0 auto 22px;display:grid;place-items:center;background:var(--jade);color:#04231A;font-size:30px;font-weight:800;}
+#claim .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
 </style>
 </head>
 <body id="top">
@@ -1027,6 +1066,106 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
         <h3 data-i18n="p3.h">Launch &amp; support</h3>
         <p data-i18n="p3.p">We put you live — often within a week — and stay on to host, update and support.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FREE WEBSITE PROMO (opens at /#claim) ================= -->
+<section class="sec" id="claim" hidden>
+  <div class="wrap">
+    <div class="cl-box">
+      <span class="eyebrow">Free website promo</span>
+      <h2 class="sec-h" style="margin-top:18px">Claim your free website</h2>
+      <p class="sec-p">This takes about 5 minutes. Answer what you can and we build the rest. <span class="cl-left" id="cl-left"></span></p>
+
+      <div class="cl-done" id="cl-closed" hidden style="margin-top:40px">
+        <h3 style="font-size:32px;margin-bottom:14px">All 10 spots are filled</h3>
+        <p class="sec-p" style="margin:0 auto 26px">Thank you for your interest. Message us on WhatsApp and we will add you to the waiting list.</p>
+        <a class="btn btn-wa" href="https://wa.me/233550456626" target="_blank" rel="noopener">💬 Message us on WhatsApp</a>
+      </div>
+
+      <div class="cl-done" id="cl-done" hidden>
+        <div class="tick" aria-hidden="true">✓</div>
+        <h3 style="font-size:32px;margin-bottom:14px">Thank you, we have your details</h3>
+        <p class="sec-p" style="margin:0 auto 22px">We will message you on WhatsApp shortly to confirm your spot. Your reference is <b id="cl-ref"></b>.</p>
+        <p class="cl-msg" id="cl-photofail" hidden></p>
+        <a class="btn btn-wa" id="cl-wa" href="#" target="_blank" rel="noopener">💬 Message us on WhatsApp</a>
+      </div>
+
+      <form id="cl-form" novalidate>
+        <input class="hp" type="text" name="website" id="cl-website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <fieldset>
+          <legend><i>01</i>Your business</legend>
+          <div class="cl-f"><label for="cl-niche">What kind of business is it? <b>*</b></label>
+            <select id="cl-niche"><option value="">Select your category</option></select></div>
+          <div class="cl-f"><label for="cl-name">Business name <b>*</b></label>
+            <input type="text" id="cl-name" autocomplete="organization"></div>
+          <div class="cl-f"><label for="cl-about">What do you sell or offer? <b>*</b></label>
+            <p class="cl-help">Two or three sentences is plenty.</p>
+            <textarea id="cl-about" rows="3"></textarea></div>
+          <div class="cl-f"><label for="cl-city">City and area you serve <b>*</b></label>
+            <input type="text" id="cl-city" placeholder="e.g. Accra, East Legon"></div>
+          <div class="cl-f"><label for="cl-diff">What makes you different?</label>
+            <p class="cl-help">Optional. Why do customers pick you?</p>
+            <textarea id="cl-diff" rows="2"></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend><i>02</i>What you sell, with prices</legend>
+          <div class="cl-f"><label for="cl-offer">List your products or services with prices <b>*</b></label>
+            <p class="cl-help">Type or paste it, one per line. For example: Box braids – GHS 250.</p>
+            <textarea id="cl-offer" rows="6"></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend><i>03</i>Photos</legend>
+          <div class="cl-f"><label>Your best photos (3 to 10) <b>*</b></label>
+            <p class="cl-help">Clear, in daylight, of your work or products. We shrink them for you, so phone photos are fine.</p>
+            <div class="cl-photos" id="cl-photos"></div>
+            <input type="file" id="cl-photo-in" accept="image/*" multiple hidden></div>
+          <div class="cl-f"><label>Your logo</label>
+            <p class="cl-help">Optional. If you do not have one, we will make a simple one.</p>
+            <div id="cl-logo"></div>
+            <input type="file" id="cl-logo-in" accept="image/*" hidden></div>
+        </fieldset>
+
+        <fieldset>
+          <legend><i>04</i>How people reach you</legend>
+          <div class="cl-f"><label for="cl-contact">Your name <b>*</b></label>
+            <input type="text" id="cl-contact" autocomplete="name"></div>
+          <div class="cl-f"><label for="cl-wa-num">WhatsApp number <b>*</b></label>
+            <p class="cl-help">Customers will message this number from your site. Include the country code.</p>
+            <input type="tel" id="cl-wa-num" autocomplete="tel" placeholder="+233 …"></div>
+          <div class="cl-f"><label for="cl-email">Email</label>
+            <p class="cl-help">Optional.</p>
+            <input type="email" id="cl-email" autocomplete="email"></div>
+          <div class="cl-f"><label for="cl-hours">Opening hours</label>
+            <p class="cl-help">Optional.</p>
+            <input type="text" id="cl-hours" placeholder="e.g. Mon–Sat, 9am–7pm"></div>
+          <div class="cl-f"><label for="cl-addr">Shop address</label>
+            <p class="cl-help">Optional. Leave blank if you work from home or online.</p>
+            <input type="text" id="cl-addr"></div>
+          <div class="cl-f"><label for="cl-social">Instagram, Facebook or TikTok link</label>
+            <p class="cl-help">Optional. We can pull extra details from it.</p>
+            <input type="text" id="cl-social"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend><i>05</i>Goal and look</legend>
+          <div class="cl-f"><label>What should the website mainly do? <b>*</b></label><div class="cl-chips" id="cl-goal"></div></div>
+          <div class="cl-f"><label>What feel do you want? <b>*</b></label><div class="cl-chips" id="cl-feel"></div></div>
+          <div class="cl-f"><label>Colours</label><p class="cl-help">Pick any that you like.</p><div class="cl-chips" id="cl-colours"></div></div>
+        </fieldset>
+
+        <label class="cl-consent"><input type="checkbox" id="cl-consent">
+          <span>I own these photos and details and have the right to use them. I agree that Africode Studios may show my website in its portfolio. I understand that spots are limited and approved by Africode.</span></label>
+
+        <p class="cl-msg" id="cl-missing" hidden></p>
+        <p class="cl-msg err" id="cl-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn-amber cl-submit" id="cl-submit">Claim my free website</button>
+        <p class="cl-note">We will message you on WhatsApp to confirm your spot.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -2119,6 +2258,219 @@ function whenVisible(el,on,off){
   whenVisible(c,function(){if(!run&&!document.hidden){run=true;last=performance.now();requestAnimationFrame(frame);}},function(){run=false;});
 })();
 
+})();
+</script>
+
+<!-- free-website promo form: opens at /#claim, saves to Google Sheets + Drive via Apps Script -->
+<script>
+(function(){
+'use strict';
+var API='https://script.google.com/macros/s/AKfycbwQHvaNizbCFXNXOgPTXXY4XkWuiKSwgkjHktyEryr3VFKWvykJD6OH7RrxeR3NTWOF2A/exec';
+var WA='233550456626';
+var MAX_PHOTOS=10;
+
+var NICHES=[
+  ['salon','Hair / salon / barber'],['cosmetics','Cosmetics / skincare'],['perfume','Perfume / fragrance'],
+  ['fashion','Fashion / tailoring'],['food','Food / catering'],['photography','Photography / videography'],
+  ['events','Events / decor'],['jewellery','Jewellery / accessories'],['auto','Car wash / detailing / mechanic'],
+  ['cleaning','Cleaning / laundry'],['fitness','Fitness / coach / wellness'],['kids','Baby and kids’ products'],
+  ['music','Music / DJ / entertainment'],['artists','Artist / craftsperson'],['furniture','Furniture / interior design'],
+  ['electronics','Electronics / phone accessories'],['farm','Agriculture / farm produce'],
+  ['tutoring','Tutoring / education'],['printing','Printing / branding / design studio'],['church','Church / ministry']
+];
+var GOALS=[['whatsapp-orders','Get orders on WhatsApp'],['bookings','Get bookings / appointments'],['calls','Get phone calls'],['showcase','Show off my work']];
+var FEELS=[['luxury','Luxury and elegant'],['bold','Bold and colourful'],['minimal','Clean and minimal'],['warm','Warm and friendly']];
+var COLOURS=[['match-logo','Match my logo'],['black-gold','Black and gold'],['white-clean','White and clean'],['blue','Blue'],['green','Green'],['red','Red'],['pink-purple','Pink / purple'],['earth','Earth tones'],['you-decide','You decide']];
+
+function $(id){return document.getElementById(id);}
+var sec=$('claim');
+if(!sec)return;
+
+var goal='',feel='',colours=[],photos=[],logo=null,busy=false,statusLoaded=false;
+
+/* ---- show the section only for /#claim (or ?claim) ---- */
+function wanted(){return location.hash==='#claim'||/[?&]claim(=|&|$)/.test(location.search);}
+/* jump (not glide) to the form: the page's smooth scrolling gets cut short while it is still laying out */
+function jump(){
+  var h=document.documentElement,old=h.style.scrollBehavior;
+  h.style.scrollBehavior='auto';
+  window.scrollTo(0,sec.getBoundingClientRect().top+window.pageYOffset-90);
+  h.style.scrollBehavior=old;
+}
+function reveal(){
+  if(!wanted())return;
+  sec.hidden=false;
+  loadStatus();
+  [60,500,1400].forEach(function(ms){setTimeout(function(){
+    if(Math.abs(sec.getBoundingClientRect().top-90)>40)jump();
+  },ms);});
+}
+window.addEventListener('hashchange',reveal);
+
+/* ---- build selects and chips ---- */
+var nicheSel=$('cl-niche');
+NICHES.forEach(function(n){var o=document.createElement('option');o.value=n[0];o.textContent=n[1];nicheSel.appendChild(o);});
+
+function chips(id,opts,multi,onPick){
+  var box=$(id);
+  opts.forEach(function(o){
+    var b=document.createElement('button');b.type='button';b.className='pick';b.textContent=o[1];b.setAttribute('aria-pressed','false');
+    b.addEventListener('click',function(){
+      if(multi){var on=b.classList.toggle('on');b.setAttribute('aria-pressed',on);onPick(o[0],on);}
+      else{[].forEach.call(box.children,function(c){c.classList.remove('on');c.setAttribute('aria-pressed','false');});b.classList.add('on');b.setAttribute('aria-pressed','true');onPick(o[0],true);}
+    });
+    box.appendChild(b);
+  });
+}
+chips('cl-goal',GOALS,false,function(v){goal=v;});
+chips('cl-feel',FEELS,false,function(v){feel=v;});
+chips('cl-colours',COLOURS,true,function(v,on){var i=colours.indexOf(v);if(on&&i<0)colours.push(v);if(!on&&i>=0)colours.splice(i,1);});
+
+/* ---- network ---- */
+function post(payload){
+  return fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload),cache:'no-store'}).then(function(r){return r.json();});
+}
+function loadStatus(){
+  if(statusLoaded)return;
+  fetch(API+'?action=status',{cache:'no-store'}).then(function(r){return r.json();}).then(function(s){
+    if(!s||!s.ok)return;
+    statusLoaded=true;
+    var left=s.total-s.used;
+    $('cl-left').textContent=left+' of '+s.total+' spots left.';
+    [].forEach.call(nicheSel.options,function(o){
+      if(o.value&&s.taken.indexOf(o.value)>=0){o.disabled=true;o.textContent=o.textContent.replace(/ \(spot filled\)$/,'')+' (spot filled)';}
+    });
+    if(left<=0){$('cl-closed').hidden=false;$('cl-form').hidden=true;}
+  }).catch(function(){});
+}
+
+/* ---- photos ---- */
+function shrink(file){
+  return new Promise(function(resolve,reject){
+    var url=URL.createObjectURL(file),img=new Image();
+    img.onload=function(){
+      var s=Math.min(1,1600/Math.max(img.width,img.height)),w=Math.round(img.width*s),h=Math.round(img.height*s);
+      var c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);
+      c.toBlob(function(b){
+        var r=new FileReader();
+        r.onload=function(){resolve({name:file.name.replace(/\.[^.]+$/,'')+'.jpg',mime:'image/jpeg',data:String(r.result).split(',')[1],preview:url});};
+        r.onerror=reject;r.readAsDataURL(b);
+      },'image/jpeg',0.82);
+    };
+    img.onerror=function(){URL.revokeObjectURL(url);reject(new Error('unreadable'));};
+    img.src=url;
+  });
+}
+function renderPhotos(){
+  var box=$('cl-photos');box.innerHTML='';
+  photos.forEach(function(p,i){
+    var d=document.createElement('div');d.className='cl-ph';
+    var im=document.createElement('img');im.src=p.preview;im.alt='';
+    var x=document.createElement('button');x.type='button';x.textContent='×';x.setAttribute('aria-label','Remove photo');
+    x.addEventListener('click',function(){photos.splice(i,1);renderPhotos();});
+    d.appendChild(im);d.appendChild(x);box.appendChild(d);
+  });
+  if(photos.length<MAX_PHOTOS){
+    var a=document.createElement('button');a.type='button';a.className='cl-add';a.textContent='+ Add photos';
+    a.addEventListener('click',function(){$('cl-photo-in').click();});
+    box.appendChild(a);
+  }
+}
+function renderLogo(){
+  var box=$('cl-logo');box.innerHTML='';
+  if(logo){
+    var w=document.createElement('div');w.className='cl-logo';
+    var im=document.createElement('img');im.src=logo.preview;im.alt='Logo';
+    var x=document.createElement('button');x.type='button';x.className='btn btn-ghost btn-sm';x.textContent='Remove';
+    x.addEventListener('click',function(){logo=null;renderLogo();});
+    w.appendChild(im);w.appendChild(x);box.appendChild(w);
+  }else{
+    var a=document.createElement('button');a.type='button';a.className='btn btn-ghost btn-sm';a.textContent='Upload logo';
+    a.addEventListener('click',function(){$('cl-logo-in').click();});
+    box.appendChild(a);
+  }
+}
+function showError(t){var e=$('cl-error');e.textContent=t;e.hidden=!t;}
+$('cl-photo-in').addEventListener('change',function(e){
+  var files=[].slice.call(e.target.files).filter(function(f){return /^image\//.test(f.type);}).slice(0,MAX_PHOTOS-photos.length);
+  e.target.value='';
+  var chain=Promise.resolve();
+  files.forEach(function(f){chain=chain.then(function(){return shrink(f).then(function(p){photos.push(p);renderPhotos();});});});
+  chain.catch(function(){showError('One of those photos could not be read. Try a different one.');});
+});
+$('cl-logo-in').addEventListener('change',function(e){
+  var f=e.target.files[0];e.target.value='';if(!f)return;
+  shrink(f).then(function(p){logo=p;renderLogo();}).catch(function(){showError('That logo file could not be read. Try a PNG or JPG.');});
+});
+renderPhotos();renderLogo();
+
+/* ---- submit ---- */
+function val(id){return $(id).value.trim();}
+function missing(){
+  var m=[];
+  if(!val('cl-niche'))m.push('your business category');
+  if(!val('cl-name'))m.push('business name');
+  if(!val('cl-about'))m.push('what you sell or offer');
+  if(!val('cl-city'))m.push('city / area');
+  if(!val('cl-offer'))m.push('products or services with prices');
+  if(photos.length<3)m.push('at least 3 photos');
+  if(!val('cl-contact'))m.push('your name');
+  if(!val('cl-wa-num'))m.push('WhatsApp number');
+  if(!goal)m.push('main goal of the site');
+  if(!feel)m.push('the feel you want');
+  if(!$('cl-consent').checked)m.push('the consent box');
+  return m;
+}
+function setBusy(t){busy=!!t;var b=$('cl-submit');b.disabled=!!t;b.textContent=t||'Claim my free website';}
+
+$('cl-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  if(busy)return;
+  showError('');
+  var m=missing(),box=$('cl-missing');
+  if(m.length){box.textContent='Still needed: '+m.join(', ')+'.';box.hidden=false;box.scrollIntoView({block:'center'});return;}
+  box.hidden=true;
+  setBusy('Sending your details…');
+  post({
+    action:'submit',niche:val('cl-niche'),businessName:val('cl-name'),about:val('cl-about'),city:val('cl-city'),
+    different:val('cl-diff'),offerings:val('cl-offer'),contactName:val('cl-contact'),whatsapp:val('cl-wa-num'),
+    email:val('cl-email'),hours:val('cl-hours'),address:val('cl-addr'),social:val('cl-social'),
+    goal:goal,feel:feel,colours:colours.join(', '),photoCount:photos.length,hasLogo:!!logo,website:$('cl-website').value
+  }).then(function(res){
+    if(!res||!res.ok){
+      setBusy('');statusLoaded=false;loadStatus();
+      showError(res&&res.error==='niche-taken'?'That category has just been taken. Please pick another one.'
+        :res&&res.error==='full'?'All the spots have been filled. Message us on WhatsApp and we will put you on the waiting list.'
+        :'Something went wrong sending your details. Check your connection and try again.');
+      return;
+    }
+    var queue=(logo?[['logo',logo]]:[]).concat(photos.map(function(p){return ['photo',p];})),failed=0,chain=Promise.resolve();
+    queue.forEach(function(q,i){
+      chain=chain.then(function(){
+        setBusy('Uploading photo '+(i+1)+' of '+queue.length+'…');
+        return post({action:'photo',id:res.id,kind:q[0],name:q[1].name,mime:q[1].mime,data:q[1].data})
+          .then(function(r){if(!r||!r.ok)failed++;},function(){failed++;});
+      });
+    });
+    return chain.then(function(){finish(res.id,failed);});
+  }).catch(function(){
+    setBusy('');showError('Something went wrong sending your details. Check your connection and try again.');
+  });
+});
+
+function finish(id,failed){
+  setBusy('');
+  $('cl-form').hidden=true;
+  $('cl-ref').textContent=id;
+  var msg='Hi Africode Studios! I just submitted my details for the free website promo ('+val('cl-name')+'). Reference: '+id;
+  $('cl-wa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
+  var pf=$('cl-photofail');
+  if(failed>0){pf.textContent=failed+' photo'+(failed>1?'s':'')+' did not upload. Please send '+(failed>1?'them':'it')+' to us on WhatsApp.';pf.hidden=false;}
+  $('cl-done').hidden=false;
+  $('cl-done').scrollIntoView({block:'center'});
+}
+
+reveal();
 })();
 </script>
 </body>
