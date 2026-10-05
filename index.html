@@ -706,7 +706,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
 /* ---------- free-website promo form (#claim) ---------- */
 [hidden]{display:none!important;}
 #claim .cl-box{max-width:720px;margin:0 auto;}
-#claim .sec-h{font-size:clamp(32px,5vw,56px);}
+#claim .sec-h{font-size:clamp(28px,4.2vw,46px);line-height:1.08;}
 #claim .cl-left{color:var(--amber);font-weight:600;}
 #claim fieldset{border:0;padding:0;margin:44px 0 0;min-width:0;}
 #claim legend{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.03em;padding:0;margin-bottom:22px;}
@@ -1074,97 +1074,98 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
 <section class="sec" id="claim" hidden>
   <div class="wrap">
     <div class="cl-box">
-      <span class="eyebrow">Free website promo</span>
-      <h2 class="sec-h" style="margin-top:18px">Claim your free website</h2>
-      <p class="sec-p">This takes about 5 minutes. Answer what you can and we build the rest. <span class="cl-left" id="cl-left"></span></p>
+      <span class="eyebrow" data-cl="eyebrow">Limited promo · 10 spots</span>
+      <h2 class="sec-h" style="margin-top:18px" data-cl="h2">Apply now: first 10 approved businesses get a free website</h2>
+      <p class="sec-p"><span data-cl="intro1">We are giving away <b>10 free websites</b>. Applications are reviewed in the order we receive them, and the first 10 businesses we approve get their website built free. Applying does not guarantee a spot.</span> <span class="cl-left" id="cl-left"></span></p>
+      <p class="sec-p" style="margin-top:12px;font-size:15px" data-cl="intro2">The application takes about 5 minutes. Answer what you can and we build the rest.</p>
 
       <div class="cl-done" id="cl-closed" hidden style="margin-top:40px">
-        <h3 style="font-size:32px;margin-bottom:14px">All 10 spots are filled</h3>
-        <p class="sec-p" style="margin:0 auto 26px">Thank you for your interest. Message us on WhatsApp and we will add you to the waiting list.</p>
-        <a class="btn btn-wa" href="https://wa.me/233550456626" target="_blank" rel="noopener">💬 Message us on WhatsApp</a>
+        <h3 style="font-size:32px;margin-bottom:14px" data-cl="closed.h">Applications are closed</h3>
+        <p class="sec-p" style="margin:0 auto 26px" data-cl="closed.p">All 10 free websites have been taken. Thank you for your interest. Message us on WhatsApp and we will add you to the waiting list.</p>
+        <a class="btn btn-wa" href="https://wa.me/233550456626" target="_blank" rel="noopener">💬 <span data-cl="wa.btn">Message us on WhatsApp</span></a>
       </div>
 
       <div class="cl-done" id="cl-done" hidden>
         <div class="tick" aria-hidden="true">✓</div>
-        <h3 style="font-size:32px;margin-bottom:14px">Thank you, we have your details</h3>
-        <p class="sec-p" style="margin:0 auto 22px">We will message you on WhatsApp shortly to confirm your spot. Your reference is <b id="cl-ref"></b>.</p>
+        <h3 style="font-size:32px;margin-bottom:14px" data-cl="done.h">Application received</h3>
+        <p class="sec-p" style="margin:0 auto 22px"><span data-cl="done.p">Thank you. We will review your application and message you on WhatsApp to let you know whether you have secured one of the 10 free websites.</span> <span data-cl="done.ref">Your reference is</span> <b id="cl-ref"></b>.</p>
         <p class="cl-msg" id="cl-photofail" hidden></p>
-        <a class="btn btn-wa" id="cl-wa" href="#" target="_blank" rel="noopener">💬 Message us on WhatsApp</a>
+        <a class="btn btn-wa" id="cl-wa" href="#" target="_blank" rel="noopener">💬 <span data-cl="wa.btn">Message us on WhatsApp</span></a>
       </div>
 
       <form id="cl-form" novalidate>
         <input class="hp" type="text" name="website" id="cl-website" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <fieldset>
-          <legend><i>01</i>Your business</legend>
-          <div class="cl-f"><label for="cl-niche">What kind of business is it? <b>*</b></label>
-            <select id="cl-niche"><option value="">Select your category</option></select></div>
-          <div class="cl-f"><label for="cl-name">Business name <b>*</b></label>
+          <legend><i>01</i><span data-cl="s1">Your business</span></legend>
+          <div class="cl-f"><label for="cl-niche"><span data-cl="l.niche">What kind of business is it?</span> <b>*</b></label>
+            <select id="cl-niche"><option value="" data-cl="niche.ph">Select your category</option></select></div>
+          <div class="cl-f"><label for="cl-name"><span data-cl="l.name">Business name</span> <b>*</b></label>
             <input type="text" id="cl-name" autocomplete="organization"></div>
-          <div class="cl-f"><label for="cl-about">What do you sell or offer? <b>*</b></label>
-            <p class="cl-help">Two or three sentences is plenty.</p>
+          <div class="cl-f"><label for="cl-about"><span data-cl="l.about">What do you sell or offer?</span> <b>*</b></label>
+            <p class="cl-help" data-cl="h.about">Two or three sentences is plenty.</p>
             <textarea id="cl-about" rows="3"></textarea></div>
-          <div class="cl-f"><label for="cl-city">City and area you serve <b>*</b></label>
-            <input type="text" id="cl-city" placeholder="e.g. Accra, East Legon"></div>
-          <div class="cl-f"><label for="cl-diff">What makes you different?</label>
-            <p class="cl-help">Optional. Why do customers pick you?</p>
+          <div class="cl-f"><label for="cl-city"><span data-cl="l.city">City and area you serve</span> <b>*</b></label>
+            <input type="text" id="cl-city" data-cl-ph="ph.city"></div>
+          <div class="cl-f"><label for="cl-diff" data-cl="l.diff">What makes you different?</label>
+            <p class="cl-help" data-cl="h.diff">Optional. Why do customers pick you?</p>
             <textarea id="cl-diff" rows="2"></textarea></div>
         </fieldset>
 
         <fieldset>
-          <legend><i>02</i>What you sell, with prices</legend>
-          <div class="cl-f"><label for="cl-offer">List your products or services with prices <b>*</b></label>
-            <p class="cl-help">Type or paste it, one per line. For example: Box braids – GHS 250.</p>
+          <legend><i>02</i><span data-cl="s2">What you sell, with prices</span></legend>
+          <div class="cl-f"><label for="cl-offer"><span data-cl="l.offer">List your products or services with prices</span> <b>*</b></label>
+            <p class="cl-help" data-cl="h.offer">Type or paste it, one per line. For example: Box braids – GHS 250.</p>
             <textarea id="cl-offer" rows="6"></textarea></div>
         </fieldset>
 
         <fieldset>
-          <legend><i>03</i>Photos</legend>
-          <div class="cl-f"><label>Your best photos (3 to 10) <b>*</b></label>
-            <p class="cl-help">Clear, in daylight, of your work or products. We shrink them for you, so phone photos are fine.</p>
+          <legend><i>03</i><span data-cl="s3">Photos</span></legend>
+          <div class="cl-f"><label><span data-cl="l.photos">Your best photos (3 to 10)</span> <b>*</b></label>
+            <p class="cl-help" data-cl="h.photos">Clear, in daylight, of your work or products. We shrink them for you, so phone photos are fine.</p>
             <div class="cl-photos" id="cl-photos"></div>
             <input type="file" id="cl-photo-in" accept="image/*" multiple hidden></div>
-          <div class="cl-f"><label>Your logo</label>
-            <p class="cl-help">Optional. If you do not have one, we will make a simple one.</p>
+          <div class="cl-f"><label data-cl="l.logo">Your logo</label>
+            <p class="cl-help" data-cl="h.logo">Optional. If you do not have one, we will make a simple one.</p>
             <div id="cl-logo"></div>
             <input type="file" id="cl-logo-in" accept="image/*" hidden></div>
         </fieldset>
 
         <fieldset>
-          <legend><i>04</i>How people reach you</legend>
-          <div class="cl-f"><label for="cl-contact">Your name <b>*</b></label>
+          <legend><i>04</i><span data-cl="s4">How people reach you</span></legend>
+          <div class="cl-f"><label for="cl-contact"><span data-cl="l.contact">Your name</span> <b>*</b></label>
             <input type="text" id="cl-contact" autocomplete="name"></div>
-          <div class="cl-f"><label for="cl-wa-num">WhatsApp number <b>*</b></label>
-            <p class="cl-help">Customers will message this number from your site. Include the country code.</p>
+          <div class="cl-f"><label for="cl-wa-num"><span data-cl="l.wa">WhatsApp number</span> <b>*</b></label>
+            <p class="cl-help" data-cl="h.wa">Customers will message this number from your site. Include the country code.</p>
             <input type="tel" id="cl-wa-num" autocomplete="tel" placeholder="+233 …"></div>
-          <div class="cl-f"><label for="cl-email">Email</label>
-            <p class="cl-help">Optional.</p>
+          <div class="cl-f"><label for="cl-email" data-cl="l.email">Email</label>
+            <p class="cl-help" data-cl="h.opt">Optional.</p>
             <input type="email" id="cl-email" autocomplete="email"></div>
-          <div class="cl-f"><label for="cl-hours">Opening hours</label>
-            <p class="cl-help">Optional.</p>
-            <input type="text" id="cl-hours" placeholder="e.g. Mon–Sat, 9am–7pm"></div>
-          <div class="cl-f"><label for="cl-addr">Shop address</label>
-            <p class="cl-help">Optional. Leave blank if you work from home or online.</p>
+          <div class="cl-f"><label for="cl-hours" data-cl="l.hours">Opening hours</label>
+            <p class="cl-help" data-cl="h.opt">Optional.</p>
+            <input type="text" id="cl-hours" data-cl-ph="ph.hours"></div>
+          <div class="cl-f"><label for="cl-addr" data-cl="l.addr">Shop address</label>
+            <p class="cl-help" data-cl="h.addr">Optional. Leave blank if you work from home or online.</p>
             <input type="text" id="cl-addr"></div>
-          <div class="cl-f"><label for="cl-social">Instagram, Facebook or TikTok link</label>
-            <p class="cl-help">Optional. We can pull extra details from it.</p>
+          <div class="cl-f"><label for="cl-social" data-cl="l.social">Instagram, Facebook or TikTok link</label>
+            <p class="cl-help" data-cl="h.social">Optional. We can pull extra details from it.</p>
             <input type="text" id="cl-social"></div>
         </fieldset>
 
         <fieldset>
-          <legend><i>05</i>Goal and look</legend>
-          <div class="cl-f"><label>What should the website mainly do? <b>*</b></label><div class="cl-chips" id="cl-goal"></div></div>
-          <div class="cl-f"><label>What feel do you want? <b>*</b></label><div class="cl-chips" id="cl-feel"></div></div>
-          <div class="cl-f"><label>Colours</label><p class="cl-help">Pick any that you like.</p><div class="cl-chips" id="cl-colours"></div></div>
+          <legend><i>05</i><span data-cl="s5">Goal and look</span></legend>
+          <div class="cl-f"><label><span data-cl="l.goal">What should the website mainly do?</span> <b>*</b></label><div class="cl-chips" id="cl-goal"></div></div>
+          <div class="cl-f"><label><span data-cl="l.feel">What feel do you want?</span> <b>*</b></label><div class="cl-chips" id="cl-feel"></div></div>
+          <div class="cl-f"><label data-cl="l.colours">Colours</label><p class="cl-help" data-cl="h.colours">Pick any that you like.</p><div class="cl-chips" id="cl-colours"></div></div>
         </fieldset>
 
         <label class="cl-consent"><input type="checkbox" id="cl-consent">
-          <span>I own these photos and details and have the right to use them. I agree that Africode Studios may show my website in its portfolio. I understand that spots are limited and approved by Africode.</span></label>
+          <span data-cl="consent">I own these photos and details and have the right to use them. I agree that Africode Studios may show my website in its portfolio. I understand that this is an application for one of 10 free websites, that spots are limited, and that Africode reviews and approves each application.</span></label>
 
         <p class="cl-msg" id="cl-missing" hidden></p>
         <p class="cl-msg err" id="cl-error" role="alert" hidden></p>
-        <button type="submit" class="btn btn-amber cl-submit" id="cl-submit">Claim my free website</button>
-        <p class="cl-note">We will message you on WhatsApp to confirm your spot.</p>
+        <button type="submit" class="btn btn-amber cl-submit" id="cl-submit">Submit my application</button>
+        <p class="cl-note" data-cl="note">Submitting does not guarantee a spot. We will message you on WhatsApp with the result.</p>
       </form>
     </div>
   </div>
@@ -2261,7 +2262,7 @@ function whenVisible(el,on,off){
 })();
 </script>
 
-<!-- free-website promo form: opens at /#claim, saves to Google Sheets + Drive via Apps Script -->
+<!-- free-website promo form: opens at /#claim, saves to Google Sheets + Drive via Apps Script. English + French. -->
 <script>
 (function(){
 'use strict';
@@ -2269,28 +2270,153 @@ var API='https://script.google.com/macros/s/AKfycbwQHvaNizbCFXNXOgPTXXY4XkWuiKSw
 var WA='233550456626';
 var MAX_PHOTOS=10;
 
+/* [key, English, French] */
 var NICHES=[
-  ['salon','Hair / salon / barber'],['cosmetics','Cosmetics / skincare'],['perfume','Perfume / fragrance'],
-  ['fashion','Fashion / tailoring'],['food','Food / catering'],['photography','Photography / videography'],
-  ['events','Events / decor'],['jewellery','Jewellery / accessories'],['auto','Car wash / detailing / mechanic'],
-  ['cleaning','Cleaning / laundry'],['fitness','Fitness / coach / wellness'],['kids','Baby and kids’ products'],
-  ['music','Music / DJ / entertainment'],['artists','Artist / craftsperson'],['furniture','Furniture / interior design'],
-  ['electronics','Electronics / phone accessories'],['farm','Agriculture / farm produce'],
-  ['tutoring','Tutoring / education'],['printing','Printing / branding / design studio'],['church','Church / ministry']
+  ['salon','Hair / salon / barber','Coiffure / salon / barbier'],
+  ['cosmetics','Cosmetics / skincare','Cosmétiques / soins de la peau'],
+  ['perfume','Perfume / fragrance','Parfums'],
+  ['fashion','Fashion / tailoring','Mode / couture'],
+  ['food','Food / catering','Restauration / traiteur'],
+  ['photography','Photography / videography','Photographie / vidéo'],
+  ['events','Events / decor','Événementiel / décoration'],
+  ['jewellery','Jewellery / accessories','Bijoux / accessoires'],
+  ['auto','Car wash / detailing / mechanic','Lavage auto / esthétique auto / mécanique'],
+  ['cleaning','Cleaning / laundry','Nettoyage / blanchisserie'],
+  ['fitness','Fitness / coach / wellness','Sport / coaching / bien-être'],
+  ['kids','Baby and kids’ products','Produits pour bébés et enfants'],
+  ['music','Music / DJ / entertainment','Musique / DJ / spectacle'],
+  ['artists','Artist / craftsperson','Artiste / artisan'],
+  ['furniture','Furniture / interior design','Meubles / décoration d’intérieur'],
+  ['electronics','Electronics / phone accessories','Électronique / accessoires de téléphone'],
+  ['farm','Agriculture / farm produce','Agriculture / produits de la ferme'],
+  ['tutoring','Tutoring / education','Cours particuliers / éducation'],
+  ['printing','Printing / branding / design studio','Impression / branding / studio de design'],
+  ['church','Church / ministry','Église / ministère']
 ];
-var GOALS=[['whatsapp-orders','Get orders on WhatsApp'],['bookings','Get bookings / appointments'],['calls','Get phone calls'],['showcase','Show off my work']];
-var FEELS=[['luxury','Luxury and elegant'],['bold','Bold and colourful'],['minimal','Clean and minimal'],['warm','Warm and friendly']];
-var COLOURS=[['match-logo','Match my logo'],['black-gold','Black and gold'],['white-clean','White and clean'],['blue','Blue'],['green','Green'],['red','Red'],['pink-purple','Pink / purple'],['earth','Earth tones'],['you-decide','You decide']];
+var GOALS=[
+  ['whatsapp-orders','Get orders on WhatsApp','Recevoir des commandes sur WhatsApp'],
+  ['bookings','Get bookings / appointments','Recevoir des réservations / rendez-vous'],
+  ['calls','Get phone calls','Recevoir des appels'],
+  ['showcase','Show off my work','Présenter mon travail']
+];
+var FEELS=[
+  ['luxury','Luxury and elegant','Luxe et élégant'],
+  ['bold','Bold and colourful','Audacieux et coloré'],
+  ['minimal','Clean and minimal','Épuré et minimaliste'],
+  ['warm','Warm and friendly','Chaleureux et convivial']
+];
+var COLOURS=[
+  ['match-logo','Match my logo','Assorti à mon logo'],
+  ['black-gold','Black and gold','Noir et or'],
+  ['white-clean','White and clean','Blanc et épuré'],
+  ['blue','Blue','Bleu'],
+  ['green','Green','Vert'],
+  ['red','Red','Rouge'],
+  ['pink-purple','Pink / purple','Rose / violet'],
+  ['earth','Earth tones','Tons terre'],
+  ['you-decide','You decide','À vous de choisir']
+];
+
+/* every other string on the form */
+var T={
+ 'eyebrow':{en:'Limited promo · 10 spots',fr:'Offre limitée · 10 places'},
+ 'h2':{en:'Apply now: first 10 approved businesses get a free website',fr:'Candidatez maintenant : les 10 premières entreprises approuvées reçoivent un site web gratuit'},
+ 'intro1':{en:'We are giving away <b>10 free websites</b>. Applications are reviewed in the order we receive them, and the first 10 businesses we approve get their website built free. Applying does not guarantee a spot.',
+           fr:'Nous offrons <b>10 sites web gratuits</b>. Les candidatures sont examinées dans l’ordre de réception, et les 10 premières entreprises que nous approuvons reçoivent leur site web gratuitement. Candidater ne garantit pas une place.'},
+ 'intro2':{en:'The application takes about 5 minutes. Answer what you can and we build the rest.',fr:'La candidature prend environ 5 minutes. Répondez à ce que vous pouvez, nous nous occupons du reste.'},
+ 'spots':{en:'{n} of {t} spots left.',fr:'Il reste {n} place(s) sur {t}.'},
+ 'closed.h':{en:'Applications are closed',fr:'Les candidatures sont closes'},
+ 'closed.p':{en:'All 10 free websites have been taken. Thank you for your interest. Message us on WhatsApp and we will add you to the waiting list.',
+             fr:'Les 10 sites web gratuits ont tous été attribués. Merci de votre intérêt. Écrivez-nous sur WhatsApp et nous vous ajouterons à la liste d’attente.'},
+ 'wa.btn':{en:'Message us on WhatsApp',fr:'Écrivez-nous sur WhatsApp'},
+ 'done.h':{en:'Application received',fr:'Candidature reçue'},
+ 'done.p':{en:'Thank you. We will review your application and message you on WhatsApp to let you know whether you have secured one of the 10 free websites.',
+           fr:'Merci. Nous examinerons votre candidature et vous écrirons sur WhatsApp pour vous dire si vous avez obtenu l’un des 10 sites web gratuits.'},
+ 'done.ref':{en:'Your reference is',fr:'Votre référence est'},
+ 'photofail':{en:'{n} photo(s) did not upload. Please send them to us on WhatsApp.',fr:'{n} photo(s) n’ont pas pu être envoyée(s). Veuillez nous les envoyer sur WhatsApp.'},
+ 's1':{en:'Your business',fr:'Votre entreprise'},
+ 'l.niche':{en:'What kind of business is it?',fr:'Quel type d’entreprise avez-vous ?'},
+ 'niche.ph':{en:'Select your category',fr:'Sélectionnez votre catégorie'},
+ 'niche.taken':{en:'(spot filled)',fr:'(place attribuée)'},
+ 'l.name':{en:'Business name',fr:'Nom de l’entreprise'},
+ 'l.about':{en:'What do you sell or offer?',fr:'Que vendez-vous ou proposez-vous ?'},
+ 'h.about':{en:'Two or three sentences is plenty.',fr:'Deux ou trois phrases suffisent.'},
+ 'l.city':{en:'City and area you serve',fr:'Ville et zone desservie'},
+ 'ph.city':{en:'e.g. Accra, East Legon',fr:'ex. Douala, Akwa'},
+ 'l.diff':{en:'What makes you different?',fr:'Qu’est-ce qui vous distingue ?'},
+ 'h.diff':{en:'Optional. Why do customers pick you?',fr:'Facultatif. Pourquoi les clients vous choisissent-ils ?'},
+ 's2':{en:'What you sell, with prices',fr:'Ce que vous vendez, avec les prix'},
+ 'l.offer':{en:'List your products or services with prices',fr:'Listez vos produits ou services avec les prix'},
+ 'h.offer':{en:'Type or paste it, one per line. For example: Box braids – GHS 250.',fr:'Saisissez-les ou collez-les, un par ligne. Exemple : Tresses africaines – 5 000 FCFA.'},
+ 's3':{en:'Photos',fr:'Photos'},
+ 'l.photos':{en:'Your best photos (3 to 10)',fr:'Vos meilleures photos (3 à 10)'},
+ 'h.photos':{en:'Clear, in daylight, of your work or products. We shrink them for you, so phone photos are fine.',fr:'Nettes, en lumière du jour, de votre travail ou de vos produits. Nous les réduisons pour vous : les photos de téléphone conviennent.'},
+ 'photo.add':{en:'+ Add photos',fr:'+ Ajouter des photos'},
+ 'photo.rm':{en:'Remove photo',fr:'Retirer la photo'},
+ 'l.logo':{en:'Your logo',fr:'Votre logo'},
+ 'h.logo':{en:'Optional. If you do not have one, we will make a simple one.',fr:'Facultatif. Si vous n’en avez pas, nous en créerons un simple.'},
+ 'logo.up':{en:'Upload logo',fr:'Téléverser le logo'},
+ 'logo.rm':{en:'Remove',fr:'Retirer'},
+ 's4':{en:'How people reach you',fr:'Comment les clients vous joignent'},
+ 'l.contact':{en:'Your name',fr:'Votre nom'},
+ 'l.wa':{en:'WhatsApp number',fr:'Numéro WhatsApp'},
+ 'h.wa':{en:'Customers will message this number from your site. Include the country code.',fr:'Les clients écriront à ce numéro depuis votre site. Indiquez l’indicatif du pays.'},
+ 'l.email':{en:'Email',fr:'E-mail'},
+ 'h.opt':{en:'Optional.',fr:'Facultatif.'},
+ 'l.hours':{en:'Opening hours',fr:'Horaires d’ouverture'},
+ 'ph.hours':{en:'e.g. Mon–Sat, 9am–7pm',fr:'ex. lun–sam, 9h–19h'},
+ 'l.addr':{en:'Shop address',fr:'Adresse de la boutique'},
+ 'h.addr':{en:'Optional. Leave blank if you work from home or online.',fr:'Facultatif. Laissez vide si vous travaillez depuis chez vous ou en ligne.'},
+ 'l.social':{en:'Instagram, Facebook or TikTok link',fr:'Lien Instagram, Facebook ou TikTok'},
+ 'h.social':{en:'Optional. We can pull extra details from it.',fr:'Facultatif. Nous pouvons y trouver des informations supplémentaires.'},
+ 's5':{en:'Goal and look',fr:'Objectif et style'},
+ 'l.goal':{en:'What should the website mainly do?',fr:'À quoi doit servir principalement le site ?'},
+ 'l.feel':{en:'What feel do you want?',fr:'Quelle ambiance souhaitez-vous ?'},
+ 'l.colours':{en:'Colours',fr:'Couleurs'},
+ 'h.colours':{en:'Pick any that you like.',fr:'Choisissez celles que vous aimez.'},
+ 'consent':{en:'I own these photos and details and have the right to use them. I agree that Africode Studios may show my website in its portfolio. I understand that this is an application for one of 10 free websites, that spots are limited, and that Africode reviews and approves each application.',
+            fr:'Je suis propriétaire de ces photos et informations et j’ai le droit de les utiliser. J’accepte qu’Africode Studios puisse présenter mon site dans son portfolio. Je comprends qu’il s’agit d’une candidature pour l’un des 10 sites web gratuits, que les places sont limitées et qu’Africode examine et approuve chaque candidature.'},
+ 'submit':{en:'Submit my application',fr:'Envoyer ma candidature'},
+ 'note':{en:'Submitting does not guarantee a spot. We will message you on WhatsApp with the result.',fr:'L’envoi de votre candidature ne garantit pas une place. Nous vous écrirons sur WhatsApp pour vous donner le résultat.'},
+ 'busy.send':{en:'Sending your details…',fr:'Envoi de vos informations…'},
+ 'busy.photo':{en:'Uploading photo {n} of {t}…',fr:'Envoi de la photo {n} sur {t}…'},
+ 'miss.pre':{en:'Still needed: ',fr:'Il manque encore : '},
+ 'm.niche':{en:'your business category',fr:'votre catégorie d’entreprise'},
+ 'm.name':{en:'business name',fr:'le nom de l’entreprise'},
+ 'm.about':{en:'what you sell or offer',fr:'ce que vous vendez ou proposez'},
+ 'm.city':{en:'city / area',fr:'la ville / zone'},
+ 'm.offer':{en:'products or services with prices',fr:'les produits ou services avec les prix'},
+ 'm.photos':{en:'at least 3 photos',fr:'au moins 3 photos'},
+ 'm.contact':{en:'your name',fr:'votre nom'},
+ 'm.wa':{en:'WhatsApp number',fr:'le numéro WhatsApp'},
+ 'm.goal':{en:'main goal of the site',fr:'l’objectif principal du site'},
+ 'm.feel':{en:'the feel you want',fr:'l’ambiance souhaitée'},
+ 'm.consent':{en:'the consent box',fr:'la case de consentement'},
+ 'e.taken':{en:'That category has just been taken. Please pick another one.',fr:'Cette catégorie vient d’être attribuée. Veuillez en choisir une autre.'},
+ 'e.full':{en:'All 10 free websites have been taken. Message us on WhatsApp and we will put you on the waiting list.',fr:'Les 10 sites web gratuits ont tous été attribués. Écrivez-nous sur WhatsApp et nous vous mettrons sur la liste d’attente.'},
+ 'e.net':{en:'Something went wrong sending your details. Check your connection and try again.',fr:'Un problème est survenu lors de l’envoi. Vérifiez votre connexion et réessayez.'},
+ 'e.photo':{en:'One of those photos could not be read. Try a different one.',fr:'Une de ces photos n’a pas pu être lue. Essayez-en une autre.'},
+ 'e.logo':{en:'That logo file could not be read. Try a PNG or JPG.',fr:'Ce fichier de logo n’a pas pu être lu. Essayez un PNG ou un JPG.'},
+ 'wa.msg':{en:'Hi Africode Studios! I just applied for the free website promo ({b}). Reference: {id}',fr:'Bonjour Africode Studios ! Je viens de candidater à l’offre de site web gratuit ({b}). Référence : {id}'}
+};
 
 function $(id){return document.getElementById(id);}
 var sec=$('claim');
 if(!sec)return;
 
+var L=document.documentElement.lang==='fr'?'fr':'en';
+function tr(k,v){
+  var s=(T[k]&&T[k][L])||'';
+  if(v)for(var x in v)s=s.replace('{'+x+'}',v[x]);
+  return s;
+}
+
 var goal='',feel='',colours=[],photos=[],logo=null,busy=false,statusLoaded=false;
+var taken=[],spots=null,errKey='',missKeys=null,doneInfo=null,busyState='';
+var nicheSel=$('cl-niche'),chipBtns={goal:[],feel:[],colours:[]};
 
 /* ---- show the section only for /#claim (or ?claim) ---- */
 function wanted(){return location.hash==='#claim'||/[?&]claim(=|&|$)/.test(location.search);}
-/* jump (not glide) to the form: the page's smooth scrolling gets cut short while it is still laying out */
 function jump(){
   var h=document.documentElement,old=h.style.scrollBehavior;
   h.style.scrollBehavior='auto';
@@ -2307,24 +2433,22 @@ function reveal(){
 }
 window.addEventListener('hashchange',reveal);
 
-/* ---- build selects and chips ---- */
-var nicheSel=$('cl-niche');
-NICHES.forEach(function(n){var o=document.createElement('option');o.value=n[0];o.textContent=n[1];nicheSel.appendChild(o);});
-
-function chips(id,opts,multi,onPick){
+/* ---- build selects and chips (labels are filled in by render()) ---- */
+NICHES.forEach(function(n){var o=document.createElement('option');o.value=n[0];nicheSel.appendChild(o);});
+function chips(id,opts,multi,onPick,store){
   var box=$(id);
   opts.forEach(function(o){
-    var b=document.createElement('button');b.type='button';b.className='pick';b.textContent=o[1];b.setAttribute('aria-pressed','false');
+    var b=document.createElement('button');b.type='button';b.className='pick';b.setAttribute('aria-pressed','false');
     b.addEventListener('click',function(){
       if(multi){var on=b.classList.toggle('on');b.setAttribute('aria-pressed',on);onPick(o[0],on);}
       else{[].forEach.call(box.children,function(c){c.classList.remove('on');c.setAttribute('aria-pressed','false');});b.classList.add('on');b.setAttribute('aria-pressed','true');onPick(o[0],true);}
     });
-    box.appendChild(b);
+    box.appendChild(b);store.push(b);
   });
 }
-chips('cl-goal',GOALS,false,function(v){goal=v;});
-chips('cl-feel',FEELS,false,function(v){feel=v;});
-chips('cl-colours',COLOURS,true,function(v,on){var i=colours.indexOf(v);if(on&&i<0)colours.push(v);if(!on&&i>=0)colours.splice(i,1);});
+chips('cl-goal',GOALS,false,function(v){goal=v;},chipBtns.goal);
+chips('cl-feel',FEELS,false,function(v){feel=v;},chipBtns.feel);
+chips('cl-colours',COLOURS,true,function(v,on){var i=colours.indexOf(v);if(on&&i<0)colours.push(v);if(!on&&i>=0)colours.splice(i,1);},chipBtns.colours);
 
 /* ---- network ---- */
 function post(payload){
@@ -2335,12 +2459,10 @@ function loadStatus(){
   fetch(API+'?action=status',{cache:'no-store'}).then(function(r){return r.json();}).then(function(s){
     if(!s||!s.ok)return;
     statusLoaded=true;
-    var left=s.total-s.used;
-    $('cl-left').textContent=left+' of '+s.total+' spots left.';
-    [].forEach.call(nicheSel.options,function(o){
-      if(o.value&&s.taken.indexOf(o.value)>=0){o.disabled=true;o.textContent=o.textContent.replace(/ \(spot filled\)$/,'')+' (spot filled)';}
-    });
-    if(left<=0){$('cl-closed').hidden=false;$('cl-form').hidden=true;}
+    spots={n:s.total-s.used,t:s.total};
+    taken=s.taken||[];
+    if(spots.n<=0){$('cl-closed').hidden=false;$('cl-form').hidden=true;}
+    render();
   }).catch(function(){});
 }
 
@@ -2366,12 +2488,12 @@ function renderPhotos(){
   photos.forEach(function(p,i){
     var d=document.createElement('div');d.className='cl-ph';
     var im=document.createElement('img');im.src=p.preview;im.alt='';
-    var x=document.createElement('button');x.type='button';x.textContent='×';x.setAttribute('aria-label','Remove photo');
+    var x=document.createElement('button');x.type='button';x.textContent='×';x.setAttribute('aria-label',tr('photo.rm'));
     x.addEventListener('click',function(){photos.splice(i,1);renderPhotos();});
     d.appendChild(im);d.appendChild(x);box.appendChild(d);
   });
   if(photos.length<MAX_PHOTOS){
-    var a=document.createElement('button');a.type='button';a.className='cl-add';a.textContent='+ Add photos';
+    var a=document.createElement('button');a.type='button';a.className='cl-add';a.textContent=tr('photo.add');
     a.addEventListener('click',function(){$('cl-photo-in').click();});
     box.appendChild(a);
   }
@@ -2381,80 +2503,129 @@ function renderLogo(){
   if(logo){
     var w=document.createElement('div');w.className='cl-logo';
     var im=document.createElement('img');im.src=logo.preview;im.alt='Logo';
-    var x=document.createElement('button');x.type='button';x.className='btn btn-ghost btn-sm';x.textContent='Remove';
+    var x=document.createElement('button');x.type='button';x.className='btn btn-ghost btn-sm';x.textContent=tr('logo.rm');
     x.addEventListener('click',function(){logo=null;renderLogo();});
     w.appendChild(im);w.appendChild(x);box.appendChild(w);
   }else{
-    var a=document.createElement('button');a.type='button';a.className='btn btn-ghost btn-sm';a.textContent='Upload logo';
+    var a=document.createElement('button');a.type='button';a.className='btn btn-ghost btn-sm';a.textContent=tr('logo.up');
     a.addEventListener('click',function(){$('cl-logo-in').click();});
     box.appendChild(a);
   }
 }
-function showError(t){var e=$('cl-error');e.textContent=t;e.hidden=!t;}
+function showError(key){errKey=key||'';renderMessages();}
 $('cl-photo-in').addEventListener('change',function(e){
   var files=[].slice.call(e.target.files).filter(function(f){return /^image\//.test(f.type);}).slice(0,MAX_PHOTOS-photos.length);
   e.target.value='';
   var chain=Promise.resolve();
   files.forEach(function(f){chain=chain.then(function(){return shrink(f).then(function(p){photos.push(p);renderPhotos();});});});
-  chain.catch(function(){showError('One of those photos could not be read. Try a different one.');});
+  chain.catch(function(){showError('e.photo');});
 });
 $('cl-logo-in').addEventListener('change',function(e){
   var f=e.target.files[0];e.target.value='';if(!f)return;
-  shrink(f).then(function(p){logo=p;renderLogo();}).catch(function(){showError('That logo file could not be read. Try a PNG or JPG.');});
+  shrink(f).then(function(p){logo=p;renderLogo();}).catch(function(){showError('e.logo');});
 });
-renderPhotos();renderLogo();
+
+/* ---- render all language-dependent text ---- */
+function renderMessages(){
+  var er=$('cl-error');er.textContent=errKey?tr(errKey):'';er.hidden=!errKey;
+  var ms=$('cl-missing');
+  if(missKeys&&missKeys.length){ms.textContent=tr('miss.pre')+missKeys.map(function(k){return tr(k);}).join(', ')+'.';ms.hidden=false;}
+  else ms.hidden=true;
+}
+function render(){
+  var i,el;
+  el=sec.querySelectorAll('[data-cl]');
+  for(i=0;i<el.length;i++){var k=el[i].getAttribute('data-cl');if(T[k])el[i].innerHTML=tr(k);}
+  el=sec.querySelectorAll('[data-cl-ph]');
+  for(i=0;i<el.length;i++)el[i].setAttribute('placeholder',tr(el[i].getAttribute('data-cl-ph')));
+  /* category list, with taken ones disabled */
+  for(i=0;i<NICHES.length;i++){
+    var o=nicheSel.options[i+1],isTaken=taken.indexOf(NICHES[i][0])>=0;
+    o.textContent=NICHES[i][L==='fr'?2:1]+(isTaken?' '+tr('niche.taken'):'');
+    o.disabled=isTaken;
+  }
+  GOALS.forEach(function(o,j){chipBtns.goal[j].textContent=o[L==='fr'?2:1];});
+  FEELS.forEach(function(o,j){chipBtns.feel[j].textContent=o[L==='fr'?2:1];});
+  COLOURS.forEach(function(o,j){chipBtns.colours[j].textContent=o[L==='fr'?2:1];});
+  $('cl-left').textContent=spots?tr('spots',spots):'';
+  if(!busy)$('cl-submit').textContent=tr('submit');
+  else setBusyText();
+  if(doneInfo){
+    $('cl-wa').href=waLink(doneInfo.id);
+    var pf=$('cl-photofail');
+    if(doneInfo.failed>0){pf.textContent=tr('photofail',{n:doneInfo.failed});pf.hidden=false;}else pf.hidden=true;
+  }
+  renderPhotos();renderLogo();renderMessages();
+}
+
+/* follow the site's EN / FR switch */
+var origSetLang=window.setLang;
+window.setLang=function(n,save){
+  if(origSetLang)origSetLang(n,save);
+  L=(n==='fr')?'fr':'en';
+  render();
+};
 
 /* ---- submit ---- */
 function val(id){return $(id).value.trim();}
 function missing(){
   var m=[];
-  if(!val('cl-niche'))m.push('your business category');
-  if(!val('cl-name'))m.push('business name');
-  if(!val('cl-about'))m.push('what you sell or offer');
-  if(!val('cl-city'))m.push('city / area');
-  if(!val('cl-offer'))m.push('products or services with prices');
-  if(photos.length<3)m.push('at least 3 photos');
-  if(!val('cl-contact'))m.push('your name');
-  if(!val('cl-wa-num'))m.push('WhatsApp number');
-  if(!goal)m.push('main goal of the site');
-  if(!feel)m.push('the feel you want');
-  if(!$('cl-consent').checked)m.push('the consent box');
+  if(!val('cl-niche'))m.push('m.niche');
+  if(!val('cl-name'))m.push('m.name');
+  if(!val('cl-about'))m.push('m.about');
+  if(!val('cl-city'))m.push('m.city');
+  if(!val('cl-offer'))m.push('m.offer');
+  if(photos.length<3)m.push('m.photos');
+  if(!val('cl-contact'))m.push('m.contact');
+  if(!val('cl-wa-num'))m.push('m.wa');
+  if(!goal)m.push('m.goal');
+  if(!feel)m.push('m.feel');
+  if(!$('cl-consent').checked)m.push('m.consent');
   return m;
 }
-function setBusy(t){busy=!!t;var b=$('cl-submit');b.disabled=!!t;b.textContent=t||'Claim my free website';}
+function setBusyText(){
+  var b=$('cl-submit');
+  b.textContent=busyState==='send'?tr('busy.send'):tr('busy.photo',busyState);
+}
+function setBusy(state){
+  busy=!!state;busyState=state||'';
+  var b=$('cl-submit');b.disabled=busy;
+  if(busy)setBusyText();else b.textContent=tr('submit');
+}
+function waLink(id){
+  return 'https://wa.me/'+WA+'?text='+encodeURIComponent(tr('wa.msg',{b:val('cl-name'),id:id}));
+}
 
 $('cl-form').addEventListener('submit',function(e){
   e.preventDefault();
   if(busy)return;
-  showError('');
-  var m=missing(),box=$('cl-missing');
-  if(m.length){box.textContent='Still needed: '+m.join(', ')+'.';box.hidden=false;box.scrollIntoView({block:'center'});return;}
-  box.hidden=true;
-  setBusy('Sending your details…');
+  errKey='';
+  missKeys=missing();
+  if(missKeys.length){renderMessages();$('cl-missing').scrollIntoView({block:'center'});return;}
+  missKeys=null;renderMessages();
+  setBusy('send');
   post({
-    action:'submit',niche:val('cl-niche'),businessName:val('cl-name'),about:val('cl-about'),city:val('cl-city'),
+    action:'submit',language:L,niche:val('cl-niche'),businessName:val('cl-name'),about:val('cl-about'),city:val('cl-city'),
     different:val('cl-diff'),offerings:val('cl-offer'),contactName:val('cl-contact'),whatsapp:val('cl-wa-num'),
     email:val('cl-email'),hours:val('cl-hours'),address:val('cl-addr'),social:val('cl-social'),
     goal:goal,feel:feel,colours:colours.join(', '),photoCount:photos.length,hasLogo:!!logo,website:$('cl-website').value
   }).then(function(res){
     if(!res||!res.ok){
       setBusy('');statusLoaded=false;loadStatus();
-      showError(res&&res.error==='niche-taken'?'That category has just been taken. Please pick another one.'
-        :res&&res.error==='full'?'All the spots have been filled. Message us on WhatsApp and we will put you on the waiting list.'
-        :'Something went wrong sending your details. Check your connection and try again.');
+      showError(res&&res.error==='niche-taken'?'e.taken':res&&res.error==='full'?'e.full':'e.net');
       return;
     }
     var queue=(logo?[['logo',logo]]:[]).concat(photos.map(function(p){return ['photo',p];})),failed=0,chain=Promise.resolve();
     queue.forEach(function(q,i){
       chain=chain.then(function(){
-        setBusy('Uploading photo '+(i+1)+' of '+queue.length+'…');
+        setBusy({n:i+1,t:queue.length});
         return post({action:'photo',id:res.id,kind:q[0],name:q[1].name,mime:q[1].mime,data:q[1].data})
           .then(function(r){if(!r||!r.ok)failed++;},function(){failed++;});
       });
     });
     return chain.then(function(){finish(res.id,failed);});
   }).catch(function(){
-    setBusy('');showError('Something went wrong sending your details. Check your connection and try again.');
+    setBusy('');showError('e.net');
   });
 });
 
@@ -2462,14 +2633,13 @@ function finish(id,failed){
   setBusy('');
   $('cl-form').hidden=true;
   $('cl-ref').textContent=id;
-  var msg='Hi Africode Studios! I just submitted my details for the free website promo ('+val('cl-name')+'). Reference: '+id;
-  $('cl-wa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
-  var pf=$('cl-photofail');
-  if(failed>0){pf.textContent=failed+' photo'+(failed>1?'s':'')+' did not upload. Please send '+(failed>1?'them':'it')+' to us on WhatsApp.';pf.hidden=false;}
+  doneInfo={id:id,failed:failed};
+  render();
   $('cl-done').hidden=false;
   $('cl-done').scrollIntoView({block:'center'});
 }
 
+render();
 reveal();
 })();
 </script>
