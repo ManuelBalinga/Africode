@@ -656,6 +656,8 @@ nav a.nl:hover::after{right:0;}
 .st.live i{background:var(--jade);animation:blip 2.4s infinite;}
 .st.soon{background:rgba(91,108,255,.13);color:#9AA5FF;}
 .st.soon i{background:#9AA5FF;}
+.st.beta{background:rgba(91,108,255,.13);color:#9AA5FF;}
+.st.beta i{background:#9AA5FF;}
 .st.dev{background:rgba(255,178,36,.13);color:var(--amber);}
 .st.dev i{background:var(--amber);}
 @keyframes blip{0%{box-shadow:0 0 0 0 rgba(31,211,163,.6);}70%{box-shadow:0 0 0 7px rgba(31,211,163,0);}100%{box-shadow:0 0 0 0 rgba(31,211,163,0);}}
@@ -1033,8 +1035,8 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
       <article class="work" data-tilt>
         <div class="glare"></div>
         <div class="lift">
-          <div class="wtop"><h3>CampusMart</h3><span class="st live"><i></i><span data-i18n="st.live">Live</span></span></div>
-          <p data-i18n="w.campusmart">A campus marketplace for Lancaster University Ghana — students buy, sell and message each other in one place. Live and running today.</p>
+          <div class="wtop"><h3>CampusMart</h3><span class="st beta"><i></i><span data-i18n="st.beta">Beta launch</span></span></div>
+          <p data-i18n="w.campusmart">A campus marketplace for Lancaster University Ghana — students buy, sell and message each other in one place. Now in beta.</p>
           <div class="tags"><span class="tag" data-i18n="w.cm.t">Marketplace</span><span class="tag">React</span><span class="tag">Supabase</span><span class="tag">Vercel</span></div>
           <a class="wlink" href="https://campusmart-seven.vercel.app" target="_blank" rel="noopener"><span data-i18n="w.visit">Visit site</span> ↗</a>
         </div>
@@ -1042,7 +1044,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
       <article class="work" data-tilt>
         <div class="glare"></div>
         <div class="lift">
-          <div class="wtop"><h3>Passify</h3><span class="st soon"><i></i><span data-i18n="st.soon">Launching 2026</span></span></div>
+          <div class="wtop"><h3>Passify</h3><span class="st live"><i></i><span data-i18n="st.live">Live</span></span></div>
           <p data-i18n="w.passify">A subscription exam-prep platform for GCE, BAC, Probatoire, IB &amp; IGCSE students — a 102-document library with mobile-money payments via Campay &amp; PayUnit.</p>
           <div class="tags"><span class="tag" data-i18n="w.pa.t">Subscription SaaS</span><span class="tag" data-i18n="w.pa.t2">Payments</span><span class="tag">EdTech</span></div>
           <a class="wlink" href="https://passify.cm" target="_blank" rel="noopener"><span data-i18n="w.visit">Visit site</span> ↗</a>
@@ -1051,10 +1053,10 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
       <article class="work" data-tilt>
         <div class="glare"></div>
         <div class="lift">
-          <div class="wtop"><h3>ALG Transport</h3><span class="st soon"><i></i><span data-i18n="st.soon">Launching 2026</span></span></div>
+          <div class="wtop"><h3>ALG Transport</h3><span class="st dev"><i></i><span data-i18n="st.dev">In development</span></span></div>
           <p data-i18n="w.alg">A website for ALG Transport and Logistics, a Ghanaian car rental, chauffeur and courier company — bookings, quotes and driver sign-up.</p>
           <div class="tags"><span class="tag" data-i18n="w.alg.t">Transport &amp; logistics</span><span class="tag" data-i18n="w.alg.t2">Bookings</span><span class="tag">Web</span></div>
-          <a class="wlink" href="https://algtransportandlogistics.com" target="_blank" rel="noopener"><span data-i18n="w.visit">Visit site</span> ↗</a>
+          <span class="wlink off"><span data-i18n="w.soon">Coming soon</span></span>
         </div>
       </article>
       <article class="work" data-tilt>
@@ -1329,11 +1331,12 @@ var I18N={
 "work.h2":{en:"We ship real products.",fr:"Nous livrons de vrais produits."},
 "work.intro":{en:"Not mockups. Products with real users, real payments and real uptime.",fr:"Pas des maquettes. Des produits avec de vrais utilisateurs, de vrais paiements, en production."},
 "st.live":{en:"Live",fr:"En ligne"},
+"st.beta":{en:"Beta launch",fr:"Lancement bêta"},
 "st.soon":{en:"Launching 2026",fr:"Lancement 2026"},
 "st.dev":{en:"In development",fr:"En développement"},
 "w.visit":{en:"Visit site",fr:"Voir le site"},
 "w.soon":{en:"Coming soon",fr:"Bientôt disponible"},
-"w.campusmart":{en:"A campus marketplace for Lancaster University Ghana — students buy, sell and message each other in one place. Live and running today.",fr:"Une place de marché étudiante pour Lancaster University Ghana — les étudiants achètent, vendent et échangent au même endroit. En ligne dès aujourd'hui."},
+"w.campusmart":{en:"A campus marketplace for Lancaster University Ghana — students buy, sell and message each other in one place. Now in beta.",fr:"Une place de marché étudiante pour Lancaster University Ghana — les étudiants achètent, vendent et échangent au même endroit. Désormais en bêta."},
 "w.cm.t":{en:"Marketplace",fr:"Place de marché"},
 "w.passify":{en:"A subscription exam-prep platform for GCE, BAC, Probatoire, IB & IGCSE students — a 102-document library with mobile-money payments via Campay & PayUnit.",fr:"Une plateforme de révision par abonnement pour les élèves du GCE, BAC, Probatoire, IB & IGCSE — une bibliothèque de 102 documents avec paiements mobile money via Campay & PayUnit."},
 "w.pa.t":{en:"Subscription SaaS",fr:"SaaS par abonnement"},

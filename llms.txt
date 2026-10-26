@@ -25,9 +25,9 @@
 
 ## Selected work
 
-- CampusMart (live): a campus marketplace for Lancaster University Ghana where students buy, sell and message each other. https://campusmart-seven.vercel.app
-- Passify (launching 2026): a subscription exam-prep platform for GCE, BAC, Probatoire, IB and IGCSE students, with mobile-money payments. https://passify.cm
-- ALG Transport (launching 2026): a website for ALG Transport and Logistics, a Ghanaian car rental, chauffeur and courier company. https://algtransportandlogistics.com
+- CampusMart (beta launch): a campus marketplace for Lancaster University Ghana where students buy, sell and message each other. https://campusmart-seven.vercel.app
+- Passify (live): a subscription exam-prep platform for GCE, BAC, Probatoire, IB and IGCSE students, with mobile-money payments. https://passify.cm
+- ALG Transport (in development): a website for ALG Transport and Logistics, a Ghanaian car rental, chauffeur and courier company.
 - MindMeld (in development): a multiplayer word game with an AI partner. https://mindmeld-murex.vercel.app
 
 ## Contact
