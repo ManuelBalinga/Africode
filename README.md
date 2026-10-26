@@ -1,40 +1,61 @@
 # The Africode Studios website
 
-Everything the live site needs is in this folder and nowhere else. Nothing
-outside it is ever deployed.
+Live at **https://africodestudios.com** (English) and **https://africodestudios.com/fr** (French).
 
 | File | What it is |
 |---|---|
-| `index.html` | The whole website — one self-contained file, no build step, no dependencies beyond Google Fonts |
-| `og.jpg` | The link-preview card shown when the site is shared on WhatsApp |
-| `vercel.json` | Security headers and caching |
+| `index.html` | **The one file you edit.** The whole English site plus every English and French string (the `I18N` table). No dependencies beyond Google Fonts |
+| `scripts/build.mjs` | Turns `index.html` into the deployable site in `dist/` (see below) |
+| `og.jpg`, `favicon.svg` | Link-preview card and icon |
+| `robots.txt`, `sitemap.xml`, `llms.txt` | What search engines and AI assistants read |
+| `vercel.json` | Build settings, security headers and caching |
 
-Run it locally with any static server:
+## How the site is built
+
+`node scripts/build.mjs` writes `dist/`:
+
+- `dist/index.html` is the English page.
+- `dist/fr/index.html` is a real French page, generated from the same file with the
+  French text written into the HTML, its own title, description, FAQ data and the
+  `hreflang` links that tell Google the two pages are versions of each other.
+- The small files above are copied across. **Only what is in `dist/` is ever
+  published**, so nothing else in this repository can reach the public internet.
+
+So there is only one page to edit. Change `index.html` (and its `I18N` table for
+text), and both languages update on the next deploy. Never edit `dist/`; it is
+rebuilt every time and is not committed.
+
+To look at it locally:
 
 ```
-cd website && python3 -m http.server 4188
+node scripts/build.mjs
+cd dist && python3 -m http.server 4188
 ```
 
-Then open `http://localhost:4188`.
+Then open `http://localhost:4188` (English) or `http://localhost:4188/fr/` (French).
 
 ## Deploying
 
-**Set the Vercel project's Root Directory to `website`.** That is the whole
-protection model: the repository above this folder is the Africode business
-archive — the blueprint, the financial model, the cost structure, the client
-revenue-share summaries — and none of it can reach the public internet if
-Vercel only ever sees this folder.
+The Vercel project is connected to this GitHub repository, so **every push to
+`main` goes live automatically** on africodestudios.com. Vercel runs the build
+command in `vercel.json` and publishes `dist/`. If the build fails, the previous
+version stays live.
 
-There is also a `.vercelignore` at the repository root listing those files by
-name. It is a fallback in case the Root Directory is left unset; it is not the
-primary defence, and it needs updating every time a new internal document is
-added. The folder boundary does not.
+`vercel.json` sets `framework` to none, the build command to
+`node scripts/build.mjs` and the output folder to `dist`. If those are changed,
+Vercel may build the wrong thing (an earlier mistake served the home page as
+"not found" for a few minutes).
 
-`africodestudios.com` is not registered yet. Buy it, add it to the Vercel
-project, then update the four absolute URLs in the `<head>` of `index.html`
-(`canonical`, `og:url`, `og:image`, `twitter:image`) and the `url`/`image`
-fields in the JSON-LD block — link previews need absolute URLs, so they
-cannot be relative.
+The domain is registered at Namecheap. DNS records live there: an `A` record for
+`@` pointing at `216.198.79.1` and a `CNAME` for `www` pointing at the value shown
+in Vercel under Settings > Domains. Keep the three Google email `TXT` records.
+
+## Search and AI visibility
+
+`index.html` carries the title and description, canonical link, Open Graph and
+Twitter cards, `ProfessionalService` and `FAQPage` structured data, and the FAQ
+section. When a price, a plan or an FAQ answer changes, update the visible text,
+the matching JSON-LD block and the `I18N` entry together so they never disagree.
 
 ## The hero demo
 
