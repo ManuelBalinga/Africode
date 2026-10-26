@@ -1,0 +1,39 @@
+# Africode Studios
+
+> Africode Studios is a web design and development studio in Accra, Ghana. It builds websites, online stores and web apps for businesses in Ghana, Cameroon and worldwide, and is built and supported in English and French. Fixed prices are agreed in writing before work starts, and many sites go live within a week.
+
+## What we do
+
+- Build: websites, online stores and custom software (one-off projects).
+- Manage: social media, content and Google profile, posted, scheduled and answered (monthly).
+- Grow: SEO, ads and plain-English reporting on what the money did (monthly).
+- Support: hosting, security, backups, domains and business email (always on).
+
+## Pricing (USD, payable in GHS or XAF)
+
+- One-Page Website: from $40. One mobile-friendly page, click-to-WhatsApp and contact buttons, basic Google/SEO setup.
+- Multipage Website: from $90. Up to 5 pages, contact form, WhatsApp and social links, Google Maps, SEO basics, gallery, menu or portfolio section.
+- Online Store: from $120. Product catalogue, shopping cart, secure checkout with mobile-money payments, simple order management.
+- Web App & Software: from $250, quoted per project after a free consult. Booking systems, dashboards, marketplaces, user accounts and secure logins.
+- Care & Hosting Plan: first year included, then $120 per year. Domain, reliable hosting, security, SSL, backups, small updates and priority support.
+
+## How it works
+
+1. Free quote and plan: a clear plan, timeline and fixed price, no surprises.
+2. We design and build: you approve the look and give feedback along the way.
+3. Launch and support: we put you live, often within a week, and stay on to host, update and support.
+
+## Selected work
+
+- CampusMart (live): a campus marketplace for Lancaster University Ghana where students buy, sell and message each other. https://campusmart-seven.vercel.app
+- Passify (launching 2026): a subscription exam-prep platform for GCE, BAC, Probatoire, IB and IGCSE students, with mobile-money payments. https://passify.cm
+- ALG Transport (launching 2026): a website for ALG Transport and Logistics, a Ghanaian car rental, chauffeur and courier company. https://algtransportandlogistics.com
+- MindMeld (in development): a multiplayer word game with an AI partner. https://mindmeld-murex.vercel.app
+
+## Contact
+
+- Website: https://africodestudios.com/
+- WhatsApp (free quote, usually answered the same day): +233 55 045 6626, https://wa.me/233550456626
+- Email: africodestudios@gmail.com
+- Location: Accra, Ghana. Clients worldwide.
+- Languages: English and French.

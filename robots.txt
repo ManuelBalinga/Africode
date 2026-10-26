@@ -1,0 +1,10 @@
+# Africode Studios - https://africodestudios.com/
+# Everyone is welcome, including search engines and AI answer engines.
+User-agent: *
+Allow: /
+
+# Leftover files from an old version of the site: nothing to index here.
+Disallow: /src/
+Disallow: /public/
+
+Sitemap: https://africodestudios.com/sitemap.xml

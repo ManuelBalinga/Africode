@@ -6,6 +6,7 @@
 <title data-i18n="meta.title">Africode Studios — We build it. You grow.</title>
 <meta name="description" data-i18n-attr="content" data-i18n="meta.desc" content="A web studio in Accra building websites, online stores and web apps for clients worldwide. Built and supported in English &amp; French. Websites from $40.">
 <meta name="theme-color" content="#08080A">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://africodestudios.com/">
 
 <meta property="og:type" content="website">
@@ -24,6 +25,7 @@
 <meta name="twitter:description" data-i18n-attr="content" data-i18n="meta.desc" content="A web studio in Accra building websites, online stores and web apps for clients worldwide.">
 <meta name="twitter:image" content="https://africodestudios.com/og.jpg">
 
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%23FFB224'/%3E%3Ctext x='50' y='73' font-family='Verdana,sans-serif' font-size='62' font-weight='700' text-anchor='middle' fill='%2308080A'%3EA%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,6 +52,78 @@
     { "@type": "Offer", "name": "Online Store", "price": "120", "priceCurrency": "USD" },
     { "@type": "Offer", "name": "Web App & Software", "price": "250", "priceCurrency": "USD" },
     { "@type": "Offer", "name": "Care & Hosting Plan", "price": "120", "priceCurrency": "USD" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a website cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prices are fixed and agreed in writing before we start. A One-Page Website is from $40, a Multipage Website (up to 5 pages) from $90, an Online Store from $120, and custom web apps from $250, quoted per project. Prices are in USD and payable in GHS or XAF."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often within a week. You get a clear plan, timeline and fixed price first. Then you approve the look, we build it with your feedback along the way, and we put you live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you build an online store that accepts mobile money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Online Store package includes a product catalogue and shopping cart, secure checkout with mobile-money payments, simple order management and everything in the Business package."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you build custom software, booking systems or dashboards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We build booking systems, dashboards and marketplaces with user accounts and secure logins, designed around how you work. Projects start from $250 and are quoted after a free consult."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in the Care & Hosting Plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Domain and reliable hosting, security, SSL and backups, small updates and changes, and priority support. The first year is included, then it is $120 per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with clients outside Ghana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We are based in Accra and work with clients worldwide, in English or French, and we deliver to clients abroad in the same week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you help with SEO, social media and ongoing support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. After the build we can manage your social media, content and Google profile, grow your traffic with SEO and ads with plain-English reporting, and look after hosting, security, backups, domains and business email."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Message us on WhatsApp on +233 55 045 6626 for a free quote. We usually reply the same day with a clear plan, timeline and fixed price."
+      }
+    }
   ]
 }
 </script>
@@ -702,6 +776,17 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;}
   .rv{opacity:1;transform:none;}
 }
+/* ---------- FAQ ---------- */
+#faq .faq-list{max-width:820px;display:flex;flex-direction:column;gap:12px;}
+#faq details{background:var(--ink-2);border:1px solid var(--line);border-radius:18px;transition:border-color .3s,background .3s;}
+#faq details[open]{border-color:var(--line-2);background:var(--surf);}
+#faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 26px;font-family:var(--display);font-weight:700;font-size:clamp(16px,2vw,19px);letter-spacing:-.02em;line-height:1.25;}
+#faq summary::-webkit-details-marker{display:none;}
+#faq summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06);color:var(--amber);font-size:19px;font-weight:600;}
+#faq details[open] summary::after{content:"\2212";}
+#faq summary:focus-visible{outline:2px solid var(--amber);outline-offset:3px;}
+#faq .faq-a{padding:0 26px 24px;color:var(--mute);font-size:16px;max-width:70ch;}
+@media (max-width:640px){#faq summary{padding:18px 18px;}#faq .faq-a{padding:0 18px 20px;}}
 </style>
 </head>
 <body id="top">
@@ -1031,6 +1116,51 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
   </div>
 </section>
 
+<!-- ================= FAQ ================= -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow" data-i18n="faq.kicker">FAQ</p>
+      <h2 class="sec-h" data-i18n="faq.h2">Questions, answered.</h2>
+      <p class="sec-p" data-i18n="faq.intro">Straight answers on pricing, timing and what you get.</p>
+    </div>
+    <div class="faq-list rv">
+      <details>
+        <summary data-i18n="faq.q1">How much does a website cost?</summary>
+        <p class="faq-a" data-i18n="faq.a1">Prices are fixed and agreed in writing before we start. A One-Page Website is from $40, a Multipage Website (up to 5 pages) from $90, an Online Store from $120, and custom web apps from $250, quoted per project. Prices are in USD and payable in GHS or XAF.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q2">How long does it take to build a website?</summary>
+        <p class="faq-a" data-i18n="faq.a2">Often within a week. You get a clear plan, timeline and fixed price first. Then you approve the look, we build it with your feedback along the way, and we put you live.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q3">Can you build an online store that accepts mobile money?</summary>
+        <p class="faq-a" data-i18n="faq.a3">Yes. The Online Store package includes a product catalogue and shopping cart, secure checkout with mobile-money payments, simple order management and everything in the Business package.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q4">Do you build custom software, booking systems or dashboards?</summary>
+        <p class="faq-a" data-i18n="faq.a4">Yes. We build booking systems, dashboards and marketplaces with user accounts and secure logins, designed around how you work. Projects start from $250 and are quoted after a free consult.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q5">What is included in the Care &amp; Hosting Plan?</summary>
+        <p class="faq-a" data-i18n="faq.a5">Domain and reliable hosting, security, SSL and backups, small updates and changes, and priority support. The first year is included, then it is $120 per year.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q6">Do you work with clients outside Ghana?</summary>
+        <p class="faq-a" data-i18n="faq.a6">Yes. We are based in Accra and work with clients worldwide, in English or French, and we deliver to clients abroad in the same week.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q7">Do you help with SEO, social media and ongoing support?</summary>
+        <p class="faq-a" data-i18n="faq.a7">Yes. After the build we can manage your social media, content and Google profile, grow your traffic with SEO and ads with plain-English reporting, and look after hosting, security, backups, domains and business email.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q8">How do I get a quote?</summary>
+        <p class="faq-a" data-i18n="faq.a8">Message us on WhatsApp on +233 55 045 6626 for a free quote. We usually reply the same day with a clear plan, timeline and fixed price.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ================= CTA ================= -->
 <section class="sec" id="contact">
   <div class="wrap">
@@ -1062,6 +1192,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px;background:var(--ink
         <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
         <a href="#work" data-i18n="nav.work">Our work</a>
         <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </div>
       <div class="fc">
         <h4 data-i18n="foot.contact">Contact</h4>
@@ -1218,6 +1349,26 @@ var I18N={
 "band.h2":{en:"Built in Accra.<br>Shipped worldwide.",fr:"Conçu à Accra.<br>Livré dans le monde entier."},
 "band.p":{en:"One studio, one time zone, no agency layers. We understand mobile money and WhatsApp-first customers — and we deliver to clients abroad in the same week, in English or French.",fr:"Un seul studio, un seul fuseau, sans couches d'agence. Nous maîtrisons le mobile money et les clients qui vivent sur WhatsApp — et nous livrons à l'étranger dans la même semaine, en français ou en anglais."},
 
+"faq.kicker":{en:"FAQ",fr:"FAQ"},
+"faq.h2":{en:"Questions, answered.",fr:"Vos questions, nos réponses."},
+"faq.intro":{en:"Straight answers on pricing, timing and what you get.",fr:"Des réponses claires sur les prix, les délais et ce que vous obtenez."},
+"nav.faq":{en:"FAQ",fr:"FAQ"},
+"faq.q1":{en:"How much does a website cost?",fr:"Combien coûte un site web ?"},
+"faq.a1":{en:"Prices are fixed and agreed in writing before we start. A One-Page Website is from $40, a Multipage Website (up to 5 pages) from $90, an Online Store from $120, and custom web apps from $250, quoted per project. Prices are in USD and payable in GHS or XAF.",fr:"Les prix sont fixes et convenus par écrit avant de commencer. Un site d’une page coûte à partir de 40 $, un site multipage (jusqu’à 5 pages) à partir de 90 $, une boutique en ligne à partir de 120 $, et les applications web sur mesure à partir de 250 $, sur devis selon le projet. Les prix sont en USD et payables en GHS ou en XAF."},
+"faq.q2":{en:"How long does it take to build a website?",fr:"Combien de temps faut-il pour créer un site web ?"},
+"faq.a2":{en:"Often within a week. You get a clear plan, timeline and fixed price first. Then you approve the look, we build it with your feedback along the way, and we put you live.",fr:"Souvent une semaine. Vous recevez d’abord un plan clair, un calendrier et un prix fixe. Ensuite, vous validez le design, nous construisons le site en tenant compte de vos retours, puis nous le mettons en ligne."},
+"faq.q3":{en:"Can you build an online store that accepts mobile money?",fr:"Pouvez-vous créer une boutique en ligne avec paiement par mobile money ?"},
+"faq.a3":{en:"Yes. The Online Store package includes a product catalogue and shopping cart, secure checkout with mobile-money payments, simple order management and everything in the Business package.",fr:"Oui. L’offre « Boutique en ligne » comprend un catalogue de produits et un panier, un paiement sécurisé par mobile money, une gestion simple des commandes et tout ce qui est inclus dans l’offre Business."},
+"faq.q4":{en:"Do you build custom software, booking systems or dashboards?",fr:"Créez-vous des logiciels sur mesure, des systèmes de réservation ou des tableaux de bord ?"},
+"faq.a4":{en:"Yes. We build booking systems, dashboards and marketplaces with user accounts and secure logins, designed around how you work. Projects start from $250 and are quoted after a free consult.",fr:"Oui. Nous créons des systèmes de réservation, des tableaux de bord et des places de marché avec comptes utilisateurs et connexions sécurisées, conçus selon votre façon de travailler. Les projets démarrent à 250 $ et sont chiffrés après une consultation gratuite."},
+"faq.q5":{en:"What is included in the Care & Hosting Plan?",fr:"Que comprend le forfait « Forfait Maintenance & Hébergement » ?"},
+"faq.a5":{en:"Domain and reliable hosting, security, SSL and backups, small updates and changes, and priority support. The first year is included, then it is $120 per year.",fr:"Le domaine et un hébergement fiable, la sécurité, le SSL et les sauvegardes, les petites mises à jour et modifications, et un support prioritaire. La première année est incluse, puis le forfait coûte 120 $ par an."},
+"faq.q6":{en:"Do you work with clients outside Ghana?",fr:"Travaillez-vous avec des clients en dehors du Ghana ?"},
+"faq.a6":{en:"Yes. We are based in Accra and work with clients worldwide, in English or French, and we deliver to clients abroad in the same week.",fr:"Oui. Nous sommes basés à Accra et travaillons avec des clients du monde entier, en français ou en anglais, et nous livrons aux clients à l’étranger dans la même semaine."},
+"faq.q7":{en:"Do you help with SEO, social media and ongoing support?",fr:"Vous occupez-vous du SEO, des réseaux sociaux et du suivi ?"},
+"faq.a7":{en:"Yes. After the build we can manage your social media, content and Google profile, grow your traffic with SEO and ads with plain-English reporting, and look after hosting, security, backups, domains and business email.",fr:"Oui. Après la création, nous pouvons gérer vos réseaux sociaux, votre contenu et votre profil Google, développer votre audience grâce au SEO et à la publicité avec des rapports en langage clair, et nous occuper de l’hébergement, de la sécurité, des sauvegardes, des domaines et de la messagerie professionnelle."},
+"faq.q8":{en:"How do I get a quote?",fr:"Comment obtenir un devis ?"},
+"faq.a8":{en:"Message us on WhatsApp on +233 55 045 6626 for a free quote. We usually reply the same day with a clear plan, timeline and fixed price.",fr:"Écrivez-nous sur WhatsApp au +233 55 045 6626 pour un devis gratuit. Nous répondons généralement le jour même avec un plan clair, un calendrier et un prix fixe."},
 "proc.kicker":{en:"How it works",fr:"Comment ça marche"},
 "proc.h2":{en:"Three steps. One week.",fr:"Trois étapes. Une semaine."},
 "proc.intro":{en:"No jargon, no long delays, no disappearing.",fr:"Sans jargon, sans délais interminables, sans disparaître."},
